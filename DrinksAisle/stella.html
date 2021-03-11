@@ -12,7 +12,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function myFunction() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
 
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "More Descriptoin";
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Less Description";
+            moreText.style.display = "inline";
+          }
+        }
+    </script>
 </head>
 
 <body>
@@ -78,11 +94,13 @@
                   <span>$3.5 ea</span>
                   <span>$1.06 /100ml </span>
                   <span>Origin : Belgium</span>
-                  <div><button class="description_button">More Description</button></div>
+
                   <div class="d-flex flex-row">
                       <input value="1" type="number" min="0"/>
                   </div>
-                  <div><button class="addcart_button">Add to Cart</button></div>
+                  <div>                  <div><button type="button" class="button_box">Add to Cart</button>
+	      	 <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+                <p><span id="dots">...</span><span id="more"> Stella is a Belgian Pilsner, best enjoyed in the summer.</span></p></div></div>
       </div>
 
     </div>
