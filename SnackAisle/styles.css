@@ -195,3 +195,14 @@ form input {
     background: #c08af2;
     color:#5b4173;
 }
+
+/* BUTTON */
+
+.button_box{
+	background: black;
+	color:white;
+	border-radius: 15px;
+	padding:5px;
+	margin: 4px 0px 0px 0px;
+}
+#more {display: none;}
