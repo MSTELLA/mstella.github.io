@@ -219,6 +219,7 @@ html, body{
 }
 
 /* BUTTON */
+
 .button_box{
 	background: black;
 	color:white;
@@ -226,4 +227,4 @@ html, body{
 	padding:5px;
 	margin: 4px 0px 0px 0px;
 }
-#more {display: none
+#more {display: none;}
