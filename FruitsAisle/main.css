@@ -23,6 +23,8 @@ html, body {
     width: 100%;
 }
 
+#more {display: none;}
+
 /*BLACK BANNER CSS*/
 .userbanner{
     background-color: black;
