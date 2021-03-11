@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
+    	    
+    <script>
+      function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+         dots.style.display = "inline";
+         btnText.innerHTML = "More Descriptoin";
+         moreText.style.display = "none";
+   } else {
+         dots.style.display = "none";
+         btnText.innerHTML = "Less Description";
+         moreText.style.display = "inline";}
+	}
+	</script>
+    
 </head>
 <body>
     <div class="container-fluid">
@@ -61,15 +79,16 @@
                 <span>Pack of 7</span><br>
                 <span>$7.99 each</span><br>
                 <span>Ontario</span><br>
-                <span>Ontarian Peaches. Sweet and juicy peaches, just like the peach emoji.</span>
                     
                 <div class="d-flex flex-row">
                     <!-- <span class="minus">-</span> -->
                     <input value="1" type="number" min="0"/>
                     <!-- <span class="plus">+</span> -->
                 </div>
-                <button type="button" class="btn btn-primary btn-lg">More Information</button>
-                <button type="button" class="btn btn-primary btn-lg">Add to Cart</button>
+                <button type="button" class="button_box">Add to Cart</button>
+                <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+                <p><span id="dots">...</span><span id="more">Ontarian Peaches. Sweet and juicy peaches, just like the peach emoji.</span></p>
+
             </div>
             </div>
         </div>
