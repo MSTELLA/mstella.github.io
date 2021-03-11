@@ -9,6 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="AisleStyle.css">
 	    <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
+	
+	    
+    <script>
+      function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+         dots.style.display = "inline";
+         btnText.innerHTML = "More Descriptoin";
+         moreText.style.display = "none";
+   } else {
+         dots.style.display = "none";
+         btnText.innerHTML = "Less Description";
+         moreText.style.display = "inline";}
+	}
+	</script>
 </head>
 
 <!--Container-->
@@ -76,9 +94,9 @@
 					<div>
 					<input value="1" type="number" min="0"/>
 					</div>
-					<button type="button" class="button_box">Add to Cart</button>
-					<br><button class="button_box"> More Description </button>
-					<p> Description for bacon </p>
+						<button type="button" class="button_box">Add to Cart</button>
+						<br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+						<p><span id="dots">...</span><span id="more">Desription for bacon.</span></p>
 
 				</div>
 			</section>
