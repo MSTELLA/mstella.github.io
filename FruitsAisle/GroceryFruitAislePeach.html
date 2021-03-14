@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
-    	    
-    <script>
+<script>
       function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
+      	var dots = document.getElementById("dots");
+	var moreText = document.getElementById("more");
+      	var btnText = document.getElementById("myBtn");
 
-      if (dots.style.display === "none") {
-         dots.style.display = "inline";
-         btnText.innerHTML = "More Description";
-         moreText.style.display = "none";
-   } else {
-         dots.style.display = "none";
-         btnText.innerHTML = "Less Description";
-         moreText.style.display = "inline";}
-	}
-	</script>
+      	if (dots.style.display === "none") {
+         	dots.style.display = "inline";
+        	btnText.innerHTML = "More Description";
+         	moreText.style.display = "none";
+   	} else {
+         	dots.style.display = "none";
+         	btnText.innerHTML = "Less Description";
+         	moreText.style.display = "inline";}
+		}
+      function CalculateSubTotal() {
+	  var subtotal = 0;
+		itemID = document.getElementById("qnt");   
+        subtotal = subtotal + itemID.value * parseInt(itemID.getAttribute("data-price"));
+		
+	document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal;
+	
+    }
+</script>
     
 </head>
 <body>
@@ -77,12 +84,13 @@
                 <span class="text-uppercase">Selection</span>
                 <h3>Peaches</h3>
                 <span>Pack of 7</span><br>
-                <span>$7.99 each</span><br>
+                <span>$6.99 each</span><br>
                 <span>Ontario</span><br>
                     
                 <div class="d-flex flex-row">
                     <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
+                    <input name="qnt" type="number" id="qnt" value="0" size="3" data-price="6.99" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()"/>
+                    <div id="ItemsTotal">Subtotal of Item: $0</div>
                     <!-- <span class="plus">+</span> -->
                 </div>
                 <button type="button" class="button_box">Add to Cart</button>
