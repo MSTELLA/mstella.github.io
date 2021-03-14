@@ -33,8 +33,8 @@
       
    function CalculateSubTotal() {
        var subtotal = 0;
-        itemID = document.getElementById("qnt");
-        subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
+       itemID = document.getElementById("qnt");
+       subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
 
     document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
    }
@@ -44,7 +44,7 @@
         {
             var nameValueArray = document.cookie.split("=");
             document.getElementById("qnt").value = nameValueArray[1];
-           document.getElementById("ItemsTotal").value = nameValueArray[5];
+            CalculateSubTotal()
         }
          
        }
@@ -52,8 +52,7 @@
     function setAllCookies()
     {
         var selectedQuantity = document.getElementById("qnt").value;
-        var subtotal = document.getElementbyId("ItemsTotal").value;
-        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC +";subtotal=" + subtotal";
+        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
     }
 
 </script>
