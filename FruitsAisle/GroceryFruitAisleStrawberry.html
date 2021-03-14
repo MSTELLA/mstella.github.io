@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     
-    	    <script>
+   <script>
         function myFunction() {
           var dots = document.getElementById("dots");
           var moreText = document.getElementById("more");
@@ -26,6 +26,13 @@
             moreText.style.display = "inline";
           }
         }
+      function CalculateSubTotal() {
+	    var subtotal = 0;
+		    itemID = document.getElementById("qnt");   
+            subtotal = subtotal + itemID.value * parseInt(itemID.getAttribute("data-price"));
+		
+	    document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal;
+    }
     </script>
     
 </head>
@@ -84,7 +91,8 @@
                     
                 <div class="d-flex flex-row">
                     <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
+                    <input name="qnt" type="number" id="qnt" value="0" size="3" data-price="6.00" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()"/>
+                    <div id="ItemsTotal">Subtotal of Item: $0</div>
                     <!-- <span class="plus">+</span> -->
                 </div>
                 <button type="button" class="button_box">Add to Cart</button>
