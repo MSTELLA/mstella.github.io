@@ -28,9 +28,9 @@
       function CalculateSubTotal() {
 	  var subtotal = 0;
 		itemID = document.getElementById("qnt");   
-        subtotal = subtotal + itemID.value * parseInt(itemID.getAttribute("data-price"));
+        subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
 		
-	document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal;
+	document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
 	
     }
     </script>
@@ -91,8 +91,8 @@
                     
                 <div class="d-flex flex-row">
                     <!-- <span class="minus">-</span> -->
-                    <input name="qnt" type="number" id="qnt" value="0" size="3" data-price="4.00" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()"/>
-                    <div id="ItemsTotal">Subtotal of Item: $0</div>
+                    <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=4.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()"/>
+                    <div id="ItemsTotal">Subtotal of Item: $0.00</div>
                     <!-- <span class="plus">+</span> -->
                 </div>
                 <button type="button" class="button_box">Add to Cart</button>
