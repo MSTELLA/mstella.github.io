@@ -177,6 +177,7 @@ html, body {
 /* FOOTER */
 .footer{
     position: relative;
+    display: inline;
     width: 100%;
     background-color: #5b4173;
     height:215px;
