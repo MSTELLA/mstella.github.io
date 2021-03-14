@@ -29,6 +29,17 @@
          btnText.innerHTML = "Less Description";
          moreText.style.display = "inline";}
 }
+      
+      <script language="javascript">
+function CalculateSubTotal() {
+    var subtotal = 0;
+        itemID = document.getElementById("qnt");
+        subtotal = subtotal + itemID.value * parseInt(itemID.getAttribute("data-price"));
+
+        document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal;
+
+}
+    </script>
 </script>
 
    
@@ -95,9 +106,10 @@
             <p> $0.33/100g.</p>
             <p> Origin: <em>Quebec</em></p>
             <div class="d-flex flex-row">
-                <!-- <span class="minus">-</span> -->
-                <input value="1" type="number" min="0"/>
-                <!-- <span class="plus">+</span> -->
+
+                <input name="qnt" type="number" id="qnt" value="0" size="3" data-price="4" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()"/>
+                    <div id="ItemsTotal">Subtotal of Item: $0</div>
+
             </div>
             <button type="button" class="button_box">Add to Cart</button>
             <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
