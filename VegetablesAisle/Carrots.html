@@ -44,15 +44,16 @@
         {
             var nameValueArray = document.cookie.split("=");
             document.getElementById("qnt").value = nameValueArray[1];
+           document.getElementById("ItemsTotal").value = nameValueArray[5];
         }
          
        }
 
-    function setQuantityCookie()
+    function setAllCookies()
     {
         var selectedQuantity = document.getElementById("qnt").value;
-        var subtotal = document.getElementbyId("Items Subtotal").value;
-         document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;"; "subtotal=" + subtotal";
+        var subtotal = document.getElementbyId("ItemsTotal").value;
+        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC +";subtotal=" + subtotal";
     }
 
 </script>
@@ -121,9 +122,9 @@
             <p> $0.33/100g.</p>
             <p> Origin: <em>Quebec</em></p>
             <div class="d-flex flex-row">
-            <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setQuantityCookie() "min="0"/>
+            <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" "min="0"/>
             </div>
-            <div id="ItemsTotal" onchange="setSubtotalCookie()>Subtotal of Item: $0.00</div>
+            <div id="ItemsTotal">Subtotal of Item: $0.00</div>
               
             <button type="button" class="button_box">Add to Cart</button>
             <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
