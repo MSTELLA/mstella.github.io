@@ -1,52 +1,49 @@
 *{
-    margin:0;
-    padding:0;
-    list-style: none;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin:0;
+	padding:0;
+	list-style: none;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#more {display: none;}
 
 html, body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 table{
-    width:70%;
-    background-color: #e6e6ff ;
-    vertical-align: middle;
-    text-align: center;
+	width:70%;
+	background-color: #e6e6ff ;
+	vertical-align: middle;
+	text-align: center;
 	right: 50%;
-	
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
 }
 
 table {
-    border: 2px solid #000;
-    align-content: center;
-    vertical-align: middle;
-    margin-top: 10px;
-    margin-right:10px;
+	border: 2px solid #000;
+	align-content: center;
+	vertical-align: middle;
+	margin-top: 10px;
+	margin-right:10px;
 }
 
 table tr:nth-child(even){
-    background-color: #d9ccff;
+	background-color: #d9ccff;
 }
 
 th{
-    height:30px;
+	height:30px;
 }
 
 tr{
-    padding: 10px 10px;
+	padding: 10px 10px;
 }
 td{
-    padding: 10px 10px;
-    align-content: center;
-    vertical-align: middle;
+	padding: 10px 10px;
+	align-content: center;
+	vertical-align: middle;
 }
 
 /*container*/
@@ -64,107 +61,108 @@ td{
 /*header*/
 
 .userbanner{
-    background-color: black;
-    height:35px;
-    width:100%;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    display: flex;
+	background-color: black;
+	height:35px;
+	width:100%;
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 15px;
+	display: flex;
 }
 
 #tiny-logo{
-    width:30px;
+	width:30px;
 }
 
 .userbanner ul{
-    text-align: right;
-    margin:0px;
-    right:0px;
-    width:100%;
-    padding-left: 0px;;
+	text-align: right;
+	margin:0px;
+	right:0px;
+	width:100%;
+	padding-left: 0px;;
 }
 
 .userbanner ul li{
-    display: inline-block;
-    line-height:35px;
-    margin: 0px 5px;
+	display: inline-block;
+	line-height:35px;
+	margin: 0px 5px;
 }
 
 .userbanner ul li a{
-    color: white;
-    border-radius: 3px;
-    text-decoration:none;
-    padding: 5px 15px;
+	color: white;
+	border-radius: 3px;
+	text-decoration:none;
+	padding: 5px 15px;
 }
+
 .userbanner ul li a:hover{
-    background: #c08af2;
-    color:#5b4173;
+	background: #c08af2;
+	color:#5b4173;
 }
 
 /* LOGO BANNER */
 .img-banner{
-    background-image: url("img/UMM_GROCERY_STORE.png");
-    width:100%;
-    height:100px;
-    vertical-align: middle;
+	background-image: url("img/UMM_GROCERY_STORE.png");
+	width:100%;
+	height:100px;
+	vertical-align: middle;
 }
 
 .logo{
-    color:white;
-    font-size: 50px;
-    text-align: center;
-    vertical-align: middle;
-    margin-bottom: 0;
-    height:100%;
-    font-weight: bold;
-    padding-top: 10px;
+	color:white;
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0;
+	height:100%;
+	font-weight: bold;
+	padding-top: 10px;
 	margin-top: 0;
 }
 
 /* NAVIGATION BAR */
 
 nav{
-    background-color: #5b4173;
-    height:50px;
+	background-color: #5b4173;
+	height:50px;
 }
 
 nav ul{
-    margin-right: 20px;
-    text-align: center;
+	margin-right: 20px;
+	text-align: center;
 }
 nav ul li{
-    display: inline-block;
-    line-height:50px;
-    margin: 10px 5px;
+	display: inline-block;
+	line-height:50px;
+	margin: 10px 5px;
 }
 
 nav ul li a{
-    color: white;
-    font-size: 30px;
-    border-radius: 3px;
-    text-decoration:none;
-    padding: 5px 15px;
+	color: white;
+	font-size: 30px;
+	border-radius: 3px;
+	text-decoration:none;
+	padding: 5px 15px;
 }
 nav ul li a:hover{
-    background: #c08af2;
-    color:#5b4173;
+	background: #c08af2;
+	color:#5b4173;
 }
 
 /* ROAD MAP BANNER */
 .page-header{
-    font-size: 25px;
-    color:#5b4173;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
+	font-size: 25px;
+	color:#5b4173;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
 	background-color: white;
 }
 
 /* ALL MIDDLE PORTION */
 .main{
-    display: flex;
-    width:100%;
+	display: flex;
+	width:100%;
 }
 
 /* SIDE MENU */
@@ -173,56 +171,53 @@ nav ul li a:hover{
 }
 
 .sidemenu ul{
-    margin-left: 20px;
+	margin-left: 20px;
 	margin-right: 20px;
-    text-align: Left;
-    padding-top: 15px;
-    padding-bottom: 15px;;
+	text-align: Left;
+	padding-top: 15px;
+	padding-bottom: 15px;;
 }
 .sidemenu ul li{
-    line-height:15px;
-    margin: 10px 5px;
-    margin-top: 10px;
+	line-height:15px;
+	margin: 10px 5px;
+	margin-top: 10px;
 }
 
 .sidemenu ul li a{
-    color: black;
-    text-decoration:none;
-    font-weight: bold;
+	color: black;
+	text-decoration:none;
+	font-weight: bold;
 }
 .sidemenu ul li a:hover{
-    color:#5b4173;
-    font-style: italic;
+	color:#5b4173;
+	font-style: italic;
 }
 
 .sidemenu ul li .active{
-    color:#5b4173;
-    font-weight: bolder;
-    text-decoration: underline ;
+	color:#5b4173;
+	font-weight: bolder;
+	text-decoration: underline ;
 }
 
 /*content*/
 
 .section-name{
 	font-size: 25px;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
+	color: black;
+	font-style: italic;
+	font-weight: bold;
 	margin-left: 30px;
 	padding-top: 10px;
 }
 .order-list{
 	width: 80%;
-    margin-bottom: 10px;
-    margin-right: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 .edit-order-list{
 	width: 80%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%);
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 }
 .content{
@@ -231,17 +226,21 @@ nav ul li a:hover{
 	display: inline-block;
 	margin-left: 10px;
 }
+.list{
+	width:100%;
+	display: inline-block;
+}
 .quantity {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 .button-value{
 	background: black;
-    color: white;
-    width: 25px;
-    font-weight: bolder;
-    display: inline-block;
-    border-radius: 5px;
+	color: white;
+	width: 25px;
+	font-weight: bolder;
+	display: inline-block;
+	border-radius: 5px;
 }
 .split-para{ 
 	display:block;
@@ -284,42 +283,30 @@ nav ul li a:hover{
 }
 /*footer*/
 .footer{
-
-    background-color: #5b4173;
-    height:215px;
-    font-size: 20px;;
+	background-color: #5b4173;
+	height:215px;
+	font-size: 20px;;
 }
 
 .footer ul{
-    margin-right: 20px;
-    text-align: Left;
-    padding-top: 15px;
-    padding-bottom: 15px;;
+	margin-right: 20px;
+	text-align: Left;
+	padding-top: 15px;
+	padding-bottom: 15px;;
 }
 .footer ul li{
-    line-height:20px;
-    margin 10px 5px;
-    margin-top: 15px;;
+	line-height:20px;
+	margin: 10px 5px;
+	margin-top: 15px;;
 }
 
 .footer ul li a{
-    color: white;
-    border-radius: 3px;
-    text-decoration:none;
-    padding: 0px 15px;
+	color: white;
+	border-radius: 3px;
+	text-decoration:none;
+	padding: 0px 15px;
 }
 .footer ul li a:hover{
-    background: #c08af2;
-    color:#5b4173;
+	background: #c08af2;
+	color:#5b4173;
 }
-
-/* BUTTON */
-
-.button_box{
-	background: black;
-	color:white;
-	border-radius: 15px;
-	padding:5px;
-	margin: 4px 0px 0px 0px;
-}
-
