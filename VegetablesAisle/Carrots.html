@@ -45,12 +45,14 @@
             var nameValueArray = document.cookie.split("=");
             document.getElementById("qnt").value = nameValueArray[1];
         }
+         
        }
 
     function setQuantityCookie()
     {
         var selectedQuantity = document.getElementById("qnt").value;
-         document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+        var subtotal = document.getElementbyId("Items Subtotal").value;
+         document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;"; "subtotal=" + subtotal";
     }
 
 </script>
@@ -121,7 +123,7 @@
             <div class="d-flex flex-row">
             <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setQuantityCookie() "min="0"/>
             </div>
-            <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+            <div id="ItemsTotal" onchange="setSubtotalCookie()>Subtotal of Item: $0.00</div>
               
             <button type="button" class="button_box">Add to Cart</button>
             <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
