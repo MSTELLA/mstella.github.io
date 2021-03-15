@@ -9,22 +9,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="AisleStyle.css">
 	    <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-	    
-    <script>
-      function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
 
-      if (dots.style.display === "none") {
-         dots.style.display = "inline";
-         btnText.innerHTML = "More Description";
-         moreText.style.display = "none";
-   } else {
-         dots.style.display = "none";
-         btnText.innerHTML = "Less Description";
-         moreText.style.display = "inline";}
-	}
+    <script>
+		function myFunction() {
+		var dots = document.getElementById("dots");
+		var moreText = document.getElementById("more");
+		var btnText = document.getElementById("myBtn");
+
+		if (dots.style.display === "none") {
+			 dots.style.display = "inline";
+			 btnText.innerHTML = "More Description";
+			 moreText.style.display = "none";
+		 } else {
+					 dots.style.display = "none";
+					 btnText.innerHTML = "Less Description";
+					 moreText.style.display = "inline";}
+		}
+
+		function CalculateSubTotal() {
+			 var subtotal = 0;
+			 itemID = document.getElementById("qnt");
+			 subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
+
+		document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+		}
+
+			window.onload = function (){
+				if (document.cookie.length != 0)
+				{
+						var nameValueArray = document.cookie.split("=");
+						document.getElementById("qnt").value = nameValueArray[1];
+						CalculateSubTotal()
+				}
+
+			 }
+
+		function setAllCookies()
+		{
+				var selectedQuantity = document.getElementById("qnt").value;
+				document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+		}
 	</script>
 </head>
 
@@ -85,17 +109,26 @@
 					</a>
 				</div>
 				<div class = "text">
-					<span class="uppercase">provider</span>
-					<h3>Steak</h3>
-					<p style = "margin: 15px 0px 15px 0px;">weight/product</p>
-					<p style = "margin: 15px 0px 15px 0px;" >price</p>
-					<p style = "margin: 15px 0px 15px 0px;" >Origin: </p>
-					<div>
-					<input value="1" type="number" min="0"/>
-					</div>
-					<button type="button" class="button_box">Add to Cart</button>
-					<br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
-					<p><span id="dots">...</span><span id="more">Desription for steak.</span></p>
+					<span class="uppercase">RED GRILL</span>
+					<h3>Beef Tenderloin Steak</h3>
+					<p style = "margin: 15px 0px 15px 0px;">~130g</p>
+					<p style = "margin: 15px 0px 15px 0px;" >$8.99 ea.</p>
+					<p style = "margin: 15px 0px 15px 0px;" >Origin: Canada</p>
+
+          <div class="d-flex flex-row">
+              <!-- <span class="minus">-</span> -->
+              <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=8.99 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/>
+              <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+              <!-- <span class="plus">+</span> -->
+          </div>
+
+          <button type="button" class="button_box">Add to Cart</button>
+					<br>
+          <button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+					<p>
+            <span id="dots">...</span>
+            <span id="more">The venison feed on grasses, plants, leaves and bark. The meat is leaner and higher in protein than either beef or chicken. Venison meat is one of the tasitest and healthiest all-natural alternatives to traditional meats. Nevison meat is low in fat cholesterol and calories. The animals are fed exclusively with 100% natural forage. Meat flour is excluded from their food wich contains no growth hormones, as the animals fot through natural fattening periods.</span>
+          </p>
 
 				</div>
 			</section>
