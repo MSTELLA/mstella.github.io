@@ -20,28 +20,28 @@
         		f2 = document.getElementById("f2");
         		f3 = document.getElementById("f3");
         		f4 = document.getElementById("f4");
-			v1 = document.getElementById("f1");
-        		v2 = document.getElementById("f2");
-        		v3 = document.getElementById("f3");
-        		v4 = document.getElementById("f4");
-			m1 = document.getElementById("f1");
-        		m2 = document.getElementById("f2");
-        		m3 = document.getElementById("f3");
-        		m4 = document.getElementById("f4");
-			se1 = document.getElementById("f1");
-        		se2 = document.getElementById("f2");
-        		se3 = document.getElementById("f3");
-        		se4 = document.getElementById("f4");
-			d1 = document.getElementById("f1");
-        		d2 = document.getElementById("f2");
-        		d3 = document.getElementById("f3");
-        		d4 = document.getElementById("f4");
-			d5 = document.getElementById("f1");
-        		d6 = document.getElementById("f2");
-			sn1 = document.getElementById("f1");
-        		sn2 = document.getElementById("f2");
-        		sn3 = document.getElementById("f3");
-        		sn4 = document.getElementById("f4");
+			v1 = document.getElementById("v1");
+        		v2 = document.getElementById("v2");
+        		v3 = document.getElementById("v3");
+        		v4 = document.getElementById("v4");
+			m1 = document.getElementById("m1");
+        		m2 = document.getElementById("m2");
+        		m3 = document.getElementById("m3");
+        		m4 = document.getElementById("m4");
+			se1 = document.getElementById("se1");
+        		se2 = document.getElementById("se2");
+        		se3 = document.getElementById("se3");
+        		se4 = document.getElementById("se4");
+			d1 = document.getElementById("d1");
+        		d2 = document.getElementById("d2");
+        		d3 = document.getElementById("d3");
+        		d4 = document.getElementById("d4");
+			d5 = document.getElementById("d5");
+        		d6 = document.getElementById("d6);
+			sn1 = document.getElementById("sn1");
+        		sn2 = document.getElementById("sn2");
+        		sn3 = document.getElementById("sn3");
+        		sn4 = document.getElementById("sn4");
         	
         		subtotal = (f1.value * f1.getAttribute("data-price")) +
                    		   (f2.value * f2.getAttribute("data-price")) +
@@ -85,6 +85,28 @@
           			document.getElementById("f2").value = nameValueArray[1];
           			document.getElementById("f3").value = nameValueArray[2];
           			document.getElementById("f4").value = nameValueArray[3];
+				document.getElementById("v1").value = nameValueArray[0];
+          			document.getElementById("v2").value = nameValueArray[1];
+          			document.getElementById("v3").value = nameValueArray[2];
+          			document.getElementById("v4").value = nameValueArray[3];
+				document.getElementById("m1").value = nameValueArray[0];
+          			document.getElementById("m2").value = nameValueArray[1];
+          			document.getElementById("m3").value = nameValueArray[2];
+          			document.getElementById("m4").value = nameValueArray[3];
+				document.getElementById("se1").value = nameValueArray[0];
+          			document.getElementById("se2").value = nameValueArray[1];
+          			document.getElementById("se3").value = nameValueArray[2];
+          			document.getElementById("se4").value = nameValueArray[3];
+				document.getElementById("d1").value = nameValueArray[0];
+          			document.getElementById("d2").value = nameValueArray[1];
+          			document.getElementById("d3").value = nameValueArray[2];
+          			document.getElementById("d4").value = nameValueArray[3];
+				document.getElementById("d5").value = nameValueArray[0];
+          			document.getElementById("d6").value = nameValueArray[1];
+          			document.getElementById("sn1").value = nameValueArray[2];
+          			document.getElementById("sn2").value = nameValueArray[3];
+				document.getElementById("sn3").value = nameValueArray[0];
+          			document.getElementById("sn4").value = nameValueArray[1];
       				CalculateSubTotal()
       			}
       		}
@@ -93,7 +115,29 @@
         		document.cookie = document.getElementById("f1").value + "&" +
                       			  document.getElementById("f2").value + "&" +
                         		  document.getElementById("f3").value + "&" +
-                        		  document.getElementById("f4").value + "&";
+                        		  document.getElementById("f4").value + "&" +
+					  document.getElementById("v1").value + "&" +
+                      			  document.getElementById("v2").value + "&" +
+                        		  document.getElementById("v3").value + "&" +
+					  document.getElementById("v4").value + "&" +
+					  document.getElementById("m1").value + "&" +
+                      			  document.getElementById("m2").value + "&" +
+                        		  document.getElementById("m3").value + "&" +
+					  document.getElementById("m4").value + "&" +
+					  document.getElementById("se1").value + "&" +
+                      			  document.getElementById("se2").value + "&" +
+                        		  document.getElementById("se3").value + "&" +
+			  	 	  document.getElementById("se4").value + "&" +
+					  document.getElementById("d1").value + "&" +
+                      			  document.getElementById("d2").value + "&" +
+                        		  document.getElementById("d3").value + "&" +
+					  document.getElementById("d4").value + "&" +
+					  document.getElementById("d5").value + "&" +
+                      			  document.getElementById("d6").value + "&" +
+                        		  document.getElementById("sn2").value + "&" +
+					  document.getElementById("sn2").value + "&" +
+                        		  document.getElementById("sn3").value + "&" +
+                        		  document.getElementById("sn4").value + "&";
       		}
 	</script>
 </head>
