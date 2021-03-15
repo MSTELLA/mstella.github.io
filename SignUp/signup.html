@@ -53,7 +53,25 @@
             </li>
         </ul>
     </div>
-        <div class="user_info">
+       <div class="row">
+    <div class="col-3 col-s-3 sidemenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Aisles</a>
+                <ul>
+                    <li><a href="#">Fruits</a></li>
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Meat</a></li>
+                    <li><a href="#">Drinks</a></li>
+                    <li><a href="#">Snacks</a></li>
+                    <li><a href="#">Seafood</a></li>
+
+                </ul>
+            </li>
+        </ul>
+      </div>
+
+        <div class="col-6 col-s-9 user_info" >
         <br>
         <h2> Sign Up to Ummm!</h2>
           <br>
@@ -62,7 +80,7 @@
         <h6>Already have a Ummm.ca account? <a href="#">Sign In</a></h6>
 
         <!---User info--->
-          <h3>Personal Information</h3>
+      <h3>Personal Information</h3>
             <br>
         <div class="personal information">
         <form>
@@ -79,16 +97,11 @@
             </form>
           <br>
           <div>
-          <table>
-            <tr>
-              <td><label for="frame">FIRST NAME</label></td>
-              <td><label for="frame">LAST NAME</label></td>
-            </tr>
-            <tr>
-              <td><input type ="text" id="userinfo" name = "firstname"></td>
-              <td><input type ="text" id="userinfo" name = lastname"></td>
-           </tr>
-          </table>
+              <label for="frame">FIRST NAME</label>
+              <input type ="text" id="userinfo" name = "firstname">
+
+              <label for="frame">LAST NAME</label>
+              <input type ="text" id="userinfo" name = lastname">
         </div>
         <br>
         DATE OF BIRTH
@@ -98,8 +111,6 @@
 
         <br>
         </div>
-
-
 
         <div class="contact information">
         <h3>Contact Information </h3>
@@ -111,23 +122,13 @@
           <label for="frame">APARTMENT</label>
           <br>
           <input type ="text" id="userinfo" name = "app">
-        <br>
-          <table>
-            <tr>
-              <td><label for="frame">CITY</label></td>
-              <td><label for="frame">CONTURY</label></td>
-            </tr>
-            <tr>
-              <td><input type ="text" id="userinfo" name = "city"></td>
-              <td><form><select id="country" name ="country">
-                  <option value="ca">CA</option>
-              </select></form></td>
-            </tr>
-          </table>
+          <br>
+          <label for="frame">CITY</label><br>
+          <input type ="text" id="userinfo" name = "city"><br>
+
           <table>
             <tr>
               <td><label for="frame">PROVINCE</label></td>
-              <td><label for="frame">POSTAL CODE</label></td>
             </tr>
             <tr>
               <td><form><select id="province" name="province">
@@ -145,32 +146,22 @@
                 <option value="NT">NT</option>
                 <option value="NU">NU</option>
               </select></form></td>
-              <td><input type ="text" id="userinfo" name = "postal"></td>
             </tr>
           </table>
-        </form>
 
-        <form>
-          <table>
-            <tr>
-              <td><label for="frame">PHONE NUMBER</label></td>
-              <td><label for="frame">MOBILE PHONE</label></td>
-            </tr>
-            <tr>
-              <td><input type ="text" id="userinfo" name = "phonenumber"></td>
-              <td><input type ="text" id="userinfo" name = "mobilephone"></td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td><label for="frame">EMAIL</label></td>
-              <td><label for="frame">CONFIRM EMAIL</label></td>
-            </tr>
-            <tr>
-              <td><input type ="text" id="userinfo" name = "email"></td>
-              <td><input type ="text" id="userinfo" name = "confirmemail"></td>
-            </tr>
-          </table>
+
+        <label for="frame">POSTAL CODE</label><br>
+        <input type ="text" id="userinfo" name = "postal"><br>
+
+        <div>
+        <label for="frame">MOBILE NUMBER</label><br>
+        <input type ="text" id="userinfo" name = "mobilephone">
+        </div>
+
+        <div>
+        <label for="frame">EMAIL</label><br>
+        <input type ="text" id="userinfo" name = "email">
+        </div>
 
           <label for="frame">PREFERRED LANGUAGE OF CORRESPONDENCE</label>
           <br>
@@ -239,8 +230,9 @@
       <br>
 
 </div>
-</section>
 </div>
+
+</section>
 <!-- Footer -->
 <div class="footer">
     <ul>
