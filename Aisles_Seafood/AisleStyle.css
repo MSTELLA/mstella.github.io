@@ -17,6 +17,7 @@ html, body{
 /*container*/
 .container {
 	width: 100%;
+	min-width: 1240px;
 	min-height: 100vh;
 	position: relative;
 }
