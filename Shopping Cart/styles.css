@@ -64,6 +64,7 @@ td{
 .container {
 	width: 100%;
 	min-height: 100vh;
+	min-width: 1240px;
 	position: relative;
   margin-left: 0;
   margin-right: 0;
