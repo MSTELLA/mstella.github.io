@@ -6,7 +6,26 @@
    <title>Tuna</title>
     <meta charset="utf-8">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
-	<script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="AisleStyle.css">
+	
+	 <script>
+        	function myFunction() {
+          		var dots = document.getElementById("dots");
+          		var moreText = document.getElementById("more");
+          		var btnText = document.getElementById("myBtn");
+
+          		if (dots.style.display === "none") {
+            			dots.style.display = "inline";
+            			btnText.innerHTML = "More Description";
+            			moreText.style.display = "none";
+          		} else {
+           			dots.style.display = "none";
+            			btnText.innerHTML = "Less Description";
+            			moreText.style.display = "inline";
+          		}
+        	}
 		function CalculateSubTotal() {
    			var subtotal = 0;
    			itemID = document.getElementById("qnt");
@@ -26,27 +45,7 @@
 		        var selectedQuantity = document.getElementById("qnt").value;
 		        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
 		}
-	</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="AisleStyle.css">
-	
-	 <script>
-        function myFunction() {
-          var dots = document.getElementById("dots");
-          var moreText = document.getElementById("more");
-          var btnText = document.getElementById("myBtn");
-
-          if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "More Description";
-            moreText.style.display = "none";
-          } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "Less Description";
-            moreText.style.display = "inline";
-          }
-        }
-    </script>
+    	</script>
 </head>
 
 <!--Container-->
@@ -112,8 +111,9 @@
 					<p style = "margin: 15px 0px 15px 0px;" >price</p>
 					<p style = "margin: 15px 0px 15px 0px;" >Origin: </p>
 					<div>
-					<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
+						<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
 					</div>
+					<div id="ItemsTotal"> Subtotal of Item: $0.00</div>
 					<button type="button" class="button_box">Add to Cart</button>
 					<br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
               				<p><span id="dots">...</span><span id="more"> The Tuna is a salt water creature. Best eaten raw in sushi.</span></p>
