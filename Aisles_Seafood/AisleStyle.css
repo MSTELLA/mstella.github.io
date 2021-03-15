@@ -230,6 +230,7 @@ nav ul li a:hover{
 	padding: 2%;
 	border-radius: 10px;
 }
+#more {display: none;}
 .button_box{
 	background: black;
 	color: white;
