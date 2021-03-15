@@ -3,12 +3,55 @@
 <html>
 
 <head>
-   <title>Edit Order List</title>
-    <meta charset="utf-8">
+   	<title>Edit Order List</title>
+    	<meta charset="utf-8">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 	<script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="OrderStyle.css">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<link rel="stylesheet" href="OrderStyle.css">
+	<script>
+		 function CalculateSubTotal() {
+        		var subtotal = 0;
+        		var gst = 0.05;
+        		var qst = 0.09975;
+        		var total = 0;
+
+        		f1 = document.getElementById("f1");
+        		f2 = document.getElementById("f2");
+        		f3 = document.getElementById("f3");
+        		f4 = document.getElementById("f4");
+        	
+        		subtotal = (f1.value * f1.getAttribute("data-price")) +
+                   		   (f2.value * f2.getAttribute("data-price")) +
+               		 	   (f3.value * f3.getAttribute("data-price")) +
+               		 	   (f4.value * f4.getAttribute("data-price"));
+        
+        		gst *= subtotal;
+	
+        		qst *= subtotal;
+	
+        		total = subtotal + gst + qst;
+        		document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+      		}
+      
+      		window.onload = function() {
+      			if (document.cookie.length != 0) {
+      				var nameValueArray = document.cookie.split("&");
+          			document.getElementById("f1").value = nameValueArray[0];
+          			document.getElementById("f2").value = nameValueArray[1];
+          			document.getElementById("f3").value = nameValueArray[2];
+          			document.getElementById("f4").value = nameValueArray[3];
+      				CalculateSubTotal()
+      			}
+      		}
+
+      		function setAllCookies() {
+        		document.cookie = document.getElementById("f1").value + "&" +
+                      			  document.getElementById("f2").value + "&" +
+                        		  document.getElementById("f3").value + "&" +
+                        		  document.getElementById("f4").value + "&";
+      		}
+	</script>
 </head>
 
 <!--Container-->
@@ -63,7 +106,7 @@
 										<td style = "width: 164px;">$4.00/0.7kg</td>
 										<td style = "width: 164px;">
 											<div class = "quantity">
-												<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
+												<input name="qnt" type="number" id="f1" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
 											</div>
 										</td>
 									</tr>
@@ -72,7 +115,7 @@
 										<td style = "width: 164px;">$2.60 per 3</td>
 										<td style = "width: 164px;">
 											<div class = "quantity">
-												<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
+												<input name="qnt" type="number" id="f2" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
 											</div>
 										</td>
 									</tr>
@@ -81,7 +124,7 @@
 										<td style = "width: 164px;">$6.99 ea</td>
 										<td style = "width: 164px;">	
 											<div class = "quantity">
-												<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
+												<input name="qnt" type="number" id="f3" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
 											</div>
 										</td>
 									</tr>
@@ -90,7 +133,7 @@
 										<td style = "width: 164px;">$6.00 ea</td>
 										<td style = "width: 164px;">
 											<div class = "quantity">
-												<input name="qnt" type="number" id="qnt" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
+												<input name="qnt" type="number" id="f4" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
 											</div>
 										</td>
 									</tr>
@@ -351,7 +394,7 @@
 								</tr>
 								<tr>
 									<td>$</td>
-									<td>$</td>
+									<td id="total"></td>
 								</tr>
 							</tbody>
 						</table>
