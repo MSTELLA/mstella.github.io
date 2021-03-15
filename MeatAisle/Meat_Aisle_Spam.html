@@ -10,20 +10,44 @@
     <link rel="stylesheet" href="AisleStyle.css">
 	    <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
     <script>
-      function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
+    function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
 
-      if (dots.style.display === "none") {
-         dots.style.display = "inline";
-         btnText.innerHTML = "More Description";
-         moreText.style.display = "none";
-   } else {
-         dots.style.display = "none";
-         btnText.innerHTML = "Less Description";
-         moreText.style.display = "inline";}
-	}
+    if (dots.style.display === "none") {
+       dots.style.display = "inline";
+       btnText.innerHTML = "More Description";
+       moreText.style.display = "none";
+     } else {
+           dots.style.display = "none";
+           btnText.innerHTML = "Less Description";
+           moreText.style.display = "inline";}
+    }
+
+    function CalculateSubTotal() {
+       var subtotal = 0;
+       itemID = document.getElementById("qnt");
+       subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
+
+    document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+    }
+
+      window.onload = function (){
+        if (document.cookie.length != 0)
+        {
+            var nameValueArray = document.cookie.split("=");
+            document.getElementById("qnt").value = nameValueArray[1];
+            CalculateSubTotal()
+        }
+
+       }
+
+    function setAllCookies()
+    {
+        var selectedQuantity = document.getElementById("qnt").value;
+        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+    }
 	</script>
 	</head>
 
@@ -83,18 +107,27 @@
 						</div>
 					</a>
 				</div>
-				<div class = "text">
-					<span class="uppercase">provider</span>
-					<h3>Spam</h3>
-					<p style = "margin: 15px 0px 15px 0px;">weight/product</p>
-					<p style = "margin: 15px 0px 15px 0px;" >price</p>
-					<p style = "margin: 15px 0px 15px 0px;" >Origin: </p>
-					<div>
-					<input value="1" type="number" min="0"/>
-					</div>
-						<button type="button" class="button_box">Add to Cart</button>
-						<br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
-						<p><span id="dots">...</span><span id="more">Desription for spam.</span></p>
+        <div class = "text">
+					<span class="uppercase">HORMEL FOODS</span>
+					<h3>SPAM Luncheon Meat</h3>
+					<p style = "margin: 15px 0px 15px 0px;">~340g</p>
+					<p style = "margin: 15px 0px 15px 0px;" >$11.89 ea. (3 packs)</p>
+					<p style = "margin: 15px 0px 15px 0px;" >Origin: United States of America</p>
+
+          <div class="d-flex flex-row">
+              <!-- <span class="minus">-</span> -->
+              <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=11.89 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/>
+              <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+              <!-- <span class="plus">+</span> -->
+          </div>
+
+          <button type="button" class="button_box">Add to Cart</button>
+					<br>
+          <button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+					<p>
+            <span id="dots">...</span>
+            <span id="more">The original. The timeless. The spiced hammiest of all SPAM varieties. Classic is the variety that has captured hearts and taste buds by consistently bringing deliciousness and creativity to a wide range of meals.</span>
+          </p>
 
 				</div>
 			</section>
