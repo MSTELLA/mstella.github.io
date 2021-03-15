@@ -1,122 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="styles.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a10dc5d5d5.js">
+	</script>
+  <script>
+    function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
 
-    <title>Miss Vickies</title>
+    if (dots.style.display === "none") {
+       dots.style.display = "inline";
+       btnText.innerHTML = "More Description";
+       moreText.style.display = "none";
+     } 
+       else {
+       dots.style.display = "none";
+       btnText.innerHTML = "Less Description";
+       moreText.style.display = "inline";}
+    }
     
-        
-    <script>
-      function myFunction() {
-      var dots = document.getElementById("dots");
-      var moreText = document.getElementById("more");
-      var btnText = document.getElementById("myBtn");
+ function CalculateSubTotal() {
+     var subtotal = 0;
+     itemID = document.getElementById("qnt");
+     subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
 
-      if (dots.style.display === "none") {
-         dots.style.display = "inline";
-         btnText.innerHTML = "More Description";
-         moreText.style.display = "none";
-   } else {
-         dots.style.display = "none";
-         btnText.innerHTML = "Less Description";
-         moreText.style.display = "inline";}
-}
+  document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+ }
+    
+    window.onload = function (){
+      if (document.cookie.length != 0)
+      {
+          var nameValueArray = document.cookie.split("=");
+          document.getElementById("qnt").value = nameValueArray[1];
+          CalculateSubTotal()
+      }
+       
+     }
+
+  function setAllCookies()
+  {
+      var selectedQuantity = document.getElementById("qnt").value;
+      document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+  }
+
 </script>
-  </head>
-  <body>
-    <!-- User Banner -->
-    <div class="banner">
-        <img class="logo" src="img/logo.png"/>
-        <ul>
-        <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
-        <li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
-        <li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
-        </ul>
-    </div>
-
-    <!-- Image Banner -->
-    <div class="img-banner">
-        <p class="banner-text">
-            Umm Grocery
-        </p>
-    </div>
-
-    <!-- Page Header -->
-    <h1 class="page-header">
-        Aisles > Snacks > Miss Vickies
-    </h1>
-<div class = "content">
-    <main>
-<!-- SIDE MENU (from an aisle/aisle product) -->
-
-    <div class="sidemenu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html">Aisles</a>
-                <ul>
-                    <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a></li>
-                    <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
-                    <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
-                    <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a></li>
-                    <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a>
-                      <ul>
-                                <li><a href="rippled-regular-chips.html">Rippled Regular Chips</a></li>
-                                <li><a class="active" href="miss-vickies.html">Miss Vickies</a>
-                                <li><a href="celebration-cookies.html">Celebration Cookies</a></li>
-                                <li><a href="cheetos.html">Cheetos</a></li>
-                      </ul>
-                  </li>
-                    <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-        <!-- Main Items Container -->
-        <div class="container">
-            <div class="row">
-                <div class="d-flex">
-                    <img src="img/miss-vickies.jpg" alt="Product Image" class="image-fluid">
-                    <div class="product-item d-flex flex-column">
-                        <span class="text-uppercase">Frito-lay</span>
-                        <h4 class="product-name mb-0">Jalapeno Flavoured Chips, Miss Vickie's</h4>
-                        <span class="mb-3">200 g</span>
-    
-                        <span>$4.29 ea.</span>
-                        <span class="mb-3">$2.15 /100g</span>
-
-                        <span class="mb-3">Origin: British Columbia</span>
-    
-                        <div class="d-flex flex-row mb-2">
-                            <input value="1" type="number" min="0"/>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <button type="button" class="button_box">Add to Cart</button>
-                            <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
-                            <p><span id="dots">...</span><span id="more">Miss Vickie's® Jalapeño flavour kettle cooked potato chips are crafted using a unique blend of spices including jalapeño pepper and hints of onion, paprika, and garlic for an added kick. ‑ No trans fat ‑ Low in saturated fat ‑ No MSG ‑ No artificial colours or flavours ‑ Cholesterol free ‑ No preservatives ‑ Gluten‑free</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</div>
-<!-- Footer -->
-<div class="footer"> 
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html">Aisles</a></li>
-        <li><a href="../SnackAisle/login.html"> Login</a></li>
-        <li><a href="../SignUp/signup.html"> Sign up</a></li>
-        <li><a href="../BackstoreIndex.htm">Backstore</a></li>
-    </ul>
-</div
-    <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-  </body>
+	<title>Miss Vickies</title>
+</head>
+<body>
+	<!-- User Banner -->
+	<div class="banner">
+		<img class="logo" src="img/logo.png">
+		<ul>
+			<li>
+				<a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+			</li>
+			<li>
+				<a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a>
+			</li>
+			<li>
+				<a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a>
+			</li>
+		</ul>
+	</div><!-- Image Banner -->
+	<div class="img-banner">
+		<p class="banner-text">Umm Grocery</p>
+	</div><!-- Page Header -->
+	<h1 class="page-header">Aisles &gt; Snacks &gt; Miss Vickies</h1>
+	<div class="content">
+		<main>
+			<!-- SIDE MENU (from an aisle/aisle product) -->
+			<div class="sidemenu">
+				<ul>
+					<li>
+						<a href="../index.html">Home</a>
+					</li>
+					<li>
+						<a href="../index.html">Aisles</a>
+						<ul>
+							<li>
+								<a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a>
+							</li>
+							<li>
+								<a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a>
+							</li>
+							<li>
+								<a href="../MeatAisle/Meat_Aisle.html">Meat</a>
+							</li>
+							<li>
+								<a href="../DrinksAisle/DrinksAisle.html">Drinks</a>
+							</li>
+							<li>
+								<a href="../SnackAisle/snacks-aisle.html">Snacks</a>
+								<ul>
+									<li>
+										<a href="rippled-regular-chips.html">Rippled Regular Chips</a>
+									</li>
+									<li>
+										<a class="active" href="miss-vickies.html">Miss Vickies</a>
+									</li>
+									<li>
+										<a href="celebration-cookies.html">Celebration Cookies</a>
+									</li>
+									<li>
+										<a href="cheetos.html">Cheetos</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- Main Items Container -->
+			<div class="container">
+				<div class="row">
+					<div class="d-flex product-container">
+						<img alt="Product Image" class="image-fluid" src="img/miss-vickies.jpg">
+						<div class="product-item d-flex flex-column">
+							<span class="text-uppercase">Frito-lay</span>
+							<h4 class="product-name mb-0">Jalapeno Flavoured Chips, Miss Vickie's</h4><span class="mb-3">200 g</span> <span>$4.29 ea.</span> <span class="mb-3">$2.15 /100g</span> <span class="mb-3">Origin: British Columbia</span>
+							<div class="d-flex flex-row">
+								<input data-price=4.29 id="qnt" min="0" name="qnt" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+							</div>
+							<div id="ItemsTotal" class="my-3">
+								Subtotal of Item: $0.00
+							</div><button class="button_box" type="button">Add to Cart</button> <button class="button_box" id="myBtn" onclick="myFunction()">More Description</button>
+							<div id="myDIV">
+								<p><span id="dots">...</span><span id="more">Miss Vickie's® Jalapeño flavour kettle cooked potato chips are crafted using a unique blend of spices including jalapeño pepper and hints of onion, paprika, and garlic for an added kick. ‑ No trans fat ‑ Low in saturated fat ‑ No MSG ‑ No artificial colours or flavours ‑ Cholesterol free ‑ No preservatives ‑ Gluten‑free</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div><!-- Footer -->
+	<div class="footer">
+		<ul>
+			<li>
+				<a href="../index.html">Home</a>
+			</li>
+			<li>
+				<a href="../index.html">Aisles</a>
+			</li>
+			<li>
+				<a href="../SnackAisle/login.html">Login</a>
+			</li>
+			<li>
+				<a href="../SignUp/signup.html">Sign up</a>
+			</li>
+			<li>
+				<a href="../BackstoreIndex.html">Backstore</a>
+			</li>
+		</ul>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js">
+	</script>
+</body>
 </html>
