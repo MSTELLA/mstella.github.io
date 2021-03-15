@@ -69,9 +69,10 @@
                    		   (sn2.value * sn2.getAttribute("data-price")) +
                		 	   (sn3.value * sn3.getAttribute("data-price")) +
 				   (sn4.value * sn2.getAttribute("data-price"));*/
-        
-        		gst *= subtotal;
-			document.getElementById("subtotal").innerHTML = "$" + total.toFixed(2);
+      			document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
+        		
+			gst *= subtotal;
+			
         		qst *= subtotal;
 	
         		total = subtotal + gst + qst;
