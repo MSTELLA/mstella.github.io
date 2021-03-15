@@ -20,7 +20,7 @@
         		f2 = document.getElementById("f2");
         		f3 = document.getElementById("f3");
         		f4 = document.getElementById("f4");
-			v1 = document.getElementById("v1");
+			/*v1 = document.getElementById("v1");
         		v2 = document.getElementById("v2");
         		v3 = document.getElementById("v3");
         		v4 = document.getElementById("v4");
@@ -41,12 +41,12 @@
 			sn1 = document.getElementById("sn1");
         		sn2 = document.getElementById("sn2");
         		sn3 = document.getElementById("sn3");
-        		sn4 = document.getElementById("sn4");
+        		sn4 = document.getElementById("sn4");*/
         	
         		subtotal = (f1.value * f1.getAttribute("data-price")) +
                    		   (f2.value * f2.getAttribute("data-price")) +
                		 	   (f3.value * f3.getAttribute("data-price")) +
-				   (f4.value * f4.getAttribute("data-price")) +
+				   (f4.value * f4.getAttribute("data-price")); /*+
 				   (v1.value * v1.getAttribute("data-price")) +
                    		   (v2.value * v2.getAttribute("data-price")) +
                		 	   (v3.value * v3.getAttribute("data-price")) +
@@ -68,7 +68,7 @@
 				   (sn1.value * sn1.getAttribute("data-price")) +
                    		   (sn2.value * sn2.getAttribute("data-price")) +
                		 	   (sn3.value * sn3.getAttribute("data-price")) +
-				   (sn4.value * sn2.getAttribute("data-price"));
+				   (sn4.value * sn2.getAttribute("data-price"));*/
         
         		gst *= subtotal;
 			document.getElementById("subtotal").innerHTML = "$" + total.toFixed(2);
@@ -85,7 +85,7 @@
           			document.getElementById("f2").value = nameValueArray[1];
           			document.getElementById("f3").value = nameValueArray[2];
           			document.getElementById("f4").value = nameValueArray[3];
-				document.getElementById("v1").value = nameValueArray[4];
+				/*document.getElementById("v1").value = nameValueArray[4];
           			document.getElementById("v2").value = nameValueArray[5];
           			document.getElementById("v3").value = nameValueArray[6];
           			document.getElementById("v4").value = nameValueArray[7];
@@ -106,7 +106,7 @@
           			document.getElementById("sn1").value = nameValueArray[22];
           			document.getElementById("sn2").value = nameValueArray[23];
 				document.getElementById("sn3").value = nameValueArray[24];
-          			document.getElementById("sn4").value = nameValueArray[25];
+          			document.getElementById("sn4").value = nameValueArray[25];*/
       				CalculateSubTotal()
       			}
       		}
@@ -115,7 +115,7 @@
         		document.cookie = document.getElementById("f1").value + "&" +
                       			  document.getElementById("f2").value + "&" +
                         		  document.getElementById("f3").value + "&" +
-                        		  document.getElementById("f4").value + "&" +
+                        		  document.getElementById("f4").value + "&" ;/*+
 					  document.getElementById("v1").value + "&" +
                       			  document.getElementById("v2").value + "&" +
                         		  document.getElementById("v3").value + "&" +
@@ -137,7 +137,7 @@
                         		  document.getElementById("sn2").value + "&" +
 					  document.getElementById("sn2").value + "&" +
                         		  document.getElementById("sn3").value + "&" +
-                        		  document.getElementById("sn4").value + "&";
+                        		  document.getElementById("sn4").value + "&";*/
       		}
 	</script>
 </head>
