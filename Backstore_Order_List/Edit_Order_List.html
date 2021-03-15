@@ -20,11 +20,55 @@
         		f2 = document.getElementById("f2");
         		f3 = document.getElementById("f3");
         		f4 = document.getElementById("f4");
+			v1 = document.getElementById("f1");
+        		v2 = document.getElementById("f2");
+        		v3 = document.getElementById("f3");
+        		v4 = document.getElementById("f4");
+			m1 = document.getElementById("f1");
+        		m2 = document.getElementById("f2");
+        		m3 = document.getElementById("f3");
+        		m4 = document.getElementById("f4");
+			se1 = document.getElementById("f1");
+        		se2 = document.getElementById("f2");
+        		se3 = document.getElementById("f3");
+        		se4 = document.getElementById("f4");
+			d1 = document.getElementById("f1");
+        		d2 = document.getElementById("f2");
+        		d3 = document.getElementById("f3");
+        		d4 = document.getElementById("f4");
+			d5 = document.getElementById("f1");
+        		d6 = document.getElementById("f2");
+			sn1 = document.getElementById("f1");
+        		sn2 = document.getElementById("f2");
+        		sn3 = document.getElementById("f3");
+        		sn4 = document.getElementById("f4");
         	
         		subtotal = (f1.value * f1.getAttribute("data-price")) +
                    		   (f2.value * f2.getAttribute("data-price")) +
                		 	   (f3.value * f3.getAttribute("data-price")) +
-               		 	   (f4.value * f4.getAttribute("data-price"));
+				   (f4.value * f4.getAttribute("data-price")) +
+				   (v1.value * v1.getAttribute("data-price")) +
+                   		   (v2.value * v2.getAttribute("data-price")) +
+               		 	   (v3.value * v3.getAttribute("data-price")) +
+				   (v4.value * v4.getAttribute("data-price")) +
+				   (m1.value * m1.getAttribute("data-price")) +
+                   		   (m2.value * m2.getAttribute("data-price")) +
+               		 	   (m3.value * m3.getAttribute("data-price")) +
+				   (m4.value * m4.getAttribute("data-price")) +
+				   (se1.value * se1.getAttribute("data-price")) +
+                   		   (se2.value * se2.getAttribute("data-price")) +
+               		 	   (se3.value * se3.getAttribute("data-price")) +
+				   (se4.value * se4.getAttribute("data-price")) +
+				   (d1.value * d1.getAttribute("data-price")) +
+                   		   (d2.value * d2.getAttribute("data-price")) +
+               		 	   (d3.value * d3.getAttribute("data-price")) +
+				   (d4.value * d4.getAttribute("data-price")) +
+               		 	   (d3.value * d5.getAttribute("data-price")) +
+               		 	   (d4.value * d6.getAttribute("data-price")) +
+				   (sn1.value * sn1.getAttribute("data-price")) +
+                   		   (sn2.value * sn2.getAttribute("data-price")) +
+               		 	   (sn3.value * sn3.getAttribute("data-price")) +
+				   (sn4.value * sn2.getAttribute("data-price"));
         
         		gst *= subtotal;
 			document.getElementById("subtotal").innerHTML = "$" + total.toFixed(2);
