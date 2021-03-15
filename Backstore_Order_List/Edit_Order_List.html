@@ -63,12 +63,12 @@
                    		   (d2.value * d2.getAttribute("data-price")) +
                		 	   (d3.value * d3.getAttribute("data-price")) +
 				   (d4.value * d4.getAttribute("data-price")) +
-               		 	   (d3.value * d5.getAttribute("data-price")) +
-               		 	   (d4.value * d6.getAttribute("data-price")) +
+               		 	   (d5.value * d5.getAttribute("data-price")) +
+               		 	   (d6.value * d6.getAttribute("data-price")) +
 				   (sn1.value * sn1.getAttribute("data-price")) +
                    		   (sn2.value * sn2.getAttribute("data-price")) +
                		 	   (sn3.value * sn3.getAttribute("data-price")) +
-				   (sn4.value * sn2.getAttribute("data-price"));
+				   (sn4.value * sn4.getAttribute("data-price"));
       			document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
         		
 			gst *= subtotal;
@@ -102,7 +102,7 @@
           			document.getElementById("d2").value = nameValueArray[17];
           			document.getElementById("d3").value = nameValueArray[18];
           			document.getElementById("d4").value = nameValueArray[19];
-				document.getElementById("d5").value = nameValueArray[10];
+				document.getElementById("d5").value = nameValueArray[20];
           			document.getElementById("d6").value = nameValueArray[21];
           			document.getElementById("sn1").value = nameValueArray[22];
           			document.getElementById("sn2").value = nameValueArray[23];
@@ -135,7 +135,7 @@
 					  document.getElementById("d4").value + "&" +
 					  document.getElementById("d5").value + "&" +
                       			  document.getElementById("d6").value + "&" +
-                        		  document.getElementById("sn2").value + "&" +
+                        		  document.getElementById("sn1").value + "&" +
 					  document.getElementById("sn2").value + "&" +
                         		  document.getElementById("sn3").value + "&" +
                         		  document.getElementById("sn4").value + "&";
