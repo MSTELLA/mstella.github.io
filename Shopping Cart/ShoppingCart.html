@@ -18,13 +18,13 @@
         product2 = document.getElementById("product2");
         product3 = document.getElementById("product3");
         product4 = document.getElementById("product4");
-        
+
         subtotal = (product1.value * product1.getAttribute("data-price")) +
                    (product2.value * product2.getAttribute("data-price")) +
                    (product3.value * product3.getAttribute("data-price")) +
                    (product4.value * product4.getAttribute("data-price"));
         document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
-        
+
         gst *= subtotal;
         document.getElementById("gst").innerHTML = "$" + gst.toFixed(2);
 
@@ -34,7 +34,7 @@
         total = subtotal + gst + qst;
         document.getElementById("total").innerHTML = "$" + total.toFixed(2);
       }
-      
+
       window.onload = function() {
       	if (document.cookie.length != 0) {
       		var nameValueArray = document.cookie.split("&");
@@ -121,24 +121,26 @@
                             <tr>
                               <th scope="row">
                                   <div style="padding:10%;">
-                                    <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                    <div class = "imagebox">
+                                      <img src="../Aisles_Seafood/img/crab.png" alt="Product Image" class="img-thumbnail">
+                                    </div>
                                     <div>
-                                        <h5>Doritos</h5>
+                                        <h5>ALIBABA</h5>
                                         <h3>
-                                            Nacho cheese tortilla chips
+                                            Crab
                                         </h3>
                                         <p>
-                                           255g
+                                           680g~1.4kg
                                         </p>
                                     </div>
                                 </div>
                               </th>
                               <td>
-                                <input data-price=2.00 id="product1" min="0" name="product1" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                <input data-price=8.99 id="product1" min="0" name="product1" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                               </td>
                               <td>
                                   <span>
-                                      $2.00
+                                      $8.99
                                   </span>
                               </td>
                               <td>
@@ -151,11 +153,13 @@
                             <tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../MeatAisle/img/bacon.jpg" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>DU BRETON</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Bacon
                                           </h3>
                                           <p>
                                              255g
@@ -164,11 +168,11 @@
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=3.00 id="product2" min="0" name="product2" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=8.99 id="product2" min="0" name="product2" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $3.00
+                                        $8.99
                                     </span>
                                 </td>
                                 <td>
@@ -181,24 +185,26 @@
                               <tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../FruitsAisle/img/peach.jpg" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>ONTARIO</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Peaches
                                           </h3>
                                           <p>
-                                             255g
+                                             Pack of 7
                                           </p>
                                       </div>
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=4.00 id="product3" min="0" name="product3" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=6.99 id="product3" min="0" name="product3" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $4.00
+                                        $6.99
                                     </span>
                                 </td>
                                 <td>
@@ -210,24 +216,26 @@
                               </tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../DrinksAisle/img/heineken.png" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>HEINEKEN</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Heineken'S BROUWERIJEN NEDERLAND BV
                                           </h3>
                                           <p>
-                                             255g
+                                             500ml can
                                           </p>
                                       </div>
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=5.00 id="product4" min="0" name="product4" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=3.25 id="product4" min="0" name="product4" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $5.00
+                                        $3.25
                                     </span>
                                 </td>
                                 <td>
@@ -295,3 +303,15 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
  </body>
 </html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
