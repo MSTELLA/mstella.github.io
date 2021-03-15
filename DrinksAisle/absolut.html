@@ -29,8 +29,31 @@
             moreText.style.display = "inline";
           }
         }
+        function CalculateSubTotal() {
+          var subtotal = 0;
+          itemID = document.getElementById("qnt");
+       subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
+
+       document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+
+     }
+      window.onload = function (){
+          if (document.cookie.length != 0)
+          {
+           var nameValueArray = document.cookie.split("=");
+           document.getElementById("qnt").value = nameValueArray[1];
+           CalculateSubTotal()
+         }
+
+      }
+
+   function setAllCookies()
+   {
+       var selectedQuantity = document.getElementById("qnt").value;
+       document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+   }
     </script>
-	
+
 </head>
 
 <body>
@@ -96,16 +119,19 @@
                   <span>750 ml bottle</span>
                   <span>$30.25 ea</span>
                   <span>$4.04 /100ml </span>
-                  <span>Origin : Sweden</span>
-                  </div>
-                  <div class="d-flex flex-row">
-                      <input value="1" type="number" min="0"/>
-                  </div>
+                  <span>Origin : Sweden</span><br>
+
+
+                    <!-- <span class="minus">-</span> -->
+                    <div><input name="qnt" type="number" id="qnt" value="0" size="3" data-price=30.25 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/></div>
+                     <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+                      <!-- <span class="plus">+</span> -->
+
                   <div><button type="button" class="button_box">Add to Cart</button>
 	      	 <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
                 <p><span id="dots">...</span><span id="more"> Absolut Peach is a vodka infused with real peaches.</span></p></div>
 
-
+        </div>
         </div>
 
      </div>
