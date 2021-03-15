@@ -27,7 +27,7 @@
                		 	   (f4.value * f4.getAttribute("data-price"));
         
         		gst *= subtotal;
-	
+			document.getElementById("subtotal").innerHTML = "$" + total.toFixed(2);
         		qst *= subtotal;
 	
         		total = subtotal + gst + qst;
@@ -389,11 +389,11 @@
 						<table>
 							<tbody>
 								<tr>
-									<td>original price</td>
-									<td>total price</td>
+									<td>subtotal</td>
+									<td>total</td>
 								</tr>
 								<tr>
-									<td>$</td>
+									<td id="total">$</td>
 									<td id="total"></td>
 								</tr>
 							</tbody>
