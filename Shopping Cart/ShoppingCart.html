@@ -6,6 +6,53 @@
     <link rel="stylesheet" href="styles.css">
 	<script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
     <title>Cart Page</title>
+
+    <script>
+      function CalculateSubTotal() {
+        var subtotal = 0;
+        var gst = 0.05;
+        var qst = 0.09975;
+        var total = 0;
+
+        product1 = document.getElementById("product1");
+        product2 = document.getElementById("product2");
+        product3 = document.getElementById("product3");
+        product4 = document.getElementById("product4");
+        
+        subtotal = (product1.value * product1.getAttribute("data-price")) +
+                   (product2.value * product2.getAttribute("data-price")) +
+                   (product3.value * product3.getAttribute("data-price")) +
+                   (product4.value * product4.getAttribute("data-price"));
+        document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
+        
+        gst *= subtotal;
+        document.getElementById("gst").innerHTML = "$" + gst.toFixed(2);
+
+        qst *= subtotal;
+        document.getElementById("qst").innerHTML = "$" + qst.toFixed(2);
+
+        total = subtotal + gst + qst;
+        document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+      }
+      
+      window.onload = function() {
+      	if (document.cookie.length != 0) {
+      		var nameValueArray = document.cookie.split(";");
+          document.getElementById("product1").value = nameValueArray[0];
+          document.getElementById("product2").value = nameValueArray[1];
+          document.getElementById("product3").value = nameValueArray[2];
+          document.getElementById("product4").value = nameValueArray[3];
+      		CalculateSubTotal()
+      	}
+      }
+
+      function setAllCookies() {
+        document.cookie = document.getElementById("product1").value + ";" +
+                          document.getElementById("product2").value + ";" +
+                          document.getElementById("product3").value + ";" +
+                          document.getElementById("product4").value + ";" + "expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+      }
+      </script>
   </head>
 
 
@@ -87,15 +134,11 @@
                                 </div>
                               </th>
                               <td>
-                                <div>
-                                    <!-- <span class="minus">-</span> -->
-                                    <input value="1" type="number" min="0"/>
-                                    <!-- <span class="plus">+</span> -->
-                                </div>
+                                <input data-price=2.00 id="product1" min="0" name="product1" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                               </td>
                               <td>
                                   <span>
-                                      $7.00
+                                      $2.00
                                   </span>
                               </td>
                               <td>
@@ -121,15 +164,11 @@
                                   </div>
                                 </th>
                                 <td>
-                                  <div>
-                                      <!-- <span class="minus">-</span> -->
-                                      <input value="1" type="number" min="0"/>
-                                      <!-- <span class="plus">+</span> -->
-                                  </div>
+                                  <input data-price=3.00 id="product2" min="0" name="product2" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $7.00
+                                        $3.00
                                     </span>
                                 </td>
                                 <td>
@@ -155,15 +194,11 @@
                                   </div>
                                 </th>
                                 <td>
-                                  <div>
-                                      <!-- <span class="minus">-</span> -->
-                                      <input value="1" type="number" min="0"/>
-                                      <!-- <span class="plus">+</span> -->
-                                  </div>
+                                  <input data-price=4.00 id="product3" min="0" name="product3" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $7.00
+                                        $4.00
                                     </span>
                                 </td>
                                 <td>
@@ -173,7 +208,6 @@
                                     </svg>
                                 </td>
                               </tr>
-                              <tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
                                       <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
@@ -189,49 +223,11 @@
                                   </div>
                                 </th>
                                 <td>
-                                  <div>
-                                      <!-- <span class="minus">-</span> -->
-                                      <input value="1" type="number" min="0"/>
-                                      <!-- <span class="plus">+</span> -->
-                                  </div>
+                                  <input data-price=5.00 id="product4" min="0" name="product4" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $7.00
-                                    </span>
-                                </td>
-                                <td>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                    </svg>
-                                </td>
-                              </tr>
-                              <tr>
-                                <th scope="row">
-                                    <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
-                                      <div>
-                                          <h5>Doritos</h5>
-                                          <h3>
-                                              Nacho cheese tortilla chips
-                                          </h3>
-                                          <p>
-                                             255g
-                                          </p>
-                                      </div>
-                                  </div>
-                                </th>
-                                <td>
-                                  <div>
-                                      <!-- <span class="minus">-</span> -->
-                                      <input value="1" type="number" min="0"/>
-                                      <!-- <span class="plus">+</span> -->
-                                  </div>
-                                </td>
-                                <td>
-                                    <span>
-                                        $7.00
+                                        $5.00
                                     </span>
                                 </td>
                                 <td>
@@ -259,19 +255,19 @@
             <tbody>
               <tr>
                 <td>Subtotal</td>
-                <td>$7.00</td>
+                <td id="subtotal">$0.00</td>
               </tr>
               <tr>
                 <td>GST</td>
-                <td>$7.00</td>
+                <td id="gst">$0.00</td>
               </tr>
               <tr>
                 <td>QST</td>
-                <td>$7.00</td>
+                <td id="qst">$0.00</td>
               </tr>
               <tr>
                 <td>Total</td>
-                <td>$7.00</td>
+                <td id="total">$0.00</td>
               </tr>
             </tbody>
           </table>
