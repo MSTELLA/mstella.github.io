@@ -231,14 +231,11 @@ nav ul li a:hover{
 	border-radius: 10px;
 }
 .button_box{
-	padding: 15px 32px;
-	color: white;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
 	background: black;
-	border-radius: 10px;
+	color: white;
+	border-radius: 15px;
+	padding: 5px;
+	margin: 4px 0px 0px 0px;
 }
 /*footer*/
 .footer{
