@@ -17,6 +17,8 @@ html, body{
 	width: 100%;
 	min-height: 100vh;
 	position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
 .background{
 	background: url("img/3.png") no-repeat center center fixed;
@@ -176,9 +178,10 @@ nav ul li a:hover{
     margin-bottom: 10px;
     margin-right: 10px;
 	background-color:white;
+  flex-wrap: wrap;
 }
 .products{
-	width: 20%;
+
 	/*border: 5px solid black;*/
 	padding: 2%;
 	margin: 50px 0px 50px 20px;
@@ -280,5 +283,26 @@ nav ul li a:hover{
     background: #c08af2;
     color:#5b4173;
 }
+
+/* dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 #more {display: none;}
