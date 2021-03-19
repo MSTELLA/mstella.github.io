@@ -5,7 +5,7 @@
     <title>Ummm Grocery | Sign Up </title>
    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
     <!-- BOOTSRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
@@ -15,13 +15,22 @@
     function myFunction() {
       document.getElementById("myForm").reset();
     }
+
+    function myFunction() {
+      var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+    }
     </script>
 </head>
 
 <body>
-<section>
-<div class="container-fluid">
 
+
+<!---  Header  ------------------------------------>
 <!-- Black User banner -->
 <div class="userbanner">
     <img id="tiny-logo" src="img/logo.png"/>
@@ -32,101 +41,75 @@
 
     </ul>
 </div>
-
 <!-- Logo Banner -->
 <div class = "img-banner"><p class="logo">UMMM GROCERY</p></div>
 
-<!-- MAIN SECTION-->
-<div class = "content">
-<section class="main">
 
-<!-- SIDE MENU (from an aisle/aisle product) -->
- <div class="row">
-    <div class="col-3 col-s-3 sidemenu">
+
+<!---   MAIN SECTION   ------------------------------------>
+<div class ="row">
+    <!-- SIDE MENU (from an aisle/aisle product) -->
+    <div class="sidemenu column side">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Aisles</a>
-                <ul>
-	            <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a>
-		    </li>
-	            <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a>
-		    </li>
-		    <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a>
-	            </li>
-	            <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a>
-		    </li>
-		    <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a>
-		    </li>
-		    <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a>
-	            </li>
-
-                </ul>
-            </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Aisles</a>
+            <ul>
+	            <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a></li>
+	            <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
+		          <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
+	            <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a></li>
+		          <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
+		          <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
+            </ul>
+          </li>
         </ul>
-      </div>
+    </div>
 
-    <div class="col-6 col-s-9 user_info" >
+    <!-- USER INFORNATION -->
+    <div class="user_information column visual">
+      <form action="" method="POST">
+        <h2> Sign Up for Ummm!</h2>
+        <br>
+        <fieldset>
+          <legend><span class="section">1</span>Personal Information</legend>
+
+        <label for="frame">TITLE</label>
+        <br>
+        <select id="title" name="title">
+          <option value="select">Select your title</option>
+          <option value="Mr">Mr.</option>
+          <option value="Mrs">Mrs.</option>
+          <option value="Miss">Miss</option>
+          <option value="Ms">Ms.</option>
+        </select><br>
+
+        <label for="firstname">FIRST NAME</label>
+        <input type ="text" name = "firstname">
+
+        <label for="lastname">LAST NAME</label>
+        <input type ="text" name = lastname">
+
+        <label for="date">DATE OF BIRTH</label>
+        <input type="date" name="birthday">
+
+      </fieldset>
       <br>
-      <h2> Sign Up for Ummm!</h2>
-      <br>
-      <br>
 
-    <h6>Already have a Ummm.ca account? <a href="../SnackAisle/login.html">Sign In</a></h6><br>
+      <fieldset>
+        <legend><span class="section">2</span>Contact information</legend>
 
-        <!---User info--->
-    <h3>Personal Information</h3>
-    <br>
-      <div class="personal information">
-        <form id="myForm">
+      <label for="address">ADRESS(NO,STREET)</label>
+      <input type ="text" name = "street">
 
-          <label for="frame">TITLE</label>
-          <br>
-            <select id="title" name="title">
-              <option value="select">Select your title</option>
-              <option value="Mr">Mr.</option>
-              <option value="Mrs">Mrs.</option>
-              <option value="Miss">Miss</option>
-              <option value="Ms">Ms.</option>
-            </select>
-          <br>
-          <div>
-              <label for="frame">FIRST NAME</label>
-              <input type ="text" id="userinfo" name = "firstname">
+      <label for="app">APARTMENT</label>
+      <input type ="text" name = "app">
 
-              <label for="frame">LAST NAME</label>
-              <input type ="text" id="userinfo" name = lastname">
-        </div>
-        <br>
-        DATE OF BIRTH
-        <input type="date" id="date" name="birthday">
-        <br>
+      <label for="city">CITY</label><br>
+      <input type ="text" name = "city"><br>
 
 
-        <br>
-        </div>
-
-    <div class="contact information">
-      <br>                              
-      <h3>Contact Information </h3>
-      <div>
-      <br>                              
-        <label for="frame">ADRESS(NO,STREET)</label>
-        <br>
-        <input type ="text" id="userinfo" name = "street">
-        <br>
-        <label for="frame">APARTMENT</label>
-        <br>
-        <input type ="text" id="userinfo" name = "app">
-        <br>
-        <label for="frame">CITY</label><br>
-        <input type ="text" id="userinfo" name = "city"><br>
-
-        <table>
-          <tr>
-            <td><label for="frame">PROVINCE</label></td>
-          </tr>
-          <tr>
-            <td><select id="province" name="province">
+      <label for="frame">PROVINCE</label><br>
+      <select name="province">
               <option value="select">Select your province</option>
               <option value="NL">NL</option>
               <option value="PE">PE</option>
@@ -141,99 +124,64 @@
               <option value="YT">YT</option>
               <option value="NT">NT</option>
               <option value="NU">NU</option>
-            </select></td>
-          </tr>
-        </table>
+      </select><br><br>
 
+      <label for="postal">POSTAL CODE</label>
+      <input type ="text" name = "postal"><br>
 
-        <label for="frame">POSTAL CODE</label><br>
-        <input type ="text" id="userinfo" name = "postal"><br>
+      <label for="mobile">MOBILE NUMBER</label>
+      <input type ="text" name = "mobilephone" placeholder="000)000-0000">
 
-        <div>
-        <label for="frame">MOBILE NUMBER</label><br>
-        <input type ="text" id="userinfo" name = "mobilephone">
-        </div>
+      <label for="email">EMAIL</label>
+      <input type ="email" name = "email">
 
-        <div>
-        <label for="frame">EMAIL</label><br>
-        <input type ="text" id="userinfo" name = "email">
-        </div>
+      <label for="pass">PASSWORD</label>
+      <input type ="password" name = "password">
 
-        <label for="frame">PREFERRED LANGUAGE OF CORRESPONDENCE</label>
-        <br>
-        <select id="preferlanguage" name="preferlanguage">
-          <option value="select">Select your prefer language</option>
-          <option value="EN">English</option>
-          <option value="FR">French</option>
-        </select>
-        <br>
-        <label for="frame">PASSWORD</label>
-        <br>
-        <input type ="text" id="userinfo" name = "password">
-        <br>
-        <label for="frame">CONFIRM PASSWORD</label>
-        <br>
-        <input type ="text" id="userinfo" name = "confirmpassword">
-        <br>
-        <br>
-      </div>
-    </div>
+      <label for="confirm_pass">CONFIRM PASSWORD</label>
+      <input type ="password" name = "confirmpassword" id="myInput">
+      <input type="checkbox" onclick="myFunction()">Show Password
 
-
-      <div class="subscription">
-        <h3>Subscription to e-communications</h3>
-        <label for="frame"><em>Ummm Newsletter</em></label>
-        <br>
-        <p><input type="checkbox" id="userinfo" name ="subcription">
-        I would like to receive the Ummm newsletter which includes</p>
-          <ul>
-            <li> * recipe ideas including a weekly menu based on flyer specials</li>
-            <li> * nutritional information</li>
-            <li> * special offers and promotions</li>
-            <li> * information on our products and services</li>
-          </ul>
-        <br>
-       </div>
-
-
-
-      <div class="membership">
-        <h3>Do you want to register a Ummm Rewards?</h3>
-         Register for Ummm Rewards to earn points every time you buy online or make an in-store purchase.
-        <br>
-        <img src="img/pointcard.png" alt="Ummm_Membership Card"  class="pointcard">
-        <br>
-        <div>
-          <input type="radio" name="membership" value="option1">Yes, I want one<br>
-          <input type="radio" name="membership" value="option2">No<br>
-          <br>
-        </div>
-      </div>
-
-
-    <div class="consent">
-      <h3>Consent to Conditions of Use and Protection of Personal Information Policy</h3>
-      <div>
-        <input type="checkbox" id="userinfo" name="consentcondition">
-        Yes, I have read and accecpt the conditions of Use and Protection of Personal Information Policy
-      </div>
-      <br>
-    </div>
-
-    <p id="submission">
-      <input type="reset" onclick="myFunction()" class="reset" value="Reset" name="resetuserinfo">
-      <input type="submit" class="submit" value ="Create Account" name ="submituserinfo"><br>
-    </p>
+    </fieldset>
     <br>
 
-  </form>
- </div>
+    <fieldset>
+      <legend><span class="section">3</span>Membership</legend>
+
+      <h3>Do you want to register a Ummm Rewards?</h3>
+      Register for Ummm Rewards to earn points every time you buy online or make an in-store purchase.
+      <br>
+      <img src="img/pointcard.png" alt="Ummm_Membership Card"  class="pointcard">
+      <br>
+      <div>
+      <input type="radio" name="membership" value="option1">Yes, I want one<br>
+      <input type="radio" name="membership" value="option2">No<br>
+      <br>
+      </div>
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend><span class="section">4</span>Consent</legend>
+
+      <h3>Consent to Conditions of Use and Protection of Personal Information Policy</h3>
+      <input type="checkbox" name="consentcondition">
+      Yes, I have read and accecpt the conditions of Use and Protection of Personal Information Policy
+      <br>
+    </fieldset>
+
+    <br>
+
+     <input type="reset" onclick="myFunction()" class="reset" name="resetuserinfo">
+     <input type="submit" class="submit" name ="submituserinfo"><br>
+
+    </form>
+  </div>
 </div>
 
-</section>    
-</div>											
-<!-- Footer -->                                                                               
-<div class="footer">               
+<!-- Footer -->
+<div class="footer">
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html">Aisles</a></li>
@@ -243,7 +191,7 @@
     </ul>
 </div>
 
-                                            
+
 </body>
 
 </html>
