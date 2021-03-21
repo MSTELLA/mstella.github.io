@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Ummm Grocery | Drinks </title>
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Ummm Grocery | Sign Up </title>
+   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
@@ -11,13 +11,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    function myFunction() {
+      document.getElementById("myForm").reset();
+    }
 
+    function myFunction() {
+      var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+    }
+    </script>
 </head>
 
 <body>
-<section>
-<div class="container-fluid">
 
+
+<!---  Header  ------------------------------------>
 <!-- Black User banner -->
 <div class="userbanner">
     <img id="tiny-logo" src="img/logo.png"/>
@@ -28,76 +41,101 @@
 
     </ul>
 </div>
-
 <!-- Logo Banner -->
 <div class = "img-banner"><p class="logo">UMMM GROCERY</p></div>
 
-<!-- MAIN SECTION-->
 
-<div class="row">
-  <div class="sidemenu">
-      <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html">Aisles</a>
+
+<!---   MAIN SECTION   ------------------------------------>
+<!-- Page Header -->
+<h1 class="page-header"> AISLES &gt; DRINKS </h1>
+
+<div class ="row">
+    <!-- SIDE MENU (from an aisle/aisle product) -->
+    <div class="sidemenu column side">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Aisles</a>
             <ul>
-              <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a></li>
-              <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
-              <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
-              <li><a class="active" href="DrinksAisle.html">Drinks</a>
-                  <ul>
-                    <li><a href="spirits.html">Spirits</a></li>
-                    <li><a href="wine.html">Wine</a></li>
-                    <li><a href="beer.html">Beer</a></li>
-                  </ul>
-              </li>
-              <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
-              <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
-           </ul>
-         </li>
-    </ul>
+	            <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a></li>
+	            <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
+		          <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
+	            <li><a href="../DrinksAisle/DrinksAisle.html" class="active">Drinks</a></li>
+                <ul class = "mobilenone">
+                  <li><a href="heineken.html">Heineken</a></li>
+                  <li><a href="absolut.html">Absolut</a></li>
+                  <li><a href="kopke.html">Kopke</a></li>
+                  <li><a href="moet.html">Moët&Chandon</a></li>
+                </ul>
 
- </div>
-
-
- <div class="main">
-   <p class="page-header"> AISLES &gt; DRINKS</p>
-   <div class="responsive">
-       <div class="col-container">
-         <div class="col">
-           <div class="d-flex flex-column">
-                <a href="spirits.html"><img src="https://cdn.pixabay.com/photo/2018/04/13/02/36/fruit-daiquiri-3315410_1280.png" alt="spirits" class="list_img"></a>
-                <h2><a href="spirits.html" class="drinksection">SPIRITS</a></h2>
-           </div>
-        </div>
-        <div class="col">
-          <div class="d-flex flex-column">
-            <a href="wine.html"><img src="https://cdn.pixabay.com/photo/2017/09/03/20/14/champagne-2711895_1280.jpg" value="wine" class="list_img"></a>
-            <h2><a href="wine.html" class="drinksection">WINE</a></h2>
-
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="d-flex flex-column">
-            <a href="beer.html"><img src="https://cdn.pixabay.com/photo/2018/08/21/21/50/beer-3622242_1280.png" value="beer" class="list_img"></a>
-            <h2><a href="beer.html" class="drinksection">BEER</a></h2>
-
-          </div>
-       </div>
-     </div>
+		          <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
+		          <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
+            </ul>
+          </li>
+        </ul>
     </div>
+
+    <!-- Drink Aisle -->
+  <div class="flex-container column visual">
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="heineken.html"><img src="img/heineken.png" alt="heineken" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Heineken's Brouwerijen</span>
+          <a href="heineken.html" class="drinksection"><h3>Heineken</h3></a>
+          <span>500ml can</span>
+          <span>$3.25 ea</span>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+            <a href="absolut.html"><img src="img/absolut.png" alt="absolut" class="list_img"></a>
+            <br>
+            <span class="text-uppercase">The Absolut Company</span>
+            <a href="absolut.html" class="drinksection"><h3>Absolut Apeach</h3></a>
+            <span>750 ml bottle</span>
+            <span>$30.25 ea</span>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="kopke.html"><img src="img/kopke.png" alt="kopke" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Kopke</span>
+          <a href="kopke.html" class="drinksection"><h3>Kopke Fine Ruby Port</h3></a>
+          <span>750ml bottle</span>
+          <span>$19.5 ea</span>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="moet.html"><img src="img/moet.png" alt="Product Image" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Moët & Chandon</span>
+          <a href="moet.html" class="drinksection"><h3>Moët & Chandon Rosé</h3></a>
+          <span>750ml bottle</span>
+          <span>$100.25 ea</span>
+        </div>
+      </div>
 
   </div>
 
- </div>
+</div>
+
+</div>
 
 <!-- Footer -->
 <div class="footer">
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html">Aisles</a></li>
-		<li><a href="../SnackAisle/login.html"> Login</a></li>
-		<li><a href="../SignUp/signup.html"> Sign up</a></li>
+        <li><a href="../SnackAisle/login.html"> Login</a></li>
+        <li><a href="../SignUp/signup.html"> Sign up</a></li>
         <li><a href="../BackstoreIndex.html">Backstore</a></li>
     </ul>
 </div>
