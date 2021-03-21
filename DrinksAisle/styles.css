@@ -1,73 +1,31 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     list-style: none;
     box-sizing: border-box;
-    text-decoration:none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    list-style: none;
     text-decoration: none;
-    border-collapse: collapse;
-    margin:0px;
-    padding: 0px;
-
-}
-
-.main {
-  float:left;
-  width:100%;
-  padding:0 20px;
-}
-
-/* media queries */
-.responsive{
-  width: 100%;
-  display:flex;
-  flex-wrap: wrap;
-  text-align: center;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-@media(max-width:950px)
-{
-  div.responsive{
-    background-color: white;
-    overflow: auto;
-    white-space: nowrap;
-  }
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.d-flex {
+    text-align: left;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
-
-
-@media(max-width:500px)
-{
-  .responsive > .col{
-      flex: calc(50%);
-  }
+/* BANNER */
+#tiny-logo{
+    width:30px;
 }
-
-@media(min-width:501px)
-{
-  .responsive > .col{
-    flex: calc(20%);
-  }
-}
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .main {
-    width:100%;
-  }
-}
-
-
-html, body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-/* USER BANNER */
 .userbanner{
     background-color: black;
     height:35px;
@@ -77,11 +35,6 @@ html, body{
     font-size: 15px;
     display: flex;
 }
-
-#tiny-logo{
-    width:30px;
-}
-
 .userbanner ul{
     text-align: right;
     margin:0px;
@@ -107,53 +60,27 @@ html, body{
     color:#5b4173;
 }
 
-.drinksection{
-  text-decoration: none;
-  color:black;
-  font-weight: bold;
-}
-.drinksection:hover{
-  color:#5b4173;
-  font-style: italic;
-}
-
-.addcart_button {
-  background-color: #008CBA;
-  border: none;
-  color: white;
-  padding: 14px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+.userbanner-text {
+    color: #fff;
+    font-size: 50px;
+   ;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 700;
+    padding: 10px 0;
+    text-transform: uppercase;
 }
 
-#more {display: none;}
-
-.description_button {
-  background-color: #f4d160;
-  border: none;
-  color: white;
-  padding: 10px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+.page-header{
+    font-size: 25px;
+    color: #5b4173;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
 }
 
-h2{
-  text-align: center;
-  margin-top:30px;
-  padding:30px;
-}
-img{
-  max-width: 100%;
-  height: auto;
-}
 /* LOGO BANNER */
 .img-banner{
     background-image: url("img/UMM_GROCERY_STORE.png");
@@ -173,42 +100,88 @@ img{
     padding-top: 10px;
 }
 
-/* ROAD MAP BANNER */
-.page-header{
-    font-size: 25px;
+/* SIDEMENU */
+.login-page .sidemenu {
+    position: fixed;
+}
+.sidemenu{
+    display: inline-block;
+    height: 80%;
+}
+.sidemenu ul{
+    margin-right: 20px;
+    text-align: Left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   ;
+}
+.sidemenu ul li{
+    line-height:15px;
+    margin: 10px 5px;
+    margin-top: 10px;
+}
+.sidemenu ul li a{
+    color: black;
+    text-decoration:none;
+    font-weight: bold;
+}
+.sidemenu ul li a:hover{
     color:#5b4173;
     font-style: italic;
-    font-weight: bold;
-    text-align: center;
-    margin:20px;
+}
+.sidemenu ul li .active{
+    color:#5b4173;
+    font-weight: bolder;
+    text-decoration: underline ;
+}
+.btn {
+    background-color: #5b4173 !important;
+    border-color: #5b4173 !important;
 }
 
-/* Column container */
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-.main {
-  -ms-flex: 85%; /* IE10 */
-  flex: 85%;
-  background-color: white;
-  padding: 10px;
-  margin-left: 0px;
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 0px;
 }
 
-.container-fluid{
-    width: 100%;
+/* Left and right column */
+.column.side {
+  width: 20%;
 }
-.col-container {
+
+/* Middle column */
+.column.visual {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
   display: table;
-  width: 100%;
+  clear: both;
 }
-.col {
-  display: table-cell;
-  padding: 100px;
 
+/* Drink Ssection */
+.container {
+    margin: 25px 0 50px;
+}
+
+.flex-container{
+  height:800px;
+}
+.item-container{
+  height:600px;
+}
+
+.drinksection{
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+.drinksection:hover{
+  color:#5b4173;
+  font-style: italic;
 }
 
 .list_img {
@@ -219,68 +192,61 @@ img{
     object-fit: cover;
     border-radius: 10px;
 }
-.column {
-  float: left;
-  padding: 10px;
 
+/* each aisle page */
+h2
+{
+  text-align: center;
+  margin-top:30px;
+  padding:30px;
 }
-
-
-/* SIDE MENU */
-.sidemenu{
-  -ms-flex: 15%; /* IE10 */
-  flex: 15%;
-  padding: 0px;
+.flex-container{
+  height:650px;
 }
 
-.sidemenu ul{
-    margin-right: 20px;
-    text-align: Left;
-    padding-top: 15px;
-    padding-bottom: 15px;;
-}
-.sidemenu ul li{
-    line-height:15px;
-    margin 10px 5px;
-    margin-top: 10px;
-}
-
-.sidemenu ul li a{
-    color: black;
-    text-decoration:none;
-    font-weight: bold;
-}
-.sidemenu ul li a:hover{
-    color:#5b4173;
-    font-style: italic;
+/* BUTTON */
+.button_box{
+background: black;
+color:white;
+border-radius: 15px;
+padding:5px;
+margin: 4px 0px 0px 0px;
+margin: 5px auto;
+width: fit-content;
 }
 
-.sidemenu ul li .active{
-    color:#5b4173;
-    font-weight: bolder;
-    text-decoration: underline ;
+#more {display: none;}
+
+
+.item_img, .list_img{
+  margin: 0 auto;
 }
+
+
 
 
 /* FOOTER */
 .footer{
+    position: relative;
+    width: 100%;
     background-color: #5b4173;
     height:215px;
-    font-size: 20px;;
+    font-size: 20px;
+   ;
 }
-
 .footer ul{
     margin-right: 20px;
     text-align: Left;
     padding-top: 15px;
-    padding-bottom: 15px;;
+    padding-bottom: 15px;
+   ;
 }
 .footer ul li{
     line-height:20px;
     margin 10px 5px;
-    margin-top: 15px;;
+    margin-top: 15px;
+   ;
 }
-
 .footer ul li a{
     color: white;
     border-radius: 3px;
@@ -289,16 +255,161 @@ img{
 }
 .footer ul li a:hover{
     background: #c08af2;
-    color:#5b4173;
-}
-/* BUTTON */
-
-.button_box{
-background: black;
-color:white;
-border-radius: 15px;
-padding:5px;
-margin: 4px 0px 0px 0px;
 }
 
-#more {display: none;}
+/* media quries */
+@media (max-width: 600px) { /*mobile*/
+  .column.side, .column.visual {
+    width: 100%;
+  }
+
+  div.column.side{
+    height:300px;
+    margin: 0;
+    position: static;
+  }
+  .sidemenu ul{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 0
+  }
+  .sidemenu ul li{
+      line-height:20px;
+  }
+  /*Drink Aisle*/
+  .flex-container{height:1800px;}
+
+  .tabletnone, .mobilenone{
+    display:none;
+  }
+
+  .d-flex{
+    margin:10px;
+    margin-bottom: 10px;
+    padding:20px;
+    text-align: center;
+  }
+
+    /*Aisle item */
+    .item-container{
+      height:900px;
+    }
+
+    .item_img{
+      width: 250px;
+      height: auto;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 10px;
+
+    }
+    .page-header{
+        font-size: 15px;
+
+    }
+}
+
+@media (min-width:601px) and (max-width:800px){ /*tablet*/
+  main {
+      flex-direction: row;
+  }
+
+  .column.side {
+    width: 30%;
+  }
+
+  .column.visual {
+    width: 70%;
+  }
+
+  /*Drink Aisle*/
+  .d-flex {
+    text-align: left;
+    flex-direction: row;
+    margin: 0;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+
+  .flex-container{
+    height:1000px;
+  }
+
+  .tabletnone{
+    display: none;
+  }
+
+  /*Aisle item */
+  .item_img{
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 10px;
+
+  }
+
+
+}
+
+
+@media (min-width:801px) and (max-width:1200px){ /*small laptop*/
+
+  .column.side {
+    width: 30%;
+  }
+
+  .column.visual {
+    width: 70%;
+  }
+
+  /*Drink Aisle*/
+  .flex-container{
+    height:1000px;
+  }
+
+ .d-flex{
+   margin:10px;
+   padding:20px;
+ }
+
+ .list_img {
+      margin: 0 auto;
+     width: auto;
+     height: 150px ;
+     overflow: hidden;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ /*Aisle item */
+ .item_img{
+   width: auto;
+   height: 300px;
+   overflow: hidden;
+   object-fit: cover;
+   border-radius: 10px;
+
+ }
+ .item-container{
+   height:850px;
+ }
+
+
+}
+
+@media (min-width:1201px){ /*big screen */
+    /*Aisle item */
+    .item_img{
+      width: auto;
+      height: 500px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 10px;
+
+    }
+
+
+}
