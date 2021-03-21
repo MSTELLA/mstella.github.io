@@ -15,6 +15,7 @@
         		var gst = 0.05;
         		var qst = 0.09975;
         		var total = 0;
+			var f1price = 0;
 
         		f1 = document.getElementById("f1");
         		f2 = document.getElementById("f2");
@@ -42,7 +43,8 @@
 			sn2 = document.getElementById("sn2");
         		sn3 = document.getElementById("sn3");
         		sn4 = document.getElementById("sn4");
-        	
+        		f1price = (f1.value * f1.getAttribute("data-price"))
+			document.getElementById("f1price").innerHTML = "$" + f1price.toFixed(2);
         		subtotal = (f1.value * f1.getAttribute("data-price")) +
                    		   (f2.value * f2.getAttribute("data-price")) +
                		 	   (f3.value * f3.getAttribute("data-price")) +
@@ -195,7 +197,7 @@
 										<td>$4.00/0.7kg</td>
 										<td>Apples</td>
 										<td>quantity</td>
-										<td id = "f1">$0.00</td>
+										<td id = "f1price">$0.00</td>
 									</tr>
 									<tr>
 										<td><input type = "checkbox"></input></td>
