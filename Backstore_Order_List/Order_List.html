@@ -77,6 +77,8 @@
 	
         		total = subtotal + gst + qst;
         		document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+			
+			document.getElementById("f1").innerHTML = "$" + f1.toFixed(2);
       		}
       
       		window.onload = function() {
@@ -193,7 +195,7 @@
 										<td>$4.00/0.7kg</td>
 										<td>Apples</td>
 										<td>quantity</td>
-										<td id = "f1"></td>
+										<td id = "f1">$0.00</td>
 									</tr>
 									<tr>
 										<td><input type = "checkbox"></input></td>
