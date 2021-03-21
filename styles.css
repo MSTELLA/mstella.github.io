@@ -18,23 +18,10 @@
   display:flex;
   flex-wrap: wrap;
   text-align: center;
-  
+
 }
 
-/* media quries */
-@media(max-width:500px)
-{
-    .list > div{
-      flex: calc(50%);
-    }
-}
 
-@media(min-width:501px)
-{
-  .list > div{
-    flex: calc(25%);
-    }
-}
 
 /*mod----------------------------*/
 * {
@@ -272,6 +259,7 @@ font-weight: bold;
   height:302px;
   text-align: center;
 }
+
 .icons > li > .icon_img{
   margin-top:18px;
 }
@@ -285,6 +273,7 @@ font-weight: bold;
   margin:auto;
   letter-spacing: -1px;
 }
+
 .more{
   width:100px;
   height: 30px;
@@ -532,4 +521,36 @@ nav ul li a:hover{
 .footer ul li a:hover{
     background: #c08af2;
     color:#5b4173;
+}
+
+/* media quries */
+@media(max-width:500px)
+{
+  .list > div{
+    flex: calc(50%);
+  }
+
+  .amount{
+    display:block;
+  }
+
+  .amount > li {
+    width:100px;
+    margin: 0 auto;
+  }
+
+  .shop_1, .shop_2, .shop_3{
+    width:80px;
+    height:80px;
+    margin-top: 30px;
+    margin-bottom:10px
+  }
+
+}
+
+@media(min-width:501px)
+{
+  .list > div{
+    flex: calc(25%);
+    }
 }
