@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Ummm Grocery | Drinks_Wine </title>
+    <title>Ummm Grocery | Drinks_Moët & Chandon </title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -33,12 +33,13 @@
           itemID = document.getElementById("qnt");
           subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
 
-       document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+          document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
 
-      }
-        window.onload = function (){
-          if (document.cookie.length != 0)
-          {
+        }
+
+       window.onload = function (){
+        if (document.cookie.length != 0)
+        {
            var nameValueArray = document.cookie.split("=");
            document.getElementById("qnt").value = nameValueArray[1];
            CalculateSubTotal()
@@ -47,16 +48,14 @@
        }
 
        function setAllCookies()
-       {
-         var selectedQuantity = document.getElementById("qnt").value;
-         document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
-       }
-    </script>
+      {
+       var selectedQuantity = document.getElementById("qnt").value;
+       document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+     }
+     </script>
 </head>
 
 <body>
-<section>
-<div class="container-fluid">
 
 <!-- Black User banner -->
 <div class="userbanner">
@@ -72,10 +71,15 @@
 <!-- Logo Banner -->
 <div class = "img-banner"><p class="logo">UMMM GROCERY</p></div>
 
-<!-- MAIN SECTION-->
 
-    <div class="row">
-    <div class="sidemenu">
+
+<!---   MAIN SECTION   ------------------------------------>
+<!-- Page Header -->
+<p class="page-header"> AISLES &gt; DRINKS &gt; Moët & Chandon </p>
+
+<div class ="row">
+    <!-- SIDE MENU (from an aisle/aisle product) -->
+    <div class="sidemenu column side">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../index.html">Aisles</a>
@@ -84,10 +88,11 @@
                     <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a>
                     <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
                     <li><a href="DrinksAisle.html">Drinks</a>
-                      <ul>
-                          <li><a href="spirits.html">Spirits</a></li>
-                          <li><a class="active" href="wine.html">Wine</a>
-                          <li><a href="beer.html">Beer</a></li>
+                      <ul class="mobilenone">
+                        <li><a href="heineken.html">Heineken</a></li>
+                        <li><a href="absolut.html">Absolut</a></li>
+                        <li><a href="kopke.html">Kopke</a></li>
+                        <li><a href="moet.html" class="active">Moët&Chandon</a></li>
                       </ul>
                     </li>
                     <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
@@ -96,42 +101,47 @@
                 </ul>
             </li>
         </ul>
-    </div>
+     </div>
 
 
-    <div class="main">
-      <p class="page-header"> AISLES &gt; DRINKS &gt; Wine &gt; Moët & Chandon </p>
-
-      <div class="col-container">
-        <div class="column left">
-          <img src="img/moet.png" alt="moet" class="list_img">
-        </div>
-
-        <div class="column right">
+     <!-- Aisle Product -->
+    <div class="item-container column visual">
+      <div class="row">
+        <div class="col-sm">
           <div class="d-flex flex-column">
-                    <span class="text-uppercase">Moët & Chandon</span>
-                    <h3>Moët & Chandon Brut Rosé Champagne</h3>
-                    <span>750ml bottle</span>
-                    <span>$100.25 ea</span>
-                    <span>$13.4 /100ml </span>
-                    <span>Origin : France</span>
-                    <!-- <span class="minus">-</span> -->
-                    <div><input name="qnt" type="number" id="qnt" value="0" size="3" data-price=100.25 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/></div>
-                    <div id="ItemsTotal">Subtotal of Item: $0.00</div>
-                      <!-- <span class="plus">+</span> -->
-
-                    <div> <div><button type="button" class="button_box">Add to Cart</button>
-	      	 <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
-                <p><span id="dots">...</span><span id="more"> Moet is a celebratory champagne. Perfect for when you finish your website. </span></p></div></div>
-                </div>
+            <img src="img/moet.png" alt="moet" class="item_img">
+          </div>
         </div>
+
+        <div class="col-sm">
+          <div class="d-flex flex-column description">
+            <span class="text-uppercase">Moët & Chandon</span>
+            <h3>Moët & Chandon Brut Rosé Champagne</h3>
+            <span>750ml bottle</span>
+            <span>$100.25 ea</span>
+            <span>$13.4 /100ml </span>
+            <span>Origin : France</span>
+            <!-- <span class="minus">-</span> -->
+            <div><input name="qnt" type="number" id="qnt" value="0" size="3" data-price=100.25 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/></div>
+            <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+            <br>
+              <!-- <span class="plus">+</span> -->
+            <div>
+              <div>
+                <button type="button" class="button_box">Add to Cart</button>
+                <br>
+                <button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+                <p><span id="dots">...</span><span id="more"> Moet is a celebratory champagne. Perfect for when you finish your website. </span></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm"><div class="d-flex flex-column tabletnone"></div></div>
       </div>
-
-
-
     </div>
 
-
+</div>
 
 <!-- Footer -->
 <div class="footer">
