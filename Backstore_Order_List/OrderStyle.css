@@ -49,7 +49,8 @@ td{
 /*container*/
 .container {
 	width: 100%;
-	min-width: 1240px;
+	min-height:100vh;
+	position: relative;
 }
 .background{
 	background: url("img/3.png") no-repeat center center fixed;
