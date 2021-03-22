@@ -133,6 +133,7 @@ nav ul li a:hover{
 /* ALL MIDDLE PORTION */
 .main{
 	display: flex;
+	flex-wrap: wrap;
 	width:100%;
 }
 
