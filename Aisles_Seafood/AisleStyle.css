@@ -230,10 +230,9 @@ nav ul li a:hover{
 }
 .text{
 	position: relative;
-	top: 55%;
+	top: 25%;
 	height: 60%;
 	width: 45%;
-	left: 40%;
 	padding-left: 2%;
 	border-radius: 10px;
 }
