@@ -164,6 +164,7 @@ nav ul li a:hover{
 /* ALL MIDDLE PORTION */
 .main{
 	display: flex;
+	flex-wrap: wrap;
 	width:100%;
 }
 
@@ -212,14 +213,10 @@ nav ul li a:hover{
 	padding-top: 10px;
 }
 .order-list{
-	width: 80%;
-	margin-bottom: 10px;
-	margin-right: 10px;
+	width: 100%;
 }
 .edit-order-list{
-	width: 80%;
-	margin-bottom: 10px;
-	margin-right: 10px;
+	width: 100%;
 }
 }
 .content{
