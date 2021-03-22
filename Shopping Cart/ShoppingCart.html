@@ -18,13 +18,13 @@
         product2 = document.getElementById("product2");
         product3 = document.getElementById("product3");
         product4 = document.getElementById("product4");
-        
+
         subtotal = (product1.value * product1.getAttribute("data-price")) +
                    (product2.value * product2.getAttribute("data-price")) +
                    (product3.value * product3.getAttribute("data-price")) +
                    (product4.value * product4.getAttribute("data-price"));
         document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
-        
+
         gst *= subtotal;
         document.getElementById("gst").innerHTML = "$" + gst.toFixed(2);
 
@@ -34,10 +34,10 @@
         total = subtotal + gst + qst;
         document.getElementById("total").innerHTML = "$" + total.toFixed(2);
       }
-      
+
       window.onload = function() {
       	if (document.cookie.length != 0) {
-      		var nameValueArray = document.cookie.split(";");
+      		var nameValueArray = document.cookie.split("&");
           document.getElementById("product1").value = nameValueArray[0];
           document.getElementById("product2").value = nameValueArray[1];
           document.getElementById("product3").value = nameValueArray[2];
@@ -47,10 +47,10 @@
       }
 
       function setAllCookies() {
-        document.cookie = document.getElementById("product1").value + ";" +
-                          document.getElementById("product2").value + ";" +
-                          document.getElementById("product3").value + ";" +
-                          document.getElementById("product4").value + ";" + "expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+        document.cookie = document.getElementById("product1").value + "&" +
+                          document.getElementById("product2").value + "&" +
+                          document.getElementById("product3").value + "&" +
+                          document.getElementById("product4").value + ";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
       }
       </script>
   </head>
@@ -121,41 +121,46 @@
                             <tr>
                               <th scope="row">
                                   <div style="padding:10%;">
-                                    <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                    <div class = "imagebox">
+                                      <img src="../Aisles_Seafood/img/crab.png" alt="Product Image" class="img-thumbnail">
+                                    </div>
                                     <div>
-                                        <h5>Doritos</h5>
+                                        <h5>ALIBABA</h5>
                                         <h3>
-                                            Nacho cheese tortilla chips
+                                            Crab
                                         </h3>
                                         <p>
-                                           255g
+                                           680g~1.4kg
                                         </p>
                                     </div>
                                 </div>
                               </th>
                               <td>
-                                <input data-price=2.00 id="product1" min="0" name="product1" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                <input data-price=8.99 id="product1" min="0" name="product1" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                               </td>
                               <td>
                                   <span>
-                                      $2.00
+                                      $8.99
                                   </span>
                               </td>
                               <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                     <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                   </svg>
+                                </a>
                               </td>
                             </tr>
                             <tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../MeatAisle/img/bacon.jpg" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>DU BRETON</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Bacon
                                           </h3>
                                           <p>
                                              255g
@@ -164,77 +169,84 @@
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=3.00 id="product2" min="0" name="product2" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=8.99 id="product2" min="0" name="product2" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $3.00
+                                        $8.99
                                     </span>
                                 </td>
                                 <td>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                       <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                       <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                     </svg>
+                                  </a>
                                 </td>
                               </tr>
                               <tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../FruitsAisle/img/peach.jpg" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>ONTARIO</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Peaches
                                           </h3>
                                           <p>
-                                             255g
+                                             Pack of 7
                                           </p>
                                       </div>
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=4.00 id="product3" min="0" name="product3" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=6.99 id="product3" min="0" name="product3" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $4.00
+                                        $6.99
                                     </span>
                                 </td>
                                 <td>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                       <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                       <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                     </svg>
+                                  </a>
                                 </td>
                               </tr>
                                 <th scope="row">
                                     <div style="padding:10%;">
-                                      <img src="https://product-images.metro.ca/images/h3b/hfb/9668777148446.jpg" alt="Product Image" class="img-thumbnail">
+                                      <div class = "imagebox">
+                                        <img src="../DrinksAisle/img/heineken.png" alt="Product Image" class="img-thumbnail">
+                                      </div>
                                       <div>
-                                          <h5>Doritos</h5>
+                                          <h5>HEINEKEN</h5>
                                           <h3>
-                                              Nacho cheese tortilla chips
+                                              Heineken'S BROUWERIJEN NEDERLAND BV
                                           </h3>
                                           <p>
-                                             255g
+                                             500ml can
                                           </p>
                                       </div>
                                   </div>
                                 </th>
                                 <td>
-                                  <input data-price=5.00 id="product4" min="0" name="product4" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
+                                  <input data-price=3.25 id="product4" min="0" name="product4" onchange="setAllCookies()" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" size="3" type="number" value="0">
                                 </td>
                                 <td>
                                     <span>
-                                        $5.00
+                                        $3.25
                                     </span>
                                 </td>
                                 <td>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                                       <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                       <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                     </svg>
+                                  </a>
                                 </td>
                               </tr>
                           </tbody>
@@ -272,9 +284,9 @@
             </tbody>
           </table>
         </div>
-        <h3 style = "border-top: 5px solid black; padding: 0 20px 5px 20px;">
+        <a href="../index.html" style="text-align: center; display: block; margin: 5px 0;">
             <button type="button" class = "button_box">Continue Shopping</button>
-        </h3>
+        </a>
     </div>
   </section>
 		</section>
@@ -295,3 +307,15 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
  </body>
 </html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
