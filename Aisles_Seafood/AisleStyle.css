@@ -57,7 +57,7 @@ img{
 .userbanner ul li{
 	display: inline-block;
 	line-height:35px;
-	margin: 0px 5px;
+	margin: 0px;
 }
 
 .userbanner ul li a{
@@ -133,7 +133,7 @@ nav ul li a:hover{
 /* ALL MIDDLE PORTION */
 .main{
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	width:100%;
 }
 
