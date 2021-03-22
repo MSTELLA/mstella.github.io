@@ -226,13 +226,13 @@ nav ul li a:hover{
 	width: 150px;
 	height: 150px;
 	position: relative;
-	padding-top: 25%;
+	margin-top: 25%;
 }
 .text{
 	position: relative;
-	padding-top: 25%;
+	margin-top: 25%;
 	height: 60%;
-	width: 45%;
+	min-width: 150px;
 	padding-left: 2%;
 	border-radius: 10px;
 }
