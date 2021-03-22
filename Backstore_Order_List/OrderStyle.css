@@ -164,7 +164,7 @@ nav ul li a:hover{
 /* ALL MIDDLE PORTION */
 .main{
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	width:100%;
 }
 
@@ -259,7 +259,7 @@ nav ul li a:hover{
 	margin: 4px 2px;
 	cursor: pointer;
 	background: black;
-    border-radius: 10px;
+    	border-radius: 10px;
 }
 .button_box{
 	width: 80%;
