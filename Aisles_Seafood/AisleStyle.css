@@ -203,6 +203,10 @@ nav ul li a:hover{
 	border-radius: 10px;
 	/*border: 2px solid black;*/
 }
+image{
+	width: 150px;
+	height: 150px;
+}
 .salmon{
 	background-image: url(img/salmon.png);
 }
@@ -222,18 +226,19 @@ nav ul li a:hover{
 	text-transform: uppercase!important;
 }
 .imgsection{
-	width: 20%;
-	position: absolute;
+	width: 150px;
+	height: 150px;
+	position: relative;
 	top: 25%;
 	left: 250px;
 }
 .text{
 	position: relative;
-	top: 15%;
+	top: 55%;
 	height: 60%;
 	width: 45%;
 	left: 40%;
-	padding: 2%;
+	padding-left: 2%;
 	border-radius: 10px;
 }
 #more {display: none;}
