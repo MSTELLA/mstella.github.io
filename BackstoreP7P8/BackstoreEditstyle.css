@@ -258,3 +258,7 @@ input{
 	margin: 4px 0px 0px 0px;
 }
 #more {display: none;}
+
+form label{
+    size: 100px;;
+}
