@@ -260,5 +260,5 @@ input{
 #more {display: none;}
 
 form label{
-    size: 100px;;
+    width: 100px;
 }
