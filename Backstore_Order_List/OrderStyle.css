@@ -87,7 +87,6 @@ td{
 .userbanner ul li{
 	display: inline-block;
 	line-height:35px;
-	margin: 0px 5px;
 }
 
 .userbanner ul li a{
@@ -162,10 +161,21 @@ nav ul li a:hover{
 }
 
 /* ALL MIDDLE PORTION */
-.main{
-	display: flex;
-	/*flex-wrap: wrap;*/
-	width:100%;
+@media (max-width:700px){
+	.main{
+	    display: flex;
+	    /*flex-wrap: wrap;*/
+	    flex-direction:column;
+	    width:100%;
+    }
+}
+
+@media (min-width:700px){
+	.main{
+	    display: flex;
+	    /*flex-wrap: wrap;*/
+	    width:100%;
+    }
 }
 
 /* SIDE MENU */
