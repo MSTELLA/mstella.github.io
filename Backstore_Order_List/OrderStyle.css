@@ -161,7 +161,7 @@ nav ul li a:hover{
 }
 
 /* ALL MIDDLE PORTION */
-@media (max-width:700px){
+@media (max-width:650px){
 	.main{
 	    display: flex;
 	    /*flex-wrap: wrap;*/
@@ -170,7 +170,7 @@ nav ul li a:hover{
     }
 }
 
-@media (min-width:700px){
+@media (min-width:651px){
 	.main{
 	    display: flex;
 	    /*flex-wrap: wrap;*/
