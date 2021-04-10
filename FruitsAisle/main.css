@@ -215,3 +215,161 @@ html, body {
     margin: 4px 0px 0px 0px;
 }
 #more {display: none;}
+
+/* media quries */
+@media (max-width: 600px) { /*mobile*/
+  .column.side, .column.visual {
+    width: 100%;
+  }
+
+  div.column.side{
+    height:300px;
+    margin: 0;
+    position: static;
+  }
+  .sidemenu ul{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    padding: 0
+  }
+  .sidemenu ul li{
+      line-height:20px;
+  }
+  /*Drink Aisle*/
+  .flex-container{height:1800px;}
+
+  .tabletnone, .mobilenone{
+    display:none;
+  }
+
+  .d-flex{
+    margin:10px;
+    margin-bottom: 10px;
+    padding:20px;
+    text-align: center;
+  }
+
+    /*Aisle item */
+    .item-container{
+      height:900px;
+    }
+
+    .item_img{
+      width: 250px;
+      height: auto;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 10px;
+
+    }
+    .page-header{
+        font-size: 15px;
+
+    }
+}
+
+#more {display: none;}
+@media (min-width:601px) and (max-width:800px){ /*tablet*/
+  main {
+      flex-direction: row;
+  }
+
+  .column.side {
+    width: 30%;
+  }
+
+  .column.visual {
+    width: 70%;
+  }
+
+  /*Drink Aisle*/
+  .d-flex {
+    text-align: left;
+    flex-direction: row;
+    margin: 0;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+
+  .flex-container{
+    height:1000px;
+  }
+
+  .tabletnone{
+    display: none;
+  }
+
+  /*Aisle item */
+  .item_img{
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 10px;
+
+  }
+
+
+}
+
+
+@media (min-width:801px) and (max-width:1200px){ /*small laptop*/
+
+  .column.side {
+    width: 30%;
+  }
+
+  .column.visual {
+    width: 70%;
+  }
+
+  /*Drink Aisle*/
+  .flex-container{
+    height:1000px;
+  }
+
+ .d-flex{
+   margin:10px;
+   padding:20px;
+ }
+
+ .list_img {
+      margin: 0 auto;
+     width: auto;
+     height: 150px ;
+     overflow: hidden;
+     object-fit: cover;
+     border-radius: 10px;
+ }
+
+ /*Aisle item */
+ .item_img{
+   width: auto;
+   height: 300px;
+   overflow: hidden;
+   object-fit: cover;
+   border-radius: 10px;
+
+ }
+ .item-container{
+   height:850px;
+ }
+
+
+}
+
+@media (min-width:1201px){ /*big screen */
+    /*Aisle item */
+    .item_img{
+      width: auto;
+      height: 500px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 10px;
+
+    }
+
+
+}
