@@ -134,6 +134,10 @@ nav ul li a:hover{
 }
 
 @media (max-width:650px){
+   .mobilenone{
+    display:none;
+  }
+	
     .sidemenu ul{
         margin-left: 20px;
         margin-right: 20px;
