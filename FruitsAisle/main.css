@@ -254,9 +254,6 @@ width: fit-content;
 }
 
 /* media quries */
-.sidemenu{
-	display: inline-block;
-}
 @media (max-width: 600px) { /*mobile*/
   .column.side, .column.visual {
     width: 100%;
