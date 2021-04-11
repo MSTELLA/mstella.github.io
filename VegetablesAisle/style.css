@@ -42,7 +42,7 @@ position: relative;
 .userbanner ul li{
     display: inline-block;
     line-height:35px;
-    margin: 10px 5px;
+    margin: 0px;
 }
 .userbanner ul li a{
     color: white;
@@ -63,14 +63,15 @@ position: relative;
     vertical-align: middle;
 }
 .logo{
-    color:white;
-    font-size: 50px;;
-    text-align: center;
-    vertical-align: middle;
-    margin-bottom: 0;
-    height:100%;
-    font-weight: bold;
-    padding-top: 10px;
+	color:white;
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 0;
+	height:100%;
+	font-weight: bold;
+	padding-top: 10px;
+	margin-top: 0;
 }
 
 /* NAVIGATION BAR */
@@ -86,7 +87,7 @@ nav ul{
 nav ul li{
     display: inline-block;
     line-height:50px;
-    margin 10px 5px;
+    margin: 10px 5px;
 }
 nav ul li a{
     color: white;
