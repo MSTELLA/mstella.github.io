@@ -4,13 +4,14 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration:none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body{
     font-family: Arial;
 }
-
+.container-fluid{
+    width: 100%;
+}
 /* USER BANNER */
 .userbanner{
     background-color: black;
@@ -21,11 +22,9 @@ html, body{
     font-size: 15px;
     display: flex;
 }
-
 #tiny-logo{
     width:30px;
 }
-
 .userbanner ul{
     text-align: right;
     margin:0px;
@@ -33,10 +32,10 @@ html, body{
     width:100%;
     padding-left: 0px;;
 }
-
 .userbanner ul li{
     display: inline-block;
     line-height:35px;
+    margin 10px 5px;
 }
 
 .userbanner ul li a{
@@ -49,7 +48,6 @@ html, body{
     background: #c08af2;
     color:#5b4173;
 }
-
 /* LOGO BANNER */
 .img-banner{
     background-image: url("img/UMM_GROCERY_STORE.png");
@@ -57,20 +55,16 @@ html, body{
     height:100px;
     vertical-align: middle;
 }
-
 .logo{
-	color:white;
-	font-size: 50px;
-	text-align: center;
-	vertical-align: middle;
-	margin-bottom: 0;
-	height:100%;
-	font-weight: bold;
-	padding-top: 10px;
-	margin-top: 0;
+    color:white;
+    font-size: 50px;;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+    height:100%;
+    font-weight: bold;
+    padding-top: 10px;
 }
-
-
 /* ROAD MAP BANNER */
 .page-header{
     font-size: 25px;
@@ -79,37 +73,16 @@ html, body{
     font-weight: bold;
     text-align: center;
 }
-
 /* ALL MIDDLE PORTION */
-@media (max-width:650px){
-	.main{
-	    display: flex;
-	    /*flex-wrap: wrap;*/
-	    flex-direction:column;
-	    width:100%;
-    }
+.main{
+    display: flex;
+    width:100%;
 }
-
-@media (min-width:651px){
-	.main{
-	    display: flex;
-	    /*flex-wrap: wrap;*/
-	    width:100%;
-    }
-}
-
-.container {
-	width: 100%;
-	min-height:100vh;
-	position: relative;
-}
-
 /* SIDE MENU */
 .sidemenu{
     display: inline-block;
     height: 80%;
 }
-
 .sidemenu ul{
     margin-right: 20px;
     text-align: Left;
@@ -118,10 +91,9 @@ html, body{
 }
 .sidemenu ul li{
     line-height:15px;
-    margin: 10px 5px;
+    margin 10px 5px;
     margin-top: 10px;
 }
-
 .sidemenu ul li a{
     color: black;
     text-decoration:none;
@@ -131,90 +103,73 @@ html, body{
     color:#5b4173;
     font-style: italic;
 }
-
 .sidemenu ul li .active{
     color:#5b4173;
     font-weight: bolder;
     text-decoration: underline ;
 }
-
 /* PRODUCT GRID */
 .product-grid{
  display:flex;
  flex-wrap: wrap;
  width:100%;
 }
-
 .product-btns{
     width:100%;
     display:flex;
 }
-
 .backstore-btns{
     display:flex;
 }
-
 /* PRODUCTS LIST */
-
 .Products-List{
     width:100%;
     margin-bottom: 10px;
     margin-right: 10px;
 }
-
 .products-table{
     width:100%;
     margin-right: 10px;
 }
-
 table{
     width:100%;
     background-color: #e6e6ff ;
     vertical-align: middle;
     text-align: center;
 }
-
 table {
     border: 2px solid #000;
     align-content: center;
     vertical-align: middle;
     margin-top: 10px;
-    margin: right 10px;
+    margin right:10px;
 }
-
 table tr:nth-child(even){
     background-color: #d9ccff;
 }
-
 th{
     height:30px;
 }
-
 tr{
     padding: 10px 10px;
 }
-
 td{
     padding: 10px 10px;
     align-content: center;
     vertical-align: middle;
 }
-
 td img{
     text-align: center;
 }
-
 .icon-img{
     width:50px;
     display: block;
 }
-
 /*RESPONSIVE PART OF THE TABLE*/
 @media(max-width:809px){
     table th{
         display:none;
     }
-
     th, td, tr{
         display:block;
         width:100%;
@@ -222,7 +177,6 @@ td img{
         margin-right:0;
     }
 }
-
 /*BUTTONS */
 .edit-product-btn{
     background-color:#0d6efd;
@@ -232,12 +186,10 @@ td img{
     border-radius: .3rem;
     margin-top: 5px;;
 }
-
 .cart-btns{
     display:block;
     text-align:center;
 }
-
 .minus-plus-btn{
     background: black;
     color:white;
@@ -246,7 +198,6 @@ td img{
     display:inline-block;
     border-radius: 5px;;
 }
-
 .add-cart-btn{
     background: black;
     color:white;
@@ -266,7 +217,6 @@ td img{
     height:215px;
     font-size: 20px;;
 }
-
 .footer ul{
     margin-right: 20px;
     text-align: Left;
@@ -275,10 +225,9 @@ td img{
 }
 .footer ul li{
     line-height:20px;
-    margin: 10px 5px;
+    margin 10px 5px;
     margin-top: 15px;;
 }
-
 .footer ul li a{
     color: white;
     border-radius: 3px;
@@ -289,9 +238,7 @@ td img{
     background: #c08af2;
     color:#5b4173;
 }
-
 /* BUTTON */
-
 .button_box{
 	background: black;
 	color:white;
