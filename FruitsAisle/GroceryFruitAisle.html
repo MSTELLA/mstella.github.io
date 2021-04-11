@@ -1,110 +1,121 @@
-<!DOCTYPE html>
-<html lang en>
-    
+<!doctype html>
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Fruit Aisle</title>
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="utf-8">
+    <title>Ummm Grocery | Drinks </title>
+   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-    
-    <!--bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- BOOTSRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <!--black banner-->
-    <div class="userbanner"> 
+
+
+<!---  Header  ------------------------------------>
+<!-- Black User banner -->
+<div class="userbanner">
     <img id="tiny-logo" src="img/logo.png"/>
     <ul>
         <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
         <li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
         <li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
-        
-        </ul>
-    </div>
-    <!--header-->
-    <div class = "img-banner"><p class="logo">UMM GROCERY</p></div>
 
-    <!--title-->
-    <h1 class="page-header"> AISLES &gt; FRUITS</h1>
+    </ul>
+</div>
+<!-- Logo Banner -->
+<div class = "img-banner"><p class="logo">UMMM GROCERY</p></div>
 
-    <div class = "row">
-    <!--side menu-->
+
+
+<!---   MAIN SECTION   ------------------------------------>
+<!-- Page Header -->
+<h1 class="page-header"> AISLES &gt; FRUITS </h1>
+
+<div class ="row">
+    <!-- SIDE MENU (from an aisle/aisle product) -->
     <div class="sidemenu column side">
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html">Aisles</a>
-                <ul>
-                    <li><a class="active"href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a></li>
-                        <ul class = "mobilenone">
-                            <li><a href="GroceryFruitAisleApple.html">Apples</a></li>
-                            <li><a href="GroceryFruitAisleBanana.html">Bananas</a>
-                            <li><a href="GroceryFruitAislePeach.html">Peaches</a></li>
-                            <li><a href="GroceryFruitAisleStrawberry.html">Strawberries</a></li>
-                        </ul>
-                    <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
-                    <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
-                    <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a></li>
-                    <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
-                    <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Aisles</a>
+            <ul>
+	            <li><a href="../FruitsAisle/GroceryFruitAisle.html" class="active">Fruits</a></li>
+                <ul class = "mobilenone">
+                  <li><a href="GroceryFruitAisleApple.html">Apple</a></li>
+                  <li><a href="GroceryFruitAisleBanana.html">Banana</a></li>
+                  <li><a href="GroceryFruitAislePeach.html">Peach</a></li>
+                  <li><a href="GroceryFruitAisleStrawberry.html">Strawberry</a></li>
                 </ul>
-            </li>
+	            <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
+		        <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
+	            <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a></li>
+		        <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
+		        <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
+            </ul>
+          </li>
         </ul>
     </div>
-    <!--products-->
-    <div class="flex-container column visual">
+
+    <!-- Drink Aisle -->
+  <div class="flex-container column visual">
+
     <div class="row">
-        <div class="col-sm">
-            <div class="d-flex flex-column">
-            <a href="GroceryFruitAisleApple.html"><img src="img/apple.jpg" alt = "apple" class="list_img"></a>
-            <br>
-            <span class="text-uppercase">Lufa Farms</span>
-            <h3>Apples</h3>
-            <span>80-120 g each</span>
-            <span> $4.00/0.7kg</span>
-            </div>
-         </div>
-
-         <div class="col-sm"> 
-         <div class="d-flex flex-column">
-           <a href="GroceryFruitAisleBanana.html"><img src="img/banana.jpg" alt = "banana" class="list_img"> </a>
-           <br>
-                <span class="text-uppercase">Costa Rica</span>
-                <h3>Bananas</h3>
-                <span>80-120 g each</span>
-                <span> $2.60 per 3</span>
-         </div>
-         </div>
-
-         <div class="col-sm"> 
-             <div class="d-flex flex-column">
-            <a href="GroceryFruitAislePeach.html"><img src="img/peach.jpg" alt="peach" class="list_img"> </a>
-            <br>
-                <span class="text-uppercase">Ontario</span>
-                <h3>Peaches</h3>
-                <span>Pack of 7</span>
-                <span>$6.99</span>
-              </div>
-         </div>
-
-         <div class="col-sm">
-            <div class="d-flex flex-column">
-            <a href="GroceryFruitAisleStrawberry.html"><img src="img/strawberry.jpg" alt="strawberry" class="list_img"> </a>
-            <br>
-            <span class="text-uppercase">Quebec</span>
-            <h3>Strawberries</h3>
-            <span>Pack of 350 g</span>
-            <span>$6.00</span>
-            </div>
-         </div>
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="GroceryFruitAisleApple.html"><img src="img/apple.jpg" alt="apple" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Lufa Farms</span>
+          <h3>Apple</h3>
+          <span>80-120 g each</span>
+          <span>$4.00 per bag of 0.7kg</span>
         </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+            <a href="GroceryFruitAisleBanana.html"><img src="img/banana.jpg" alt="banana" class="list_img"></a>
+            <br>
+            <span class="text-uppercase">Costa Rica Banana Farm</span>
+            <h3>Banana</h3>
+            <span>80-120 g each</span>
+            <span>$2.60 per 3</span>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="GroceryFruitAislePeach.html"><img src="img/peach.jpg" alt="peach" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Ontario Peach Farms</span>
+          <h3>Peach</h3>
+          <span>Pack of 7</span>
+          <span>$6.99</span>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="d-flex flex-column">
+          <a href="GroceryFruitAisleStrawberry.html"><img src="img/strawberry.png" alt="strawberry" class="list_img"></a>
+          <br>
+          <span class="text-uppercase">Quebec Farms</span>
+          <h3>Strawberry</h3>
+          <span>Pack of 350 g</span>
+          <span>$6.00</span>
+        </div>
+      </div>
+
+  </div>
+
 </div>
+
 </div>
-    </div>
-    </div>
+
 <!-- Footer -->
-<div class="footer"> 
+<div class="footer">
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html">Aisles</a></li>
@@ -113,5 +124,8 @@
         <li><a href="../BackstoreIndex.html">Backstore</a></li>
     </ul>
 </div>
+
+
 </body>
+
 </html>
