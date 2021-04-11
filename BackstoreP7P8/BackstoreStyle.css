@@ -4,6 +4,7 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration:none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body{
@@ -40,7 +41,6 @@ html, body{
 .userbanner ul li{
     display: inline-block;
     line-height:35px;
-    margin 10px 5px;
 }
 
 .userbanner ul li a{
