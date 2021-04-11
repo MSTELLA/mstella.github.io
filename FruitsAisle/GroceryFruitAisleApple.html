@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang en>
+<!doctype html>
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Apple</title>
-    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+    <meta charset="utf-8">
+    <title>Ummm Grocery | Drinks_Heineken </title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- BOOTSRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-      function myFunction() {
+        function myFunction() {
           var dots = document.getElementById("dots");
           var moreText = document.getElementById("more");
           var btnText = document.getElementById("myBtn");
@@ -25,110 +27,135 @@
             moreText.style.display = "inline";
           }
         }
-      function CalculateSubTotal() {
-	  var subtotal = 0;
-		itemID = document.getElementById("qnt");   
-        subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
-		
-	document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
-	
-    }
-      window.onload = function (){
+
+        function CalculateSubTotal() {
+          var subtotal = 0;
+          itemID = document.getElementById("qnt");
+          subtotal = subtotal + itemID.value * itemID.getAttribute("data-price");
+
+          document.getElementById("ItemsTotal").innerHTML = "Subtotal of Item: $" + subtotal.toFixed(2);
+
+        }
+
+       window.onload = function (){
         if (document.cookie.length != 0)
         {
-            var nameValueArray = document.cookie.split("=");
-            document.getElementById("qnt").value = nameValueArray[1];
-            CalculateSubTotal()
-        }
-         
+           var nameValueArray = document.cookie.split("=");
+           document.getElementById("qnt").value = nameValueArray[1];
+           CalculateSubTotal()
+         }
+
        }
 
-    function setAllCookies()
-    {
-        var selectedQuantity = document.getElementById("qnt").value;
-        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
-    }	    	    
-    </script>
-    
+       function setAllCookies()
+      {
+       var selectedQuantity = document.getElementById("qnt").value;
+       document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
+     }
+     </script>
 </head>
+
 <body>
-<!--black banner-->
-<div class="userbanner"> 
+
+
+<!-- Black User banner -->
+<div class="userbanner">
     <img id="tiny-logo" src="img/logo.png"/>
     <ul>
         <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
         <li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
         <li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
-        
-        </ul>
-    </div>
-    <!--header-->
-    <div class = "img-banner"><p class="logo">UMM GROCERY</p></div>
-    <!--title-->
-    <div class="image-header"> AISLES &gt; FRUITS &gt; APPLES</div>
-    <!--sidemenu-->
-    <div class = "row">
+
+    </ul>
+</div>
+
+<!-- Logo Banner -->
+<div class = "img-banner"><p class="logo">UMMM GROCERY</p></div>
+
+
+
+<!---   MAIN SECTION   ------------------------------------>
+<!-- Page Header -->
+<p class="page-header"> AISLES &gt; DRINKS &gt; APPLE </p>
+
+<div class ="row">
+    <!-- SIDE MENU (from an aisle/aisle product) -->
     <div class="sidemenu column side">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../index.html">Aisles</a>
                 <ul>
-                    <li><a href="../FruitsAisle/GroceryFruitAisle">Fruits</a></li>
-                        <ul class="mobilenone">
-                            <li><a class="active" href="GroceryFruitAisleApple.html">Apples</a></li>
-                            <li><a href="GroceryFruitAislePeach.html">Peaches</a></li>
-                            <li><a href="GroceryFruitAisleBanana.html">Bananas</a></li>
-                            <li><a href="GroceryFruitAisleStrawberry.html">Strawberries</a></li>
-                        </ul>
-                    <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a></li>
+                    <li><a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a>
+			<ul class="mobilenone">
+                        <li><a href=".html" class="active" >Heineken</a></li>
+                        <li><a href="absolut.html">Absolut</a></li>
+                        <li><a href="kopke.html" >Kopke</a></li>
+                        <li><a href="moet.html">Moët&Chandon</a></li>
+                      </ul></li>
+                    <li><a href="../VegetablesAisle/Vegetables-Aisle.html">Vegetables</a>
                     <li><a href="../MeatAisle/Meat_Aisle.html">Meat</a></li>
-                    <li><a href="../DrinksAisle/DrinksAisle.html">Drinks</a></li>
+                    <li><a href="DrinksAisle.html">Drinks</a></li>
                     <li><a href="../SnackAisle/snacks-aisle.html">Snacks</a></li>
                     <li><a href="../Aisles_Seafood/Seafood_Aisle.html">Seafood</a></li>
+
                 </ul>
             </li>
         </ul>
-    </div>
-<!--Aisle-->
-    <section class="item-container column visual">
-        <div class="row">
-           <div class="product-img"> <img src="img/apple.jpg" alt="Apple Image" class="imgitem"></div>
+     </div>
+
+
+     <!-- Aisle Product -->
+    <div class="item-container column visual">
+      <div class="row">
+        <div class="col-sm">
+          <div class="d-flex flex-column">
+                <img src="img/heineken.png" alt="heineken" class="item_img">
+          </div>
         </div>
-        <div class="oneProduct">
-            <div class="textalign">
-            <div class="d-flex flex-column" style="text-align: left">
-                <span class="text-uppercase">Selection</span>
-                <h3>Apples</h3>
-                <span>80-120 g ea.</span><br>
-                <span>$4.00 per bag of 0.7kg</span><br>
-                <span>U.S</span><br>
-                    
-                <div class="d-flex flex-row">
-                    <!-- <span class="minus">-</span> -->
-                    <input name="qnt" type="number" id="qnt" value="0" size="3" data-price=4.00 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/>
-                    <div id="ItemsTotal">Subtotal of Item: $0.00</div>
-                    <!-- <span class="plus">+</span> -->
-                </div>
-                <button type="button" class="button_box">Add to Cart</button>
-                <br><button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
-              	<p><span id="dots">...</span><span id="more"> Mcintosh Apple. Can be eaten raw or used in cooking. Classic apple taste.</span></p>
+
+        <div class="col-sm">
+          <div class="d-flex flex-column description">
+            <span class="text-uppercase">Heineken's Brouwerijen Nederland Bv</span>
+            <h3>Heineken</h3>
+            <span>500 ml can</span>
+            <span>$3.25 ea</span>
+            <span>$0.65 /100ml </span>
+            <span>Origin : Netherlands </span>
+
+            <!-- <span class="minus">-</span> -->
+            <div><input name="qnt" type="number" id="qnt" value="0" size="3" data-price=3.25 min="0" onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()"/></div>
+            <div id="ItemsTotal">Subtotal of Item: $0.00</div>
+            <br>
+            <!-- <span class="plus">+</span> -->
+
+            <div>
+              <button type="button" class="button_box">Add to Cart</button>
+              <br>
+              <button onclick="myFunction()" id="myBtn" class="button_box"> More Description </button>
+              <p><span id="dots">...</span><span id="more"> Appealing aromas of sweet malt, floral hops and hints of biscuit, grain and herb. </span></p>
             </div>
-            </div>
+          </div>
         </div>
-    </section>
-    </section>
+
+        <div class="col-sm tabletnone"></div>
+
+      </div>
     </div>
-    </div>
+
+</div>
+
 <!-- Footer -->
-<div class="footer"> 
+<div class="footer">
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../index.html">Aisles</a></li>
-        <li><a href="../SnackAisle/login.html"> Login</a></li>
-        <li><a href="../SignUp/signup.html"> Sign up</a></li>
+		<li><a href="../SnackAisle/login.html"> Login</a></li>
+		<li><a href="../SignUp/signup.html"> Sign up</a></li>
         <li><a href="../BackstoreIndex.html">Backstore</a></li>
     </ul>
 </div>
 
+
 </body>
+
 </html>
