@@ -272,7 +272,6 @@ width: fit-content;
     padding: 0
   }
   .sidemenu ul li{
-      display: inline-block;
       line-height:20px;
   }
 
