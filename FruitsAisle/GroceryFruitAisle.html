@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-    
 <body>
-<div class="container-fluid">
     <!--black banner-->
     <div class="userbanner"> 
     <img id="tiny-logo" src="img/logo.png"/>
@@ -27,12 +25,12 @@
     </div>
     <!--header-->
     <div class = "img-banner"><p class="logo">UMM GROCERY</p></div>
+
     <!--title-->
-    <div class="title"> AISLES &gt; FRUITS</div>
+    <h1 class="page-header"> AISLES &gt; FRUITS</h1>
+
+    <div class = "row">
     <!--side menu-->
-    <div class = "content">
-    <section class="main">
-    <div class="row">
     <div class="sidemenu column side">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -55,49 +53,52 @@
         </ul>
     </div>
     <!--products-->
-    <section class="product-grid">
+    <div class="flex-container column visual">
     <div class="row">
-        <div class="oneProduct"> 
-            <div class="product-img"> <a href="GroceryFruitAisleApple.html"><img src="img/apple.jpg"/></a> </div> 
-            <div class="product-label">
+        <div class="col-sm">
+            <div class="d-flex flex-column">
+            <a href="GroceryFruitAisleApple.html"><img src="img/apple.jpg" alt = "apple" class="list_img"></a>
+            <br>
             <span class="text-uppercase">Lufa Farms</span>
             <h3>Apples</h3>
             <span>80-120 g each</span>
-            <br><span class="price"> $4.00/0.7kg</span>
+            <span> $4.00/0.7kg</span>
             </div>
          </div>
 
-         <div class="oneProduct"> 
-            <div class="product-img"> <a href="GroceryFruitAisleBanana.html"><img src="img/banana.jpg"/> </a> </div> 
-            <div class="product-label">
+         <div class="col-sm"> 
+         <div class="d-flex flex-column">
+           <a href="GroceryFruitAisleBanana.html"><img src="img/banana.jpg" alt = "banana" class="list_img"> </a>
+           <br>
                 <span class="text-uppercase">Costa Rica</span>
                 <h3>Bananas</h3>
                 <span>80-120 g each</span>
-                <br><span class="price"> $2.60 per 3</span>
-                </div>
+                <span> $2.60 per 3</span>
+         </div>
          </div>
 
-         <div class="oneProduct"> 
-            <div class="product-img"> <a href="GroceryFruitAislePeach.html"><img src="img/peach.jpg"/> </a></div> 
-            <div class="product-label">
+         <div class="col-sm"> 
+             <div class="d-flex flex-column">
+            <a href="GroceryFruitAislePeach.html"><img src="img/peach.jpg" alt="peach" class="list_img"> </a>
+            <br>
                 <span class="text-uppercase">Ontario</span>
                 <h3>Peaches</h3>
                 <span>Pack of 7</span>
-                <br><span class="price">$6.99</span>
-                </div>
+                <span>$6.99</span>
+              </div>
          </div>
 
-         <div class="oneProduct"> 
-            <div class="product-img"> <a href="GroceryFruitAisleStrawberry.html"><img src="img/strawberry.jpg"/> </a></div> 
-            <div class="product-label">
+         <div class="col-sm">
+            <div class="d-flex flex-column">
+            <a href="GroceryFruitAisleStrawberry.html"><img src="img/strawberry.jpg" alt="strawberry" class="list_img"> </a>
+            <br>
             <span class="text-uppercase">Quebec</span>
             <h3>Strawberries</h3>
             <span>Pack of 350 g</span>
-            <br><span class="price">$6.00</span>
+            <span>$6.00</span>
             </div>
          </div>
-    </section>
-</section>
+        </div>
 </div>
 </div>
     </div>
