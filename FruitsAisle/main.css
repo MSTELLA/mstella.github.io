@@ -179,10 +179,6 @@ main {
   color:black;
   font-weight: bold;
 }
-.drinksection:hover{
-  color:#5b4173;
-  font-style: italic;
-}
 
 .list_img {
 
@@ -269,15 +265,17 @@ width: fit-content;
     position: static;
   }
   .sidemenu ul{
+    display: inline-block;
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
     padding: 0
   }
   .sidemenu ul li{
+      display: inline-block;
       line-height:20px;
   }
-  /*Drink Aisle*/
+
   .flex-container{height:1800px;}
 
   .tabletnone, .mobilenone{
@@ -323,7 +321,6 @@ width: fit-content;
     width: 70%;
   }
 
-  /*Drink Aisle*/
   .d-flex {
     text-align: left;
     flex-direction: row;
@@ -341,7 +338,6 @@ width: fit-content;
     display: none;
   }
 
-  /*Aisle item */
   .item_img{
     width: auto;
     height: 300px;
