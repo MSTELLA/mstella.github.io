@@ -86,6 +86,12 @@ html, body{
     width:100%;
 }
 
+.container {
+	width: 100%;
+	min-height:100vh;
+	position: relative;
+}
+
 /* SIDE MENU */
 .sidemenu{
     display: inline-block;
