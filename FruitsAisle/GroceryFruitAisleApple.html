@@ -52,6 +52,18 @@
        var selectedQuantity = document.getElementById("qnt").value;
        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
      }
+	
+	$('.input-number-increment').click(function() {
+  var $input = $(this).parents('.input-number-group').find('.input-number');
+  var val = parseInt($input.val(), 10);
+  $input.val(val + 1);
+	});
+
+	$('.input-number-decrement').click(function() {
+  var $input = $(this).parents('.input-number-group').find('.input-number');
+  var val = parseInt($input.val(), 10);
+  $input.val(val - 1);
+	})
      </script>
 </head>
 
