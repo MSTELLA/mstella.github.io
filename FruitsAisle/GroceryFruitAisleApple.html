@@ -53,13 +53,13 @@
        document.cookie = "quantity=" + selectedQuantity +";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
      }
 	
-	$('.input-number-increment').click(function() {
+function Add() {
   var $input = $(this).parents('.input-number-group').find('.input-number');
   var val = parseInt($input.val(), 10);
   $input.val(val + 1);
 	});
 
-	$('.input-number-decrement').click(function() {
+function Minus() {
   var $input = $(this).parents('.input-number-group').find('.input-number');
   var val = parseInt($input.val(), 10);
   $input.val(val - 1);
@@ -135,11 +135,11 @@
 	<!--button for products-->	  
 	<div class="input-group input-number-group">
   	<div class="input-group-button">
-    	<span class="input-number-decrement">-</span>
+    	<button type="button" class="button_box" onclick="Minus()">-</button>
   	</div>
   	<input class="input-number" type="number" value="1" min="0" max="1000" name="qnt" id="qnt" data-price=4.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()">
   	<div class="input-group-button">
-    	<span class="input-number-increment">+</span>
+    	<button type="button" class="button_box" onclick="Add()">+</button>
   	</div>
 	</div>
         <div id="ItemsTotal">Subtotal of Item: $0.00</div>
