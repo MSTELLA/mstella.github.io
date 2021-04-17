@@ -7,9 +7,8 @@ if ( isset( $_GET['submit'] ) ) {
     $birthday = $_GET['bDay'];
     $cardnumber = $_GET['card'];
 
-    $file = 'users.xml';
-
-    $users = simplexml_load_file($file);
+    $simplexml= new SimpleXMLElement('<?xml version="1.0"?><users/>');
+    
     $user = $users->addChild('user');
   
     $user->addChild('firstName', $firstname);
@@ -20,6 +19,6 @@ if ( isset( $_GET['submit'] ) ) {
     $user->addChild('cardNumber', $cardnumber);
   
 
-    $users->asXML($file);
+    file_put_contents('users.xml', $simplexml->asXML());
 }
 ?>
