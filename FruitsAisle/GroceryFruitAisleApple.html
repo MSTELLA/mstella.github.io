@@ -122,7 +122,7 @@
 
 	<!--button for products-->	  
     	<button onclick="decrement()">-</button>
-  	<input type="number" value="1" min="0" max="1000" name="qnt" id="qnt" data-price=4.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()">
+  	<input type="number" value="1" min="0" max="100" name="qnt" id="qnt" data-price=4.00 onchange="setAllCookies()">
 	<button onclick="increment()">+</button>
         <div id="ItemsTotal">Subtotal of Item: $0.00</div>
 	<script>
@@ -132,8 +132,7 @@
 
                                     var price = document.getElementById('qnt').getAttribute('data_price');
                                     var qty = document.getElementById('demoInput').value;
-                                    var subtotal = document.getElementById('subtot');
-                                    ItemsTotal.innerHTML = qty * parseFloat(price);
+                                   CalculateSubTotal();
                                 }
                                 function decrement() 
                                 {
@@ -141,8 +140,7 @@
 
                                     var price = document.getElementById('qnt').getAttribute('data_price');
                                     var qty = document.getElementById('demoInput').value;
-                                    var subtotal = document.getElementById('subtot');
-                                    ItemsTotal.innerHTML = qty * parseFloat(price);
+				CalculateSubTotal()
 				}
 
 		  </script>
