@@ -130,19 +130,19 @@
                                 {
                                     document.getElementById('demoInput').stepUp();
 
-                                    var price = document.getElementById('price').getAttribute('p');
+                                    var price = document.getElementById('qnt').getAttribute('data_price');
                                     var qty = document.getElementById('demoInput').value;
                                     var subtotal = document.getElementById('subtot');
-                                    subtotal.innerHTML = qty * parseFloat(price);
+                                    ItemsTotal.innerHTML = qty * parseFloat(price);
                                 }
                                 function decrement() 
                                 {
                                     document.getElementById('demoInput').stepDown();
 
-                                    var price = document.getElementById('price').getAttribute('p');
+                                    var price = document.getElementById('qnt').getAttribute('data_price');
                                     var qty = document.getElementById('demoInput').value;
                                     var subtotal = document.getElementById('subtot');
-                                    subtotal.innerHTML =  qty * parseFloat(price);
+                                    ItemsTotal.innerHTML = qty * parseFloat(price);
 				}
 
 		  </script>
