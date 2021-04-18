@@ -68,81 +68,33 @@
                 <th>Select</th>
                 <th>Image</th>
                 <th>Product Name</th>
-                <th>Brand</th>
+                <th>Brand/Origin</th>
                 <th>Price</th>
-                <th>Price/Quantity</th>
-                <th>Origin</th>
                 <th>Description</th>
-                <th>Inventory</th>
                 <th> </th>
             </tr>   
 
-            <!-- ROW 1-->
-            <tr>
-                <td> <input type="checkbox" name="Select"></td>
-                <td><img class="icon-img" src="img/CARROTS.png"> </td>
-                <td class="img-row">Carrots (2LB)</td>
-                <td>Lufa Farms</td>
-                <td>$2.99 each</td>
-                <td>$0.33/100g.</td>
-                <td>Quebec</td>
-                <td>The carrot...</td>
-                <td><div class="d-flex flex-row">
-                    <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
-                    <!-- <span class="plus">+</span> -->
-                </div></td>
-            </tr>   
+            <tbody>
+            <tbody>
+					<?php
+					$file = simplexml_load_file('products.xml');
 
-             <!-- ROW 2-->
-            <tr>
-                <td> <input type="checkbox" name="Select"></td>
-                <td class="img-row"><img class="icon-img" src="img/EGGPLANT.png"> </td>
-                <td>Eggplant</td>
-                <td>Lufa Farms</td>
-                <td>$5.47 avg. each (830 g. avg.)</td>
-                <td>$ 6.59/kg $2.99/lb.</td>
-                <td>Quebec</td>
-                <td>The eggplant...</td>
-                <td><div class="d-flex flex-row">
-                    <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
-                    <!-- <span class="plus">+</span> -->
-                </div></td>
-            </tr>   
-             <!-- ROW 3-->
-            <tr>
-                <td> <input type="checkbox" name="Select"></td>
-                <td class="img-row"><img class="icon-img" src="img/TOMATO.png"> </td>
-                <td>Tomato</td>
-                <td>Lufa Farms</td>
-                <td>$2.20 avg. each (200g avg.)</td>
-                <td>$11.00/kg $4.99/lb.</td>
-                <td>Quebec</td>
-                <td>The tomato...</td>
-                <td><div class="d-flex flex-row">
-                    <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
-                    <!-- <span class="plus">+</span> -->
-                </div></td>
-            </tr>   
-             <!-- ROW 4-->
-            <tr>
-                <td> <input type="checkbox" name="Select"></td>
-                <td class="img-row"><img class="icon-img" src="img/ZUCCHINI.png"> </td>
-                <td>Zucchini</td>
-                <td>Lufa Farms</td>
-                <td>$1.45 avg. each (245g avg.)</td>
-                <td>$5.93/kg $2.69/lb.</td>
-                <td>Quebec</td>
-                <td>The zucchini...</td>
-                <td><div class="d-flex flex-row">
-                    <!-- <span class="minus">-</span> -->
-                    <input value="1" type="number" min="0"/>
-                    <!-- <span class="plus">+</span> -->
-                </div></td>
-            </tr>   
-
+					foreach($file->product as $row){
+						?>
+						<tr>
+                            <td><?php echo $row->IMAGE; ?></td>
+							<td><?php echo $row->NAME; ?></td>
+                            <td><?php echo $row->ORIGIN; ?></td>
+                            <td><?php echo $row->WEIGHT; ?></td>
+							<td><?php echo $row->PRICE; ?></td>
+							<td><?php echo $row->DESCRIPTION; ?></td>
+						</tr>
+						<?php
+					}
+		
+					?>
+				</tbody>
+                </tbody>
 
         </table>
     </section>
