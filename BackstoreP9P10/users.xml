@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
-
+  <firstName>Name</firstName>
+  <lastName>LastName</lastName>
+  <email>Email</email>
+  <phoneNumber>5140000000</phoneNumber>
+  <birthday>00/00/0000</birthday>
+  <cardNumber>000</cardNumber>
 </users>
