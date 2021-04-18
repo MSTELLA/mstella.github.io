@@ -7,7 +7,7 @@ if ( isset( $_GET['submit'] ) ) {
     $birthday = $_GET['bDay'];
     $cardnumber = $_GET['card'];
 
-    $simplexml= new SimpleXMLElement('<user><users/>');
+    $simplexml= new SimpleXMLElement('<users><users/>');
     
     $user = $users->addChild('user');
   
