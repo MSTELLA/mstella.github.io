@@ -119,9 +119,11 @@
             	<h3>Apple</h3>
             	<span>80-120 g each</span>
            	<span>$4.00 per bag of 0.7kg </span>
+	<div>
 		<button class="button_box" onclick="decrement()">-</button>
        		<input id="qnt" type="number" min="0" max="20" data-price=4.00 style="text-align: center;" onchange="setAllCookies()">            
         	<button class="button_box" onclick="increment()">+</button>
+			</div>
                 	<script>
                         function increment() {
                             document.getElementById('qnt').stepUp();
