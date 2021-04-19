@@ -19,6 +19,7 @@ table{
 	position: relative;
 	left: 50%;
 	transform: translate(-50%);
+	border-collapse: collapse;
 }
 
 table {
@@ -33,8 +34,13 @@ table tr:nth-child(even){
 	background-color: #d9ccff;
 }
 
+table tbody {
+	border: 2px solid #000;
+}
+
 th{
 	height:30px;
+	border: 1px solid black;
 }
 
 tr{
@@ -181,6 +187,7 @@ nav ul li a:hover{
 /* SIDE MENU */
 .sidemenu{
 	display: inline-block;
+    height: 80%;
 }
 
 @media (max-width:650px){
@@ -250,11 +257,10 @@ nav ul li a:hover{
 .edit-order-list{
 	width: 100%;
 }
-}
+
 .content{
-	width: 80%;
-	height: 75%;
-	display: inline-block;
+	min-height: 59.1vh;
+    display: flex;
 	margin-left: 10px;
 }
 .list{
@@ -316,7 +322,9 @@ nav ul li a:hover{
 .footer{
 	background-color: #5b4173;
 	height:215px;
-	font-size: 20px;;
+	font-size: 20px;
+	position: relative;
+    width: 100%;
 }
 
 .footer ul{
