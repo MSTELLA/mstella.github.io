@@ -78,8 +78,7 @@
 					<?php
 					$file = simplexml_load_file('products.xml');
 
-					foreach($file->FRUITS->PRODUCTS->PRODUCT as $row){
-						?>
+					foreach($file->PRODUCT as $row){?>
 						<tr>
                             <td><?php echo $row->IMAGE; ?></td>
 							<td><?php echo $row->NAME; ?></td>
