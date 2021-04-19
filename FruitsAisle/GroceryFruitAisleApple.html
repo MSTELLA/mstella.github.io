@@ -114,37 +114,34 @@
         </div>
 
         <div class="col-sm">
-          <div class="d-flex flex-column description">
-            <span class="text-uppercase">Lufa Farms</span>
-            <h3>Apple</h3>
-            <span>80-120 g each</span>
-            <span>$4.00 per bag of 0.7kg </span>
+		<div class="d-flex flex-column description">
+            	<span class="text-uppercase">Lufa Farms</span>
+            	<h3>Apple</h3>
+            	<span>80-120 g each</span>
+           	<span>$4.00 per bag of 0.7kg </span>
+		<button class="button_box" onclick="decrement()">-</button>
+       		<input id="qnt" type="number" min="0" max="20" data-price=4.00 style="text-align: center;" onchange="setAllCookies()">            
+        	<button class="button_box" onclick="increment()">+</button>
+                	<script>
+                        function increment() {
+                            document.getElementById('qnt').stepUp();
+                            var qnt = document.getElementById('qnt');
+                            var subtotal = document.getElementById('subtot');
+                            subtotal.innerHTML =  (qnt.value * qnt.getAttribute('data-price')).toFixed(2);
+                            onclick="setAllCookies()";
 
-	<!--button for products BUTTONS ARE FUCKED UP-->	  
-    	<button onclick="decrement()">-</button>
-  	<input type="number" value="1" min="0" max="100" name="qnt" id="qnt" data-price=4.00 onchange="setAllCookies()">
-	<button onclick="increment()">+</button>
-        <div id="ItemsTotal">Subtotal of Item: $0.00</div>
-	<script>
-                                function increment() 
-                                {
-                                    document.getElementById('demoInput').stepUp();
-
-                                    var price = document.getElementById('qnt').getAttribute('data_price');
-                                    var qty = document.getElementById('demoInput').value;
-                                   CalculateSubTotal();
-                                }
-                                function decrement() 
-                                {
-                                    document.getElementById('demoInput').stepDown();
-
-                                    var price = document.getElementById('qnt').getAttribute('data_price');
-                                    var qty = document.getElementById('demoInput').value;
-				CalculateSubTotal()
-				}
-
-		  </script>
-        <br>
+                        }
+                        function decrement() {
+                            document.getElementById('qnt').stepDown();
+                            var qnt = document.getElementById('qnt');
+                            var subtotal = document.getElementById('subtot');
+                            subtotal.innerHTML =  (qnt.value * qnt.getAttribute('data-price')).toFixed(2);
+                            onclick="setAllCookies()";
+                        }
+                    	</script>
+                    <span>Subtotal: $</span>
+                    <span id="subtot">0.00</span>
+                    <br>
 	<!--button for products-->
 
             <div>
