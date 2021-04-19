@@ -16,7 +16,7 @@
     <div class="userbanner"> 
     <img id="tiny-logo" src="img/logo.png"/>
     <ul>
-        <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+        <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
         <li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
         <li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
         
@@ -68,22 +68,51 @@
             <th>
             </th>
         </tr>
-        <?php //load xml file
-        $file = simplexlm_load_file('users.xml');
-        foreach($file->user as $row){
-        ?>
         <tr>
-            <td><?php echo $row->firstName; ?></td>
-            <td><?php echo $row->lastName; ?></td>
-            <td><?php echo $row->email; ?></td>
-            <td><?php echo $row->phoneNumber; ?></td>
-            <td><?php echo $row->birthday; ?></td>
-            <td><?php echo $row->cardNumber; ?></td>
+            <td>
+                Gabrielle Guidote</td>
+            <td>
+                02-05-2018</td>
+            <td>
+                gabrielle.guidote@gmail.com</td>
+            <td>
+                514-944-3455</td>
+            <td>
+                02-07-2001</td>
+            <td>
+                555-444-333</td>
             <td><a href="UserEdit.html"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-cog  fa-lg" aria-hidden="true"></button></a> <br> <a href="#"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-window-close  fa-lg" aria-hidden="true"></button></a></td>
         </tr>
-        <?php
-        } 
-        ?>
+        <tr>
+            <td>
+                John Doe</td>
+            <td>
+                23-08-2001</td>
+            <td>
+                john.doe@yahoo.ca</td>
+            <td>
+                514-111-1111</td>
+            <td>
+                02-12-1999</td>
+            <td>
+                888-777-666</td>
+            <td><a href="UserEdit.html"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-cog  fa-lg" aria-hidden="true"></button></a> <br> <a href="#"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-window-close  fa-lg" aria-hidden="true"></button></a></td>
+        </tr>
+        <tr>
+            <td>
+                Marie Lamb</td>
+            <td>
+                28-11-2000</td>
+            <td>
+                wheres.the.sheep@yahoo.ca</td>
+            <td>
+                514-333-4545</td>
+            <td>
+                23-03-1987</td>
+            <td>
+                999-111-222</td>
+            <td><a href="UserEdit.html"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-cog  fa-lg" aria-hidden="true"></button></a> <br> <a href="#"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-window-close  fa-lg" aria-hidden="true"></button></a></td>
+        </tr>
     </table>
     </div>
     </section>
