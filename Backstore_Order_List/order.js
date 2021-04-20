@@ -1,14 +1,14 @@
-var add = 0;
-var update = 0;
+var add = "";
+var update = "";
 var string = "works!";
 
 function addOrder(){
-  add = 1;
+  add = true;
   window.prompt("Please enter username of the new order","________________");
 }
 
 function editOrder(){
-  update = 1;
+  update = true;
 }
 
 function deleteOrder(){
@@ -17,15 +17,15 @@ function deleteOrder(){
 
 function save() {
   if (Boolean(add)) {
-    add = 0;
+    add = false;
     window.prompt("Please enter the date of the order (DD/MM/YYYY)","--/--/----");
-    add = 0;
+    add = false;
   } else if (Boolean(update)) {
 
     window.alert("Edit saved!");
 
 
-    update = 0;
+    update = false;
   }
 }
 
