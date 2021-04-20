@@ -145,6 +145,8 @@ window.onload = function() {
     document.getElementById("item24").value = nameValueArray[23];
     document.getElementById("item25").value = nameValueArray[24];
     document.getElementById("item26").value = nameValueArray[25];
+    add = nameValueArray[26];
+    update = nameValueArray[27];
     CalculateSubTotal()
   }
 }
@@ -175,7 +177,8 @@ function setAllCookies() {
     document.getElementById("item23").value + "&" +
     document.getElementById("item24").value + "&" +
     document.getElementById("item25").value + "&" +
-    document.getElementById("item26").value + "&";
+    document.getElementById("item26").value + "&" +
+    add + "&" + update;
   "expires = Fri, 31 Dec 2030 01: 00: 00 UTC;";
 }
 
