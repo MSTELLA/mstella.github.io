@@ -109,7 +109,7 @@ window.onload = function() {
     var nameValueArray = document.cookie.split("&");
     for (let i = 0; i < nameValueArray.length; i++){
       document.getElementById('item'+(i+1)).value = nameValueArray[i];
-      window.alert(i);
+      window.alert(i+1);
     }
     /*document.getElementById("item1").value = nameValueArray[0];
     document.getElementById("item2").value = nameValueArray[1];
