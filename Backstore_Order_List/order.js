@@ -166,7 +166,7 @@ function setAllCookies() {
     document.getElementById("item24").value + "&" +
     document.getElementById("item25").value + "&" +
     document.getElementById("item26").value + "&" +
-    add + "&" + update;
-  "expires = Fri, 31 Dec 2030 01: 00: 00 UTC;";
+    add + "&" + update;";";
+  //"expires = Fri, 31 Dec 2030 01: 00: 00 UTC;";
 }
 
