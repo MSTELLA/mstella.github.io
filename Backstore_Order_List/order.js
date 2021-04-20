@@ -1,6 +1,18 @@
-var add = 1;
+var add = 0;
 var update = 0;
 var string = "works!";
+
+function addOrder(){
+		add = 1;
+}
+
+function editOrder(){
+		update = 1;
+}
+
+function deleteOrder(){
+
+}
 
 function save() {
   if (Boolean(add)) {
