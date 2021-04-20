@@ -1,4 +1,4 @@
-var add = 0;
+var add = 1;
 var update = 0;
 var string = "works!";
 
