@@ -20,13 +20,11 @@ function save() {
 
     window.prompt("Please enter the date of the order (DD/MM/YYYY)","--/--/----");
     add = 0;
-    update = 1;
   } else if (Boolean(update)) {
 
     window.alert("Edit saved!");
 
 
-    add = 1;
     update = 0;
   }
 }
