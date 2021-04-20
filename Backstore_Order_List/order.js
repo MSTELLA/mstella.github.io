@@ -17,7 +17,7 @@ function deleteOrder(){
 
 function save() {
   if (Boolean(add)) {
-
+    add = 0;
     window.prompt("Please enter the date of the order (DD/MM/YYYY)","--/--/----");
     add = 0;
   } else if (Boolean(update)) {
