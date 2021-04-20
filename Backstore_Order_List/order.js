@@ -108,7 +108,7 @@ window.onload = function() {
   if (document.cookie.length != 0) {
     var nameValueArray = document.cookie.split("&");
     for (let i = 0; i < nameValueArray.length; i++){
-      document.getElementById('item'+(i+1)).value = nameValueArray[i];
+      document.getElementById('item'+(i+1)) = nameValueArray[i];
       window.alert(nameValueArray[i]);
     }
     /*document.getElementById("item1").value = nameValueArray[0];
