@@ -2,512 +2,395 @@
 
 <html>
 
-<head>
-   	<title>Edit Order List</title>
-    	<meta charset="utf-8">
-	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
-	<script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    	<link rel="stylesheet" href="OrderStyle.css">
-	<script>
-		 function CalculateSubTotal() {
-        		var subtotal = 0;
-        		var gst = 0.05;
-        		var qst = 0.09975;
-        		var total = 0;
+  <head>
+    <title>Edit Order List</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="OrderStyle.css">
+    <script src="order.js"></script>
+  </head>
 
-        		f1 = document.getElementById("f1");
-        		f2 = document.getElementById("f2");
-        		f3 = document.getElementById("f3");
-        		f4 = document.getElementById("f4");
-			v1 = document.getElementById("v1");
-        		v2 = document.getElementById("v2");
-        		v3 = document.getElementById("v3");
-        		v4 = document.getElementById("v4");
-			m1 = document.getElementById("m1");
-        		m2 = document.getElementById("m2");
-        		m3 = document.getElementById("m3");
-        		m4 = document.getElementById("m4");
-			se1 = document.getElementById("se1");
-        		se2 = document.getElementById("se2");
-        		se3 = document.getElementById("se3");
-        		se4 = document.getElementById("se4");
-			d1 = document.getElementById("d1");
-        		d2 = document.getElementById("d2");
-        		d3 = document.getElementById("d3");
-        		d4 = document.getElementById("d4");
-			d5 = document.getElementById("d5");
-        		d6 = document.getElementById("d6");
-			sn1 = document.getElementById("sn1");
-			sn2 = document.getElementById("sn2");
-        		sn3 = document.getElementById("sn3");
-        		sn4 = document.getElementById("sn4");
-        	
-        		subtotal = (f1.value * f1.getAttribute("data-price")) +
-                   		   (f2.value * f2.getAttribute("data-price")) +
-               		 	   (f3.value * f3.getAttribute("data-price")) +
-				   (f4.value * f4.getAttribute("data-price")) +
-				   (v1.value * v1.getAttribute("data-price")) +
-                   		   (v2.value * v2.getAttribute("data-price")) +
-               		 	   (v3.value * v3.getAttribute("data-price")) +
-				   (v4.value * v4.getAttribute("data-price")) +
-				   (m1.value * m1.getAttribute("data-price")) +
-                   		   (m2.value * m2.getAttribute("data-price")) +
-               		 	   (m3.value * m3.getAttribute("data-price")) +
-				   (m4.value * m4.getAttribute("data-price")) +
-				   (se1.value * se1.getAttribute("data-price")) +
-                   		   (se2.value * se2.getAttribute("data-price")) +
-               		 	   (se3.value * se3.getAttribute("data-price")) +
-				   (se4.value * se4.getAttribute("data-price")) +
-				   (d1.value * d1.getAttribute("data-price")) +
-                   		   (d2.value * d2.getAttribute("data-price")) +
-               		 	   (d3.value * d3.getAttribute("data-price")) +
-				   (d4.value * d4.getAttribute("data-price")) +
-               		 	   (d5.value * d5.getAttribute("data-price")) +
-               		 	   (d6.value * d6.getAttribute("data-price")) +
-				   (sn1.value * sn1.getAttribute("data-price")) +
-                   		   (sn2.value * sn2.getAttribute("data-price")) +
-               		 	   (sn3.value * sn3.getAttribute("data-price")) +
-				   (sn4.value * sn4.getAttribute("data-price"));
-      			document.getElementById("subtotal").innerHTML = "$" + subtotal.toFixed(2);
-        		
-			gst *= subtotal;
-			
-        		qst *= subtotal;
-	
-        		total = subtotal + gst + qst;
-        		document.getElementById("total").innerHTML = "$" + total.toFixed(2);
-      		}
-      
-      		window.onload = function() {
-      			if (document.cookie.length != 0) {
-      				var nameValueArray = document.cookie.split("&");
-          			document.getElementById("f1").value = nameValueArray[0];
-          			document.getElementById("f2").value = nameValueArray[1];
-          			document.getElementById("f3").value = nameValueArray[2];
-          			document.getElementById("f4").value = nameValueArray[3];
-				document.getElementById("v1").value = nameValueArray[4];
-          			document.getElementById("v2").value = nameValueArray[5];
-          			document.getElementById("v3").value = nameValueArray[6];
-          			document.getElementById("v4").value = nameValueArray[7];
-				document.getElementById("m1").value = nameValueArray[8];
-          			document.getElementById("m2").value = nameValueArray[9];
-          			document.getElementById("m3").value = nameValueArray[10];
-          			document.getElementById("m4").value = nameValueArray[11];
-				document.getElementById("se1").value = nameValueArray[12];
-          			document.getElementById("se2").value = nameValueArray[13];
-          			document.getElementById("se3").value = nameValueArray[14];
-          			document.getElementById("se4").value = nameValueArray[15];
-				document.getElementById("d1").value = nameValueArray[16];
-          			document.getElementById("d2").value = nameValueArray[17];
-          			document.getElementById("d3").value = nameValueArray[18];
-          			document.getElementById("d4").value = nameValueArray[19];
-				document.getElementById("d5").value = nameValueArray[20];
-          			document.getElementById("d6").value = nameValueArray[21];
-          			document.getElementById("sn1").value = nameValueArray[22];
-          			document.getElementById("sn2").value = nameValueArray[23];
-				document.getElementById("sn3").value = nameValueArray[24];
-          			document.getElementById("sn4").value = nameValueArray[25];
-      				CalculateSubTotal()
-      			}
-      		}
+  <!--Container-->
 
-      		function setAllCookies() {
-        		document.cookie = document.getElementById("f1").value + "&" +
-                      			  document.getElementById("f2").value + "&" +
-                        		  document.getElementById("f3").value + "&" +
-                        		  document.getElementById("f4").value + "&" +
-					  document.getElementById("v1").value + "&" +
-                      			  document.getElementById("v2").value + "&" +
-                        		  document.getElementById("v3").value + "&" +
-					  document.getElementById("v4").value + "&" +
-					  document.getElementById("m1").value + "&" +
-                      			  document.getElementById("m2").value + "&" +
-                        		  document.getElementById("m3").value + "&" +
-					  document.getElementById("m4").value + "&" +
-					  document.getElementById("se1").value + "&" +
-                      			  document.getElementById("se2").value + "&" +
-                        		  document.getElementById("se3").value + "&" +
-			  	 	  document.getElementById("se4").value + "&" +
-					  document.getElementById("d1").value + "&" +
-                      			  document.getElementById("d2").value + "&" +
-                        		  document.getElementById("d3").value + "&" +
-					  document.getElementById("d4").value + "&" +
-					  document.getElementById("d5").value + "&" +
-                      			  document.getElementById("d6").value + "&" +
-                        		  document.getElementById("sn1").value + "&" +
-					  document.getElementById("sn2").value + "&" +
-                        		  document.getElementById("sn3").value + "&" +
-                        		  document.getElementById("sn4").value + ";expires= Fri, 31 Dec 2030 01:00:00 UTC;";
-      		}
-	</script>
-</head>
+  <body>
+    <div class="container">
+      <!--header-->
+      <!-- Black User banner -->
+      <div class="userbanner">
+        <img id="tiny-logo" src="img/logo.png" />
+        <ul>
+          <li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
+          <li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
+          <li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
 
-<!--Container-->
-<body>
-	<div class = "container">
-		<!--header-->
-		<!-- Black User banner -->
-		<div class="userbanner"> 
-			<img id="tiny-logo" src="img/logo.png"/>
-			<ul>
-				<li><a href="../Shopping%20Cart/ShoppingCart.html"><i class="fas fa-shopping-cart"></i></i> Shopping Cart</a></li>
-				<li><a href="../SnackAisle/login.html"><i class="fas fa-user"></i> Login</a></li>
-				<li><a href="../SignUp/signup.html"><i class="fas fa-user-plus"></i> Sign up</a></li>
-			
-			</ul>
-		</div>
+        </ul>
+      </div>
 
-		<!-- Logo Banner -->
-		<div class = "img-banner"><p class="logo">UMM GROCERY</p></div>
-		
-		<!-- Road Map Banner-->
-		<div class="page-header"> ORDER LIST &gt; EDIT ORDER LIST</div>
-		
-		<section class="main">
-			<div class="sidemenu">
-           			<ul>
-                			<li><a href="../index.html">Home</a></li>
-               	 			<li><a href="../index.html">Aisles</a></li>
-                			<li><a href="../BackstoreIndex.html">Backstore</a>
-                				<ul class = "insideside">
-                					<li><a href="../BackstoreP7P8/Backstore-ProductList.html">Products List</a></li>
-                					<li><a href="../BackstoreUser/UserList.html">Users List</a></li>
-                					<li><a href="../Backstore_Order_List/Order_List.html">Orders List</a>
-								<ul><li class="active"> Edit Order List</li></ul>
-							</li>
-                				</ul>
-					</li>
-        			</ul>
-        		</div>
-		
-			<!--content-->
-			<section class = "edit-order-list">
-				<div class = "list">
-					<!--sections-->
-					<div style = "background-image: url('img/fruits.png'); background-size: cover;">
-						<p class = "section-name">Fruits</p>
-						<div>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Apples</td>
-										<td style = "width: 164px;">$4.00 / 0.7kg</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="f1" type="number" id="f1" value="0" size="3" data-price=4.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Bananas</td>
-										<td style = "width: 164px;">$2.60 per 3</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="f2" value="0" size="3" data-price=2.60 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Peaches</td>
-										<td style = "width: 164px;">$6.99 ea</td>
-										<td style = "width: 164px;">	
-											<div class = "quantity">
-												<input name="qnt" type="number" id="f3" value="0" size="3" data-price=6.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Strawberries</td>
-										<td style = "width: 164px;">$6.00 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="f4" value="0" size="3" data-price=6.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-			
-					<div style = "background-image: url('img/vegetables.png'); background-size: cover;"><p class = "section-name">Vegetables</p>
-						<div>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Carrots</td>
-										<td style = "width: 164px;">$2.99 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="v1" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Eggplant</td>
-										<td style = "width: 164px;">$6.59/kg</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="v2" value="0" size="3" data-price=6.59 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Tomatoes</td>
-										<td style = "width: 164px;">$11.00/kg</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="v3" value="0" size="3" data-price=11.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Zucchini</td>
-										<td style = "width: 164px;">$5.93/kg</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="v4" value="0" size="3" data-price=5.93 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				
-					<div style = "background-image: url('img/meats.png'); background-size: cover;"><p class = "section-name">Meats</p>
-						<div class>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Bacon</td>
-										<td style = "width: 164px;">$8.99 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="m1" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Mergues sausages</td>
-										<td style = "width: 164px;">$5.49 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="m2" value="0" size="3" data-price=5.49 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">SPAM Luncheon Meat</td>
-										<td style = "width: 164px;">$11.89 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="m3" value="0" size="3" data-price=11.89 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Beef Tenderloin Steak</td>
-										<td style = "width: 164px;">$8.99 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="m4" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				
-					<div style = "background-image: url('img/seafoods.png'); background-size: cover;"><p class = "section-name">Seafoods</p>
-						<div>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Salmon</td>
-										<td style = "width: 164px;">$7.45 / unit</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="se1" value="0" size="3" data-price=7.45 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Tuna</td>
-										<td style = "width: 164px;">$21.10 / unit</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="se2" value="0" size="3" data-price=21.10 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Shrimp</td>
-										<td style = "width: 164px;">$7.14 / pack</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="se3" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Crab</td>
-										<td style = "width: 164px;">$8.99 / 450g</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="se4" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				
-					<div style = "background-image: url('img/drinks.png'); background-size: cover;"><p class = "section-name">Drinks</p>
-						<div>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Absolut Apeach</td>
-										<td style = "width: 164px;">$30.25 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d1" value="0" size="3" data-price=30.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Bacardi Superior White Rum</td>
-										<td style = "width: 164px;">$28.95 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d2" value="0" size="3" data-price=28.95 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Kopke Fine Ruby Port</td>
-										<td style = "width: 164px;">$19.50 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d3" value="0" size="3" data-price=19.50 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Moët & Chandon Brut Rosé Champagne</td>
-										<td style = "width: 164px;">$100.25 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d4" value="0" size="3" data-price=100.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Stella Artois</td>
-										<td style = "width: 164px;">$3.50 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d5" value="0" size="3" data-price=3.50 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Heineken</td>
-										<td style = "width: 164px;">$3.25 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="d6" value="0" size="3" data-price=3.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					
-					<div style = "background-image: url('img/snacks.png'); background-size: cover;"><p class = "section-name">Snacks</p>
-						<div>
-							<table>
-								<tbody>
-									<tr>
-										<td style = "text-align: left;">Rippled Regular Chips</td>
-										<td style = "width: 164px;">$2.29 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="sn1" value="0" size="3" data-price=2.29 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Jalapeno Flavoured Chips, Miss Vickie's</td>
-										<td style = "width: 164px;">$4.29 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="sn2" value="0" size="3" data-price=4.29 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Mini butter cookies with real milk chocolate, Célébration</td>
-										<td style = "width: 164px;">$3.00 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="sn3" value="0" size="3" data-price=3.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td style = "text-align: left;">Cheese flavoured puffs snacks</td>
-										<td style = "width: 164px;">$3.99 ea</td>
-										<td style = "width: 164px;">
-											<div class = "quantity">
-												<input name="qnt" type="number" id="sn4" value="0" size="3" data-price=3.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0"/>
-											</div>
-										</td>
-									</tr>
-								</tbody>	
-							</table>
-						</div>
-					</div>
-					<!--total value-->
-					<div>
-						<table>
-							<tbody>
-								<tr>
-									<td>subtotal</td>
-									<td>total</td>
-								</tr>
-								<tr>
-									<td id="subtotal"></td>
-									<td id="total"></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-							
-					<!--button-->
-					<div class = "button_box">
-						<div class = "flex">
-							<a href="Order_List.html"><button class = "button">Save</button></a>
-						</div>
-					</div>
-				</div>
-			</section>
-		</section>
-		<!--footer-->
-		
-		<div class="footer"> 
-			<ul>
-				<li><a href="../index.html">Home</a></li>
-				<li><a href="../index.html">Aisles</a></li>
-				<li><a href="../SnackAisle/login.html"> Login</a></li>
-				<li><a href="../SignUp/signup.html"> Sign up</a></li>
-				<li><a href="../BackstoreIndex.html">Backstore</a></li>
-			</ul>
-		</div>
-	</div>
-</body>
+      <!-- Logo Banner -->
+      <div class="img-banner">
+        <p class="logo">UMM GROCERY</p>
+      </div>
+
+      <!-- Road Map Banner-->
+      <div class="page-header"> ORDER LIST &gt; EDIT ORDER LIST</div>
+
+      <section class="main">
+        <div class="sidemenu">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Aisles</a></li>
+            <li><a href="../BackstoreIndex.html">Backstore</a>
+              <ul class="insideside">
+                <li><a href="../BackstoreP7P8/Backstore-ProductList.html">Products List</a></li>
+                <li><a href="../BackstoreP9P10/UserList.html">Users List</a></li>
+                <li><a href="../Backstore_Order_List/Order_List.html">Orders List</a>
+                  <ul>
+                    <li class="active"> Edit Order List</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!--content-->
+        <section class="edit-order-list">
+          <div class="list">
+            <!--sections-->
+            <div style="background-image: url('img/fruits.png'); background-size: cover;">
+              <p class="section-name">Fruits</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Apples</td>
+                      <td style="width: 164px;">$4.00 / 0.7kg</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item1" type="number" id="item1" value="0" size="3" data-price=4.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Bananas</td>
+                      <td style="width: 164px;">$2.60 per 3</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item2" type="number" id="item2" value="0" size="3" data-price=2.60 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Peaches</td>
+                      <td style="width: 164px;">$6.99 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item3" type="number" id="item3" value="0" size="3" data-price=6.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Strawberries</td>
+                      <td style="width: 164px;">$6.00 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item4" type="number" id="item4" value="0" size="3" data-price=6.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="background-image: url('img/vegetables.png'); background-size: cover;">
+              <p class="section-name">Vegetables</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Carrots</td>
+                      <td style="width: 164px;">$2.99 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item5" type="number" id="item5" value="0" size="3" data-price=2.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Eggplant</td>
+                      <td style="width: 164px;">$6.59/kg</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item6" type="number" id="item6" value="0" size="3" data-price=6.59 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Tomatoes</td>
+                      <td style="width: 164px;">$11.00/kg</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item7" type="number" id="item7" value="0" size="3" data-price=11.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Zucchini</td>
+                      <td style="width: 164px;">$5.93/kg</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item8" type="number" id="item8" value="0" size="3" data-price=5.93 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="background-image: url('img/meats.png'); background-size: cover;">
+              <p class="section-name">Meats</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Bacon</td>
+                      <td style="width: 164px;">$8.99 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item9" type="number" id="item9" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Mergues sausages</td>
+                      <td style="width: 164px;">$5.49 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item10" type="number" id="item10" value="0" size="3" data-price=5.49 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">SPAM Luncheon Meat</td>
+                      <td style="width: 164px;">$11.89 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item11" type="number" id="item11" value="0" size="3" data-price=11.89 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Beef Tenderloin Steak</td>
+                      <td style="width: 164px;">$8.99 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item12" type="number" id="item12" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="background-image: url('img/seafoods.png'); background-size: cover;">
+              <p class="section-name">Seafoods</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Salmon</td>
+                      <td style="width: 164px;">$7.45 / unit</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item13" type="number" id="item13" value="0" size="3" data-price=7.45 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Tuna</td>
+                      <td style="width: 164px;">$21.10 / unit</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item14" type="number" id="item14" value="0" size="3" data-price=21.10 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Shrimp</td>
+                      <td style="width: 164px;">$7.14 / pack</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item15" type="number" id="item15" value="0" size="3" data-price=7.14 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Crab</td>
+                      <td style="width: 164px;">$8.99 / 450g</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item16" type="number" id="item16" value="0" size="3" data-price=8.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="background-image: url('img/drinks.png'); background-size: cover;">
+              <p class="section-name">Drinks</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Absolut Apeach</td>
+                      <td style="width: 164px;">$30.25 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item17" type="number" id="item17 value="0" size="3" data-price=30.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Bacardi Superior White Rum</td>
+                      <td style="width: 164px;">$28.95 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item18" type="number" id="item18" value="0" size="3" data-price=28.95 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Kopke Fine Ruby Port</td>
+                      <td style="width: 164px;">$19.50 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item19" type="number" id="item19" value="0" size="3" data-price=19.50 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Moët & Chandon Brut Rosé Champagne</td>
+                      <td style="width: 164px;">$100.25 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item20" type="number" id="item20" value="0" size="3" data-price=100.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Stella Artois</td>
+                      <td style="width: 164px;">$3.50 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item21" type="number" id="item21" value="0" size="3" data-price=3.50 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Heineken</td>
+                      <td style="width: 164px;">$3.25 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item22" type="number" id="item22" value="0" size="3" data-price=3.25 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style="background-image: url('img/snacks.png'); background-size: cover;">
+              <p class="section-name">Snacks</p>
+              <div class="content">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: left;">Rippled Regular Chips</td>
+                      <td style="width: 164px;">$2.29 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item23" type="number" id="item23" value="0" size="3" data-price=2.29 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Jalapeno Flavoured Chips, Miss Vickie's</td>
+                      <td style="width: 164px;">$4.29 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item24" type="number" id="item24" value="0" size="3" data-price=4.29 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Mini butter cookies with real milk chocolate, Célébration</td>
+                      <td style="width: 164px;">$3.00 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item25" type="number" id="item25" value="0" size="3" data-price=3.00 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Cheese flavoured puffs snacks</td>
+                      <td style="width: 164px;">$3.99 ea</td>
+                      <td style="width: 164px;">
+                        <div class="quantity">
+                          <input name="item26" type="number" id="item26" value="0" size="3" data-price=3.99 onclick="CalculateSubTotal()" onkeydown="CalculateSubTotal()" onchange="setAllCookies()" min="0" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!--total value-->
+            <div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>subtotal</td>
+                    <td>total</td>
+                  </tr>
+                  <tr>
+                    <td id="subtotal"></td>
+                    <td id="total"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!--button-->
+            <div class="button_box">
+              <div class="flex">
+                <a onclick="save()"><button class="button">Save</button></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!--footer-->
+      <div>
+        <p id="try">
+          checking if div is working to begin with
+        </p>
+      </div>
+      <div class="footer">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html">Aisles</a></li>
+          <li><a href="../SnackAisle/login.html"> Login</a></li>
+          <li><a href="../SignUp/signup.html"> Sign up</a></li>
+          <li><a href="../BackstoreIndex.html">Backstore</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
