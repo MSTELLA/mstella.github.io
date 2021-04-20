@@ -107,7 +107,10 @@ function CalculateSubTotal() {
 window.onload = function() {
   if (document.cookie.length != 0) {
     var nameValueArray = document.cookie.split("&");
-    document.getElementById("item1").value = nameValueArray[0];
+    for (let i = 0; i < nameValueArray.length; i++){
+      document.getElementById('item'+i).value = nameValueArray[i];
+    }
+    /*document.getElementById("item1").value = nameValueArray[0];
     document.getElementById("item2").value = nameValueArray[1];
     document.getElementById("item3").value = nameValueArray[2];
     document.getElementById("item4").value = nameValueArray[3];
@@ -132,7 +135,7 @@ window.onload = function() {
     document.getElementById("item23").value = nameValueArray[22];
     document.getElementById("item24").value = nameValueArray[23];
     document.getElementById("item25").value = nameValueArray[24];
-    document.getElementById("item26").value = nameValueArray[25];
+    document.getElementById("item26").value = nameValueArray[25];*/
     add = nameValueArray[26];
     update = nameValueArray[27];
     CalculateSubTotal()
