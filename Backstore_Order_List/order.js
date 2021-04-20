@@ -3,11 +3,12 @@ var update = 0;
 var string = "works!";
 
 function addOrder(){
-		add = 1;
+  add = 1;
+  window.prompt("Please enter username of the new order","________________");
 }
 
 function editOrder(){
-		update = 1;
+  update = 1;
 }
 
 function deleteOrder(){
