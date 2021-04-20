@@ -22,7 +22,7 @@ function save() {
     update = 1;
   } else if (Boolean(update)) {
 
-    window.alert("updatet works");
+    window.alert("Edit saved!");
 
 
     add = 1;
