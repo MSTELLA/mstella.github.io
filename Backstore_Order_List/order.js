@@ -17,18 +17,7 @@ function deleteOrder(){
 function save() {
   if (Boolean(add)) {
 
-    var count = 3;
-    var input = document.getElementById("f3");
-    if (input > 0) {
-      window.alert("f" + count + " value is greater than 0");
-    } else {
-      window.alert(input);
-    }
-
-
-
-
-
+    window.prompt("Please enter the date of the order (DD/MM/YYYY)","--/--/----");
     add = 0;
     update = 1;
   } else if (Boolean(update)) {
