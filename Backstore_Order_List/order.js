@@ -17,15 +17,15 @@ function deleteOrder(){
 
 function save() {
   if (Boolean(add)) {
-    add = false;
+    add = "";
     window.prompt("Please enter the date of the order (DD/MM/YYYY)","--/--/----");
-    add = false;
+    add = "";
   } else if (Boolean(update)) {
 
     window.alert("Edit saved!");
 
 
-    update = false;
+    update = "";
   }
 }
 
