@@ -121,7 +121,7 @@ td{
 .userbanner ul li{
     display: inline-block;
     line-height:35px;
-    margin: 0px 5px;
+    /*margin: 0px 5px;*/
 }
 
 .userbanner ul li a{
@@ -287,14 +287,7 @@ nav ul li a:hover{
     margin-right: 10px;
 	background-color:white;
 }
-.summary{
-  width: 25%;
-}
-.summarybox{
-  border: 5px solid black;
-  border-radius: 10px;
-  margin: 50px 50px 0 0;
-}
+
 @media (max-width:650px){
     	.summary{
   		width: 90%;
