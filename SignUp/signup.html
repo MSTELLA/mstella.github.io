@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -5,7 +6,7 @@
     <title>Ummm Grocery | Sign Up </title>
    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/a10dc5d5d5.js" crossorigin="anonymous"></script>
     <!-- BOOTSRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
@@ -67,11 +68,27 @@
 
     <!-- USER INFORNATION -->
     <div class="user_information column visual">
-      <form action="form.php" method="post">
+      <form action="submit_form.php" method="post">
         <h2> Sign Up for Ummm!</h2>
         <br>
+          <fieldset>
+            <legend><span class="section">1</span>Create User Account</legend>
+
+              <label for="Id">ID</label>
+              <input type ="text" name = "id"><br>
+
+              <label for="pass">PASSWORD</label>
+              <input type ="password" name = "password">
+
+              <label for="confirm_pass">CONFIRM PASSWORD</label>
+              <input type ="password" name = "confirmpassword" id="myInput">
+              <input type="checkbox" onclick="myFunction()">Show Password
+
+        </fieldset>
+        <br>
+
         <fieldset>
-          <legend><span class="section">1</span>Personal Information</legend>
+          <legend><span class="section">2</span>Personal Information</legend>
 
         <label for="frame">TITLE</label>
         <br>
@@ -83,11 +100,8 @@
           <option value="Ms">Ms.</option>
         </select><br>
 
-        <label for="firstname">FIRST NAME</label>
-        <input type ="text" name = "firstname">
-
-        <label for="lastname">LAST NAME</label>
-        <input type ="text" name = lastname">
+        <label for="firstname">NAME</label>
+        <input type ="text" name = "name">
 
         <label for="date">DATE OF BIRTH</label>
         <input type="date" name="birthday">
@@ -96,57 +110,25 @@
       <br>
 
       <fieldset>
-        <legend><span class="section">2</span>Contact information</legend>
+        <legend><span class="section">3</span>Contact information</legend>
 
-      <label for="address">ADRESS(NO,STREET)</label>
-      <input type ="text" name = "street">
-
-      <label for="app">APARTMENT</label>
-      <input type ="text" name = "app">
-
-      <label for="city">CITY</label><br>
-      <input type ="text" name = "city"><br>
-
-
-      <label for="frame">PROVINCE</label><br>
-      <select name="province">
-              <option value="select">Select your province</option>
-              <option value="NL">NL</option>
-              <option value="PE">PE</option>
-              <option value="NS">NS</option>
-              <option value="NB">NB</option>
-              <option value="QC">QC</option>
-              <option value="ON">ON</option>
-              <option value="MB">MB</option>
-              <option value="SK">SK</option>
-              <option value="AB">AB</option>
-              <option value="BC">BC</option>
-              <option value="YT">YT</option>
-              <option value="NT">NT</option>
-              <option value="NU">NU</option>
-      </select><br><br>
+      <label for="address">ADRESS</label>
+      <input type ="text" name = "address">
 
       <label for="postal">POSTAL CODE</label>
       <input type ="text" name = "postal"><br>
-
-      <label for="mobile">MOBILE NUMBER</label>
-      <input type ="text" name = "mobilephone" placeholder="000)000-0000">
-
+      
       <label for="email">EMAIL</label>
       <input type ="email" name = "email">
 
-      <label for="pass">PASSWORD</label>
-      <input type ="password" name = "password">
-
-      <label for="confirm_pass">CONFIRM PASSWORD</label>
-      <input type ="password" name = "confirmpassword" id="myInput">
-      <input type="checkbox" onclick="myFunction()">Show Password
+      <label for="mobile">MOBILE NUMBER</label>
+      <input type ="text" name = "mobile" placeholder="000-000-0000">
 
     </fieldset>
     <br>
 
     <fieldset>
-      <legend><span class="section">3</span>Membership</legend>
+      <legend><span class="section">4</span>Membership</legend>
 
       <h3>Do you want to register a Ummm Rewards?</h3>
       Register for Ummm Rewards to earn points every time you buy online or make an in-store purchase.
@@ -162,21 +144,10 @@
     </fieldset>
     <br>
 
-    <fieldset>
-      <legend><span class="section">4</span>Consent</legend>
-
-      <h3>Consent to Conditions of Use and Protection of Personal Information Policy</h3>
-      <input type="checkbox" name="consentcondition">
-      Yes, I have read and accecpt the conditions of Use and Protection of Personal Information Policy
-      <br>
-    </fieldset>
-
-    <br>
-
     <div class= "button">
      <input type="reset" onclick="myFunction()" class="reset" name="resetuserinfo">
      <input type="submit" class="submit" name ="submituserinfo"><br>
-    </div> 
+    </div>
 
 
     </form>
