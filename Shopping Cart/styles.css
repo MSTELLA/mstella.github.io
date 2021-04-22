@@ -176,10 +176,21 @@ nav ul li a:hover{
 }
 
 /* ALL MIDDLE PORTION */
-.main{
-    display: flex;
-    width:100%;
-	height: 80%;
+@media (max-width:650px){
+    .main{
+        display: flex;
+        /*flex-wrap: wrap;*/
+        flex-direction:column;
+        width:100%;
+    }
+}
+
+@media (min-width:651px){
+    .main{
+        display: flex;
+        /*flex-wrap: wrap;*/
+        width:100%;
+    }
 }
 
 /* SIDE MENU */
@@ -188,17 +199,39 @@ nav ul li a:hover{
 	height: 80%;
 }
 
-.sidemenu ul{
-    margin-left: 20px;
-	margin-right: 20px;
-    text-align: Left;
-    padding-top: 15px;
-    padding-bottom: 15px;;
+@media (max-width:650px){
+    .sidemenu ul{
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: Left;
+        padding-top: 15px;
+        /*padding-bottom: 15px;*/
+        display: flex;
+        /*flex-wrap: wrap;*/
+    }
+    .insideside{
+        flex-direction:column;
+    }
+    .sidemenu ul li{
+        line-height:15px;
+        margin: 10px 5px;
+        margin-top: 10px;
+        width:33%;
+    }
 }
-.sidemenu ul li{
-    line-height:15px;
-    margin: 10px 5px;
-    margin-top: 10px;
+@media (min-width:651px){
+    .sidemenu ul{
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: Left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .sidemenu ul li{
+        line-height:15px;
+        margin: 10px 5px;
+        margin-top: 10px;
+    }
 }
 
 .sidemenu ul li a{
