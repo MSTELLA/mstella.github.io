@@ -23,6 +23,9 @@ html, body{
     		vertical-align: middle;
     		position: relative;
 	}
+	input{
+		width: 50px;
+	}
 }
 
 @media (min-width:651px){
