@@ -11,20 +11,36 @@ html, body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	height: 100%;
 }
-.table1{
-    width:70%;
-    border: 5px solid #000;
-    background-color: #e6e6ff ;
-    vertical-align: middle;
-    text-align: center;
-    right: 50%;
-    margin-top: 10px;
-    margin-right:10px;
-    align-content: center;
-    vertical-align: middle;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+
+@media (max-width:650px){
+    	.table1{
+    		width:100%;
+    		border: 5px solid #000;
+    		background-color: #e6e6ff ;
+    		vertical-align: middle;
+    		text-align: center;
+    		align-content: center;
+    		vertical-align: middle;
+    		position: relative;
+	}
+}
+
+@media (min-width:651px){
+	.table1{
+    		width:70%;
+    		border: 5px solid #000;
+    		background-color: #e6e6ff ;
+    		vertical-align: middle;
+    		text-align: center;
+    		right: 50%;
+    		margin-top: 10px;
+    		margin-right:10px;
+    		align-content: center;
+    		vertical-align: middle;
+    		position: relative;
+    		left: 50%;
+    		transform: translate(-50%);
+	}
 }
 .table1 thead{
   background-color: #5B4173;
@@ -275,6 +291,28 @@ nav ul li a:hover{
   border: 5px solid black;
   border-radius: 10px;
   margin: 50px 50px 0 0;
+}
+@media (max-width:650px){
+    	.summary{
+  		width: 90%;
+    		margin-left: 5%;
+    		margin-bottom: 40px;
+	}
+	.summarybox{
+  		border: 5px solid black;
+  		border-radius: 10px;
+	}
+}
+
+@media (min-width:651px){
+	.summary{
+  		width: 25%;
+	}
+	.summarybox{
+  		border: 5px solid black;
+  		border-radius: 10px;
+  		margin: 50px 50px 0 0;
+	}
 }
 .products{
 	width: 20%;
