@@ -78,9 +78,9 @@
                 $sqldata = mysqli_query($dbcon,$sqlget) or die('error getting information');
 
                 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
-                    echo "<tr> <td>";
-                    echo (rand(10,100));
-                    echo "<tr> <td>";
+                    	echo "<tr> <td>";
+                    	echo (rand(10,100));
+                    echo "</td> <td>";
                     echo $row['firstname','lastname'];
                     echo "</td><td>";
                     echo $row['email'];
@@ -92,7 +92,10 @@
                     echo $row['address'];
                     echo "</td><td>";
                     echo $row['membership'];
-                    echo "</td></tr>";
+                    echo "</td><td>";
+			echo (<a href="UserEdit.html"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-cog  fa-lg" aria-hidden="true"></button></a> <br> <a href="#"><button style = "border:none; background: rgba(1, 1, 1, 0.0);" class="fa fa-window-close  fa-lg" aria-hidden="true"></button></a>);
+			echo "</td></tr>";
+			echo "</table>";
                 }
                 ?>
 
