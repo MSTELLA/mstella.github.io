@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="backend.css">
 </head>
 <body>
-<?php include(addUser.php) ?>
 <div class="container-fluid">
     <!--black banner-->
     <div class="userbanner"> 
@@ -45,6 +44,7 @@
     </div>
     <div class="size">
         <div class="row mt-2">
+            <form action="addUser.php" method="post">
             <div class="col-md-6"><label class="labels">First Name</label><input name="fName" type="text" class="form-control" placeholder="first name" value=""></div>
             <div class="col-md-6"><label class="labels">Last Name</label><input name="lName" type="text" class="form-control" value="" placeholder="last name"></div>
             </div>
@@ -56,6 +56,7 @@
         </div>
         <br>
         <input type="submit" value="Save">
+        </form>
     </div>
     </section>
     </div>
