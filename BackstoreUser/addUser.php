@@ -1,37 +1,39 @@
 <?php
-$productName=$_REQUEST["productName"];
-$brand=$_REQUEST["brand"];
-$price=$_REQUEST["price"];
-$priceQuantity=$_REQUEST["priceQuantity"];
-$description=$_REQUEST["description"];
-/*$address=$_REQUEST["address"];
-$postal=$_REQUEST["postal"];
+/*$id=$_REQUEST["id"];
+$title=$_REQUEST["title"]; */
+$firstname=$_REQUEST["fName"];
+$lastname=$_REQUEST["lName"];
 $email=$_REQUEST["email"];
-$mobile=$_REQUEST["mobile"];
-$membership=$_REQUEST["membership"];
-*/
+$mobile=$_REQUEST["phoneNum"];
+$birthday=$_REQUEST["bDay"];
+$address=$_REQUEST["address"];
+/*$postal=$_REQUEST["postal"];*/
+$membership=$_REQUEST["card"];
+$password=$_REQUEST["password"];
+
 require_once('MYDB.php');
 $pdo= db_connect();
 
 try{
     $pdo->beginTransaction();
-    $sql="insert into product(productName, brand, price, priceQuantity, description)
-          values(?,?,?,?,?)";
+    $sql="insert into member(firstnamee, lastname, email, mobile, birthday, address, membership, password)
+          values(?,?,?,?,?,?,?,?,?,?)";
     $stmh=$pdo->prepare($sql);
-    $stmh->bindValue(1, $productName,PDO::PARAM_STR);
-    $stmh->bindValue(2, $brand,PDO::PARAM_STR);
-    $stmh->bindValue(3, $price,PDO::PARAM_STR);
-    $stmh->bindValue(4, $priceQuantity,PDO::PARAM_STR);
-    $stmh->bindValue(5, $description,PDO::PARAM_STR);
-    /*$stmh->bindValue(6, $address,PDO::PARAM_STR);
-    $stmh->bindValue(7, $postal,PDO::PARAM_STR);
-    $stmh->bindValue(8, $email,PDO::PARAM_STR);
+    $stmh->bindValue(1, $firstname,PDO::PARAM_STR);
+    $stmh->bindValue(2, $lastname,PDO::PARAM_STR);
+    $stmh->bindValue(3, $email,PDO::PARAM_STR);
+    $stmh->bindValue(4, $mobile,PDO::PARAM_STR);
+    $stmh->bindValue(5, $birthday,PDO::PARAM_STR);
+    $stmh->bindValue(6, $address,PDO::PARAM_STR);
+    $stmh->bindValue(7, $membership,PDO::PARAM_STR);
+    $stmh->bindValue(8, $password,PDO::PARAM_STR);
+    /*
     $stmh->bindValue(9, $mobile,PDO::PARAM_STR);
-    $stmh->bindValue(10, $membership,PDO::PARAM_STR);
-    */
+    $stmh->bindValue(10, $membership,PDO::PARAM_STR);*/
+    
     $stmh->execute();
     $pdo->commit();
-    print "You have successfully Edited/Added a product!";
+    print "You are sucessfully joined Ummm Grocery Store!";
       
  } catch (PDOException $Exception) {
      $pdo->rollBack();
