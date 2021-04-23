@@ -70,12 +70,12 @@
          <div class=" oneProduct">
 
         <p> Enter the information below </p>
-        <form action="#" method="get">
+        <form action="submit_form.php" method="post">
           <label for="frame">Product Name</label>
           <br>
           <input type ="text"  name = "product-name">
           <br>
-          <label for="frame">Brand</label>
+          <label for="frame">Brand/Origin</label>
           <br>
           <input type ="text"  name = "brand">
             <br>
@@ -87,15 +87,12 @@
             <br>
             <input type ="text"  name = "price-quantity">
             <br>
-            <label for="frame">Origin</label>
-            <br>
-            <input type ="text"  name = "origin">
-            <br>
             <label for="frame">Description</label>
             <br>
             <input type ="text"  name = "price">
-            </form>
-            <input type="submit" value="Save Changes" class="description-btn"></input>
+            
+            <input type="submit" value="Save Changes" class="description-btn" name ="submitproductinfo"></input>
+        </form>
         </div>
         
     </section>
