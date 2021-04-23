@@ -64,21 +64,10 @@
 
 
         <table class="Products-table">  
-            <tr> 
-                <th>Select</th>
-                <th>Image</th>
-                <th>Product Name</th>
-                <th>Brand/Origin</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th> </th>
-            </tr>   
-
-            <tbody>
                 <?php
-                include('MYDB.php') /* MAYBE MYDB?*/
+                include('MYDB.php'); /* MAYBE MYDB?*/
                 
-                $sqlget = "SELECT * FROM products" /*NAME OF TABLE is products, add it in the command line instructions*/;
+                $sqlget = "SELECT * FROM products"; /*NAME OF TABLE is products, add it in the command line instructions*/
                 $sqldata = mysqli_query($dbcon,$sqlget) or die('error getting information');
                 
                 echo "<table>";
@@ -90,7 +79,7 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th> </th>
-                    </tr>"
+                    </tr>";
 
                 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
                     echo "<tr> <td>";
@@ -108,8 +97,6 @@
                     echo "</td></tr>";
                 }
                 ?>
-
-				</tbody>
 
         </table>
     </section>
