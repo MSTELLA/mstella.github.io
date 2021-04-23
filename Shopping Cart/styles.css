@@ -12,7 +12,7 @@ html, body{
 	height: 100%;
 }
 
-@media (max-width:650px){
+@media (max-width:1217px){
     	.table1{
     		width:100%;
     		border: 5px solid #000;
@@ -37,7 +37,7 @@ html, body{
 	}
 }
 
-@media (min-width:651px){
+@media (min-width:1218px){
 	.table1{
     		width:70%;
     		border: 5px solid #000;
@@ -204,7 +204,7 @@ nav ul li a:hover{
 }
 
 /* ALL MIDDLE PORTION */
-@media (max-width:650px){
+@media (max-width:1217px){
     .main{
         display: flex;
         /*flex-wrap: wrap;*/
@@ -213,7 +213,7 @@ nav ul li a:hover{
     }
 }
 
-@media (min-width:651px){
+@media (min-width:1218px){
     .main{
         display: flex;
         /*flex-wrap: wrap;*/
@@ -227,7 +227,7 @@ nav ul li a:hover{
 	height: 80%;
 }
 
-@media (max-width:650px){
+@media (max-width:1217px){
     .sidemenu ul{
         margin-left: 20px;
         margin-right: 20px;
@@ -247,7 +247,7 @@ nav ul li a:hover{
         width:33%;
     }
 }
-@media (min-width:651px){
+@media (min-width:1218px){
     .sidemenu ul{
         margin-left: 20px;
         margin-right: 20px;
@@ -286,7 +286,7 @@ nav ul li a:hover{
 }
 
 
-@media (max-width:650px){
+@media (max-width:1217px){
     	.summary{
   		width: 90%;
     		margin-left: 5%;
@@ -311,7 +311,7 @@ nav ul li a:hover{
 }
 }
 
-@media (min-width:651px){
+@media (min-width:1218px){
 	.summary{
   		width: 25%;
 	}
