@@ -62,27 +62,17 @@
            <div class="backstore-btns"><a href="Backstore-AddorEditProduct.html"><button type="button" class="button_box">Delete Product</button></a></div>
         </div>
 
-
-        <table class="Products-table">  
                 <?php
                 include('MYDB.php'); /* MAYBE MYDB?*/
                 
                 $sqlget = "SELECT * FROM products"; /*NAME OF TABLE is products, add it in the command line instructions*/
                 $sqldata = mysqli_query($dbcon,$sqlget) or die('error getting information');
                 
-                echo "<table>";
-                echo "<tr> 
-                    <th>Select</th>
-                    <th>Image</th>
-                    <th>Product Name</th>
-                    <th>Brand/Origin</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                    <th> </th>
-                    </tr>";
+                echo "<table class='Products-table'>";
+                echo "<tr><th>Select</th><th>Image</th><th>Product Name</th><th>Brand/Origin</th><th>Price</th><th>Description</th><th></th></tr>";
 
                 while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
-                    echo "<tr> <td>";
+                    echo "<tr><td>";
                     echo $row['productName'];
                     echo "</td><td>";
                     echo $row['brand'];
@@ -96,9 +86,10 @@
                     echo $row['description'];
                     echo "</td></tr>";
                 }
+
+                echo "</table>";
                 ?>
 
-        </table>
     </section>
 
 </section>
