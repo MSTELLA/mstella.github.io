@@ -8,6 +8,21 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a10dc5d5d5.js">
 	</script>
+	<script>
+		function loginVerification() {
+			var adminUser = "admin";
+			var adminPassword = "nimda";
+			var loginUser = document.getElementById('login').value;
+			var loginPassword = document.getElementById('password').value;
+			
+			if (loginUser == adminUser && loginPassword == adminPassword) {
+				alert('Login successful! Thanks for logging in.');
+				setTimeout(function() {window.location = "../BackstoreP7P8/Backstore-ProductList.html" });
+			} else {
+				alert('Incorrect login credentials, please try again.');
+			}
+		}
+	</script>
 	<title>Login Page</title>
 </head>
 <body>
@@ -33,13 +48,13 @@
 		<main class="login-page">
 			<!-- Side Menu-->
 			<div class="sidemenu">
-				<ul>
+				<ul class="insideside">
 					<li>
 						<a href="../index.html">Home</a>
 					</li>
 					<li>
 						<a href="../index.html">Aisles</a>
-						<ul>
+						<ul class="insideside">
 							<li>
 								<a href="../FruitsAisle/GroceryFruitAisle.html">Fruits</a>
 							</li>
@@ -68,11 +83,10 @@
 			<div class="login-container">
 				<div class="wrapper">
 					<form>
-						<input id="login" name="login" placeholder="login" type="text"> <input class="mb-3" id="password" name="login" placeholder="password" type="text"> <input class="submit" type="submit" value="Submit">
+						<input id="login" name="login" placeholder="login" type="text">
+						<input class="mb-3" id="password" name="login" placeholder="password" type="password">
+						<input class="submit" type="submit" value="Submit" onclick="loginVerification()">
 					</form>
-					<div class="mb-2">
-						<a class="forgot-password" href="#">Forgot Password?</a>
-					</div>
 				</div>
 			</div>
 		</main>

@@ -259,6 +259,49 @@ form input {
         width: 25%;
     }
 }
+@media (max-width:650px){
+    .main{
+        display: flex;
+        /*flex-wrap: wrap;*/
+        flex-direction:column;
+        width:100%;
+    }
+    .sidemenu ul{
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: Left;
+        padding-top: 15px;
+        display: flex;
+    }
+    .insideside {
+        flex-direction: column;
+    }
+    .sidemenu ul li{
+        line-height:15px;
+        margin: 10px 5px;
+        margin-top: 10px;
+        width:33%;
+    }
+}
+@media (min-width:651px){
+    .main{
+        display: flex;
+        /*flex-wrap: wrap;*/
+        width:100%;
+    }
+    .sidemenu ul{
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .sidemenu ul li{
+        line-height:15px;
+        margin: 10px 5px;
+        margin-top: 10px;
+    }
+}
 @media (min-width: 880px) {
     /* SNACK INDIVIDUAL PAGE */
     .product-container {
